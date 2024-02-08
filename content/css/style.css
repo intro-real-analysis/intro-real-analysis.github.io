@@ -112,7 +112,7 @@
   --link-hover: hsl(220, 90%, 52%);
   /* I added hover color */
   --summary: rgb(245, 245, 245);
-    /* I added summary color */
+  /* I added summary color */
   --pre-bg-color: hsl(210, 28%, 93%);
   --kbd-bg-color: hsl(210, 5%, 100%);
   --kbd-border-color: hsl(210, 5%, 70%);
@@ -137,7 +137,7 @@
   --link-hover: hsl(220, 88%, 63%);
   /* I added this */
   --summary: hsla(0, 0%, 40%, 0.83);
-    /* I added summary color */
+  /* I added summary color */
   --pre-bg-color: hsl(0, 1%, 25%);
   --kbd-bg-color: hsl(0, 0%, 16%);
   --kbd-border-color: hsl(210, 5%, 70%);
@@ -215,7 +215,7 @@ body {
   background-color: var(--body-bg-color);
 
   text-rendering: optimizeLegibility;
-  
+
 }
 
 /* Justify and hyphenate all paragraphs */
@@ -520,10 +520,10 @@ overflow-x: auto;
   display: block;
   margin: 12px 0;
   font-style: italic;
-  box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-  content:"";
-  display:table;
-  clear:both;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  content: "";
+  display: table;
+  clear: both;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #16b190 !important;
   display: block;
@@ -581,10 +581,10 @@ overflow-x: auto;
   display: block;
   margin: 12px 0;
   font-style: normal;
-  box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-  content:"";
-  display:table;
-  clear:both;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  content: "";
+  display: table;
+  clear: both;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #3b87f9 !important;
   display: block;
@@ -635,8 +635,9 @@ figcaption:before {
   content: "Figure " counter(figure-counter);
   font-style: normal;
   font-weight: bold;
-  margin-bottom: 5px; /* Add some space between the image and the "Figure number" */
-  
+  margin-bottom: 5px;
+  /* Add some space between the image and the "Figure number" */
+
 }
 
 /* Center align author name, use small caps and add vertical spacing  */
@@ -654,13 +655,13 @@ summary {
 /* My donate footer style */
 
 #donate-footer {
-    text-decoration: underline;
-    color: var(--link-visited);
+  text-decoration: underline;
+  color: var(--link-visited);
 }
 
 #donate-footer:hover {
-    cursor: pointer;
-    color: var(--link-focus-outline);
+  cursor: pointer;
+  color: var(--link-focus-outline);
 }
 
 /* Sidenotes */
@@ -807,7 +808,7 @@ input.sidenote-toggle {
 }
 
 /* Heading typography */
-/* I added also numbered headers */ 
+/* I added also numbered headers */
 h1 {
   font-size: 2.5rem;
   line-height: 3.25rem;
@@ -884,10 +885,38 @@ h6 {
   margin-bottom: 0.8rem;
 }
 
-/* Responsive iFrame for GeoGebra applet with fixed size */ 
+/* Responsive iFrame for GeoGebra applet with fixed size */
 iframe {
   background-color: var(--body-bg-color);
   max-width: 100%;
   max-height: 100%;
 }
 
+.tooltip,
+.display-container {
+  position: relative;
+  cursor:pointer;
+}
+
+.tooltip .box-text {
+  display: none
+}
+
+.tooltip:hover .box-text {
+  display: inline-block
+}
+
+/* It shows info if needed on hover text*/
+#mytooltip {
+  position: absolute;
+  left: 0;
+  bottom: 22px;
+  text-align: left;
+  padding: 0.9em;
+  background-color: #dddddd;
+  color: #000;
+  font-size: medium;
+  width: 100%;
+  min-width: 20em;
+  /* Will be AT LEAST 20em wide */
+}
