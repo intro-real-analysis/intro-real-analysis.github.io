@@ -896,6 +896,7 @@ iframe {
 .display-container {
   position: relative;
   cursor:pointer;
+  color: hsl(0, 0%, 28%);
 }
 
 .tooltip .box-text {
