@@ -113,7 +113,7 @@
         be a sequence. The real numbers $x_1, x_2, \ldots, x_n,\ldots$ are called
         the <em>terms</em> of the sequence; $x_1$ is the <em>first term</em>
         of the sequence, $x_2$ is the <em>second term</em>
-        of the sequence, $\ldots$, $x_n$ is the $n$th <em>term</em>
+        of the sequence, $\ldots,$ $x_n$ is the $n$th <em>term</em>
         of the sequence.
       </p>
 
@@ -152,12 +152,12 @@
         <ol>
           <li>
             A sequence $\{ x_n \}$ is <strong>bounded above</strong> if there exists a $ B\in \R$ such that $x_n\leq B$
-            for all $n\in \N$.
+            for all $n\in \N.$
 
           </li>
           <li>
             A sequence $\{ x_n \}$ is <strong>bounded below</strong> if there exists a $ B\in \R$ such that $B \leq x_n
-            $ for all $n\in \N$.
+            $ for all $n\in \N.$
           </li>
           <li>
             A sequence $\{ x_n \}$ is <strong>bounded</strong> if
@@ -185,10 +185,11 @@
       <div class="example">
         <p>
           <span>
-            If we need to give a concrete sequence, we provide each term as a formula in terms of $n$.
+            If we need to give a concrete sequence, 
+            we provide each term as a formula in terms of $n.$
           </span>
           <span>
-            For instance, $\left\{ \dfrac{1}{n} \right\}_{n=1}^\infty$,
+            For instance, $\left\{ \dfrac{1}{n} \right\}_{n=1}^\infty,$
           </span>
           <span>
             or simply $\left\{
@@ -234,8 +235,8 @@
       <div class="definition">
         <p>
           A sequence $\{ x_n \}$ is said to <em>converge</em> to a number
-          $L \in \R$ if for every $\epsilon &gt; 0$, there exists an $M \in \N$ such
-          that $\abs{x_n - L} \lt \epsilon$ for all $n \geq M$.
+          $L \in \R$ if for every $\epsilon &gt; 0,$ there exists an $M \in \N$ such
+          that $\abs{x_n - L} \lt \epsilon$ for all $n \geq M.$
           <span>
             The number $L$
             is said to be the <em>limit</em> of $\{ x_n \}$. We write
@@ -253,7 +254,7 @@
         one must be aware that the same real number may appear mor than once in the
         sequence. When we say that the sequence $\{x_n\}$ converges to $L\in \R$
         we mean that if for every $\epsilon$ we consider the interval
-        $\left[L-\epsilon, L+\epsilon\right]$, then there exists $N\in\N$ such that <em>all</em>
+        $\left[L-\epsilon, L+\epsilon\right],$ then there exists $N\in\N$ such that <em>all</em>
         the terms $x_n$ belong to $\left[L-\epsilon, L+\epsilon\right]$
         whenever $n&gt;N.$
       </p>
@@ -286,13 +287,15 @@
 
       <div class="example">
         <p>
-          The sequence $\{x_n\}_{n=1}^{\infty}$, where $x_n =c$,
-          $\forall n \in \N$ and $c\in\R$ fixed is known as the <strong>constant sequence</strong>.
+          The sequence $\{x_n\}_{n=1}^{\infty}$, where $x_n =c,$
+          $\forall n \in \N$ and $c\in\R$ fixed is known as the 
+          <strong>constant sequence</strong>.
         </p>
 
         <p>
           <span>
-            This is a sequence $$\{ c \} = c,c,c,\ldots$$ consisting of a single constant $c$ repeating indefinitely.
+            This is a sequence $$\{ c \} = c,c,c,\ldots$$ consisting 
+            of a single constant $c$ repeating indefinitely.
           </span>
           <span>
             It converges to $c$.
@@ -304,7 +307,8 @@
 
       <div class="example">
         <p>
-          <strong>Claim:</strong> The sequence $\left\{ \dfrac{1}{n} \right\}$ is convergent and
+          <strong>Claim:</strong> The sequence 
+          $\left\{ \dfrac{1}{n} \right\}$ is convergent and
           \begin{equation*}
           \lim_{n\to \infty} \frac{1}{n} = 0 .
           \end{equation*}
@@ -445,7 +449,8 @@
       <ul>
         <li>"Let $\vre &gt;0 $ be arbitrary."</li>
         <li>
-          Demonstrate a choice for $N \in \N$. This step usually requires the most work, almost all of which is done
+          Demonstrate a choice for $N \in \N$. This step usually requires the most work,
+          almost all of which is done
           prior to actually writing the formal proof.
         </li>
         <li>
@@ -455,7 +460,8 @@
           "Assume $n\geq N$."
         </li>
         <li>
-          With $N$ well chosen, it should be possible to derive the inequality $\abs{x_n - L}\lt\vre.$
+          With $N$ well chosen, it should be possible to derive 
+          the inequality $\abs{x_n - L}\lt\vre.$
         </li>
       </ul>
       <br>
@@ -477,13 +483,13 @@
 
 
       <div class="proof">
-        Assume that the sequence $\{ x_n \}$ has limits $L_1$ and $L_2$.
+        Assume that the sequence $\{ x_n \}$ has limits $L_1$ and $L_2.$
         Take an arbitrary $\vre &gt; 0$.
-        From the definition find an $N_1$ such that for all $n \geq N_1$,
-        $\abs{x_n-L_1} \lt \frac{\vre}{2}$. Similarly, find an $N_2$
+        From the definition find an $N_1$ such that for all $n \geq N_1,$
+        $\abs{x_n-L_1} \lt \frac{\vre}{2}.$ Similarly, find an $N_2$
         such that for all $n \geq N_2$, we have
-        $\abs{x_n-L_2} \lt \frac{\vre}{2}$.
-        Now take an $n$ such that $n \geq N_1$ and also $n \geq N_2$, and estimate
+        $\abs{x_n-L_2} \lt \frac{\vre}{2}.$
+        Now take an $n$ such that $n \geq N_1$ and also $n \geq N_2,$ and estimate
         <div class="scroll-wrapper">
           \begin{equation*}
           \begin{split}
@@ -495,7 +501,7 @@
           \end{split}
           \end{equation*}
         </div>
-        Since $\abs{L_2-L_1} \lt \vre$ for all $\vre &gt; 0$, then $\abs{L_2-L_1} = 0$
+        Since $\abs{L_2-L_1} \lt \vre$ for all $\vre &gt; 0,$ then $\abs{L_2-L_1} = 0$
         and $L_2=L_1$. Therefore the limit (if it exists) is unique.
       </div>
 
@@ -509,7 +515,7 @@
       <div class="proof">
         Suppose $\{ x_n \}$ converges to $L$. Thus there exists an $N \in \N$
         such that for all $n \geq N$, we have
-        $\abs{x_n - L} \lt 1$. Let $C_1 :=\abs{L}+1$ and note that for $n \geq N$,
+        $\abs{x_n - L} \lt 1$. Let $C_1 :=\abs{L}+1$ and note that for $n \geq N,$
         <div class="scroll-wrapper">
           \begin{equation*} \begin{split}
           \abs{x_n} &amp;=\abs{x_n - L + L} \leq \abs{x_n - L} + \abs{L} \\ &amp; \lt 1 + \abs{L}=C_1 . \end{split}
@@ -522,7 +528,6 @@
         Let $B
         :=\max \{ C_1, C_2 \}$. Then for all $n \in \N$, \begin{equation*} \abs{x_n} \leq B.
         \end{equation*}
-
       </div>
 
 
