@@ -527,7 +527,6 @@ overflow-x: auto;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #16b190 !important;
   display: block;
-  overflow-x: auto;
 }
 
 .theorem::before {
@@ -545,7 +544,6 @@ overflow-x: auto;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #3b87f9 !important;
   display: block;
-  overflow-x: auto;
 }
 
 .lemma::before {
@@ -588,7 +586,6 @@ overflow-x: auto;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #3b87f9 !important;
   display: block;
-  overflow-x: auto;
 }
 
 .definition::before {
@@ -612,6 +609,10 @@ overflow-x: auto;
   content: 'Example ' counter(example) '. ';
   font-weight: bold;
   font-style: normal;
+}
+
+.practice {
+  padding: 0px 20px 8px 20px !important;
 }
 
 /* Resetting default list-style-type for figure */

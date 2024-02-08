@@ -88,6 +88,28 @@ function includeHTML() {
   }
 };
 
+// Function to handle smooth scrolling with offset
+function scrollToElementWithOffset(selector, offset) {
+  var target = document.querySelector(selector);
+  if (target) {
+    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  }
+}
+
+// Adding event listeners to all links with the class 'scroll-link'
+var links = document.querySelectorAll('a[href^="#"]');
+links.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    var targetId = this.getAttribute('href');
+    scrollToElementWithOffset(targetId, 50); // 50px offset
+  });
+});
+
 
 // Button to the top
 // Get the button
