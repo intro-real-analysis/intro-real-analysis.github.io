@@ -209,7 +209,7 @@ body {
   margin: 0 auto;
   padding: 2rem 1.25rem;
 
-  counter-reset: theorem definition example sidenote-counter h2counter;
+  counter-reset: theorem definition example sidenote-counter h2counter figure-counter;
 
   color: var(--body-color);
   background-color: var(--body-bg-color);
@@ -601,7 +601,7 @@ overflow-x: auto;
 .example {
   counter-increment: example;
   display: block;
-  margin: 12px 0;
+  margin: 25px 0;
   font-style: normal;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #6106d7 !important;
@@ -613,6 +613,30 @@ overflow-x: auto;
   content: 'Example ' counter(example) '. ';
   font-weight: bold;
   font-style: normal;
+}
+
+/* Resetting default list-style-type for figure */
+figure {
+  counter-increment: figure-counter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the figure caption */
+figcaption {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Numbering for the figure */
+/* Styling for the figure caption */
+figcaption:before {
+  content: "Figure " counter(figure-counter);
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 5px; /* Add some space between the image and the "Figure number" */
+  
 }
 
 /* Center align author name, use small caps and add vertical spacing  */
@@ -866,3 +890,4 @@ iframe {
   max-width: 100%;
   max-height: 100%;
 }
+
