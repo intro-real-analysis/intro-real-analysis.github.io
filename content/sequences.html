@@ -91,10 +91,10 @@
 
       <p>
         We will often use the following expression:
-        
+
       </p>
       <div style="text-align: center;">
-          "the sequence $x_1, x_2, \ldots, x_n,\ldots$"
+        "the sequence $x_1, x_2, \ldots, x_n,\ldots$"
       </div>
 
       <p>
@@ -106,9 +106,9 @@
       </p>
 
       <p>
-        Let 
+        Let
         $$
-        x_1,  x_2, \ldots, x_n,\ldots
+        x_1, x_2, \ldots, x_n,\ldots
         $$
         be a sequence. The real numbers $x_1, x_2, \ldots, x_n,\ldots$ are called
         the <em>terms</em> of the sequence; $x_1$ is the <em>first term</em>
@@ -120,12 +120,12 @@
 
 
       <p>
-       Instead of writing 
-       $$
-       x_1,  x_2, \ldots, x_n,\ldots
-       $$
-       we will sometimes write
-       $$
+        Instead of writing
+        $$
+        x_1, x_2, \ldots, x_n,\ldots
+        $$
+        we will sometimes write
+        $$
         \{ x_n \}_{n=1}^{\infty},\quad\{ x_n \}_{k\in\N},\quad
         \{x_n\},\quad\text{or}\quad\{ x_n \}_{n}.
         $$
@@ -144,7 +144,7 @@
         to distinguish the two concepts.
       </p>
 
-      
+
 
       <div class="definition">
         <ol>
@@ -220,7 +220,7 @@
         </p>
       </div>
 
-      
+
 
       <h3 id="convergence-of-sequeces">Convergence of sequences</h3>
 
@@ -249,10 +249,10 @@
         of limit in $\R$. We obtain this illustration by "plotting"
         the termns of the fiven sequence on the real line. In doing so,
         one must be aware that the same real number may appear mor than once in the
-        sequence. When we say that tje sequence $\{x_n\}$ converges to $L\in \R$
+        sequence. When we say that the sequence $\{x_n\}$ converges to $L\in \R$
         we mean that if for every $\epsilon$ we consider the interval
-        $[L-\epsilon, L+\epsilon]$, then there exists $N\in\N$ such that <em>all</em>
-        the terms $x_n$ belong to $[L-\epsilon, L+\epsilon]$
+        $\left[L-\epsilon, L+\epsilon\right]$, then there exists $N\in\N$ such that <em>all</em>
+        the terms $x_n$ belong to $\left[L-\epsilon, L+\epsilon\right]$
         whenever $n&gt;N.$
       </p>
 
@@ -263,12 +263,24 @@
         </figcaption>
       </figure>
 
+      <p>
+        Another way to represent the converge of a sequence is shown in the applet below.
+        In this image we first think of the sequence as a graph, as it is a
+        function of $\N.$
+      </p>
 
-      <div class="myFrame">
-        <iframe scrolling="no" title="Convergence of sequences" src="https://www.geogebra.org/material/iframe/id/rmx2ud6p/width/572/height/402/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="572px" height="402px" style="border:0px;" allowfullscreen=""> </iframe>
-        <br>
-        <span style="text-align: center;">Drag the slider!</span>
-      </div>
+      <figure>
+        <div class="myFrame">
+          <iframe scrolling="no" title="Convergence of sequences" src="https://www.geogebra.org/material/iframe/id/rmx2ud6p/width/572/height/402/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="572px" height="402px" style="border:0px;" allowfullscreen=""> </iframe>
+
+        </div>
+        <figcaption>
+          Convergence in two dimensions.
+        </figcaption>
+      </figure>
+
+
+
 
       <div class="example">
         <p>
@@ -310,10 +322,10 @@
         </p>
         <p>
           Then for all $n \geq N$,
-          <span class="responsive">
+          </p><div class="scroll-wrapper">
             $$\ds \abs{x_n - 0} = \abs{\frac{1}{n}} = \frac{1}{n} \leq \frac{1}{N}\lt \vre .\;\;\blacksquare$$
-          </span>
-        </p>
+          </div>
+        <p></p>
 
       </div>
 
@@ -394,9 +406,11 @@
           Choose $N\in \N$ with $N&gt;\dfrac{1}{\vre}.$ Then, $n\geq N$ implies
           $n &gt; \dfrac{1}{\vre}$ or $\vre &gt; \dfrac{1}{n}.$
           Therefore, for all $n \geq N,$
-          \begin{equation*}
-          \abs{\frac{n+1}{n} - 1} = \abs{\frac{1}{n}} = \frac{1}{n} \lt \vre .
-          \end{equation*}
+          <div class="scroll-wrapper">
+            \begin{equation*}
+            \abs{\frac{n+1}{n} - 1} = \abs{\frac{1}{n}} = \frac{1}{n} \lt \vre .
+            \end{equation*}
+          </div>
         </div>
       </div>
 
@@ -491,17 +505,22 @@
       </div>
 
       <div class="proof">
-        <p>
-          Suppose $\{ x_n \}$ converges to $L$. Thus there exists an $N \in \N$
-          such that for all $n \geq N$, we have
-          $\abs{x_n - L} \lt 1$. Let $C_1 :=\abs{L}+1$ and note that for $n \geq N$, \begin{equation*} \begin{split}
+        Suppose $\{ x_n \}$ converges to $L$. Thus there exists an $N \in \N$
+        such that for all $n \geq N$, we have
+        $\abs{x_n - L} \lt 1$. Let $C_1 :=\abs{L}+1$ and note that for $n \geq N$,
+        <div class="scroll-wrapper">
+          \begin{equation*} \begin{split}
           \abs{x_n} &amp;=\abs{x_n - L + L} \leq \abs{x_n - L} + \abs{L} \\ &amp; \lt 1 + \abs{L}=C_1 . \end{split}
-          \end{equation*} The set $\{ \abs{x_1}, \abs{x_2}, \ldots, \abs{x_{N-1}} \}$ is a finite set and hence let
-          \begin{equation*} C_2 :=\max \{ \abs{x_1}, \abs{x_2}, \ldots, \abs{x_{N-1}} \} . \end{equation*}
-          Let $B
-          :=\max \{ C_1, C_2 \}$. Then for all $n \in \N$, \begin{equation*} \abs{x_n} \leq B.
           \end{equation*}
-        </p>
+        </div>
+        The set $\{ \abs{x_1}, \abs{x_2}, \ldots, \abs{x_{N-1}} \}$ is a finite set and hence let
+        <div class="scroll-wrapper">
+          \begin{equation*} C_2 :=\max \{ \abs{x_1}, \abs{x_2}, \ldots, \abs{x_{N-1}} \} . \end{equation*}
+        </div>
+        Let $B
+        :=\max \{ C_1, C_2 \}$. Then for all $n \in \N$, \begin{equation*} \abs{x_n} \leq B.
+        \end{equation*}
+
       </div>
 
 
