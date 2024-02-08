@@ -899,11 +899,15 @@ iframe {
 }
 
 .tooltip .box-text {
-  display: none
+  display: none;
 }
 
 .tooltip:hover .box-text {
-  display: inline-block
+  display: inline-block;
+}
+
+.tooltip:hover {
+  color: rgba(4, 112, 162, 0.976);
 }
 
 /* It shows info if needed on hover text*/
