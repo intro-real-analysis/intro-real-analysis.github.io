@@ -212,36 +212,7 @@
 
 
 
-          <div class="definition">
-            <ol>
-              <li>
-                A sequence $\{ x_n \}$ is <strong>bounded above</strong> if there exists a $ B\in \R$ such that $x_n\leq
-                B$
-                for all $n\in \N.$
-
-              </li>
-              <li>
-                A sequence $\{ x_n \}$ is <strong>bounded below</strong> if there exists a $ B\in \R$ such that $B \leq
-                x_n
-                $ for all $n\in \N.$
-              </li>
-              <li>
-                A sequence $\{ x_n \}$ is <strong>bounded</strong> if
-                there exists a $B \in \R$ such that
-                \begin{equation*}
-                \abs{x_n} \leq B \qquad \text{for all } n \in \N.
-                \end{equation*}
-              </li>
-            </ol>
-
-
-            <span>
-              In other words, the sequence $\{x_n\}$ is bounded whenever
-              the set $\{ x_n : n \in \N \}$
-              is bounded, or equivalently when it is bounded as a function.
-            </span>
-
-          </div>
+          
 
           <h3 id="convergence-of-sequeces">Convergence of sequences</h3>
 
@@ -251,10 +222,9 @@
             sure you understand it thoroughly and you must be able to use it comfortably.
           </p>
           <div class="definition">
-            <p>
               A sequence $\{ x_n \}$ is said to <em>converge</em> to a number
-              $L \in \R$ if for every $\epsilon &gt; 0,$ there exists an $M \in \N$ such
-              that $\abs{x_n - L} \lt \epsilon$ for all $n \geq M.$
+              $L \in \R$ if for every $\epsilon &gt; 0,$ there exists an $N \in \N$ such
+              that $\abs{x_n - L} \lt \epsilon$ for all $n \geq N.$
               <span>
                 The number $L$
                 is said to be the <em>limit</em> of $\{ x_n \}$. We write
@@ -262,7 +232,6 @@
                 \lim_{n\to \infty} x_n := L .
                 \end{equation*}
               </span>
-            </p>
           </div>
 
           <p>
@@ -272,16 +241,17 @@
             one must be aware that the same real number may appear mor than once in the
             sequence. When we say that the sequence $\{x_n\}$ converges to $L\in \R$
             we mean that if for every $\epsilon$ we consider the interval
-            $\left[L-\epsilon, L+\epsilon\right],$ then there exists $N\in\N$ such that <em>all</em>
-            the terms $x_n$ belong to $\left[L-\epsilon, L+\epsilon\right]$
-            whenever $n&gt;N.$
+            $\left(L-\epsilon, L+\epsilon\right),$ then there exists $N\in\N$ such 
+            that <em>all</em> the terms $x_n$ belong to 
+            $\left(L-\epsilon, L+\epsilon\right)$ whenever $n\geq N.$
           </p>
 
           <figure>
             <img alt="Convergence in one dimension" style="width: 100%;" loading="lazy"
               src="https://www.dynamicmath.xyz/math2400/images/summary-02/convergence-1d.png">
             <figcaption>
-              Convergence in one dimension.
+              Convergence in one dimension. In this case, $N=10$, so $x_n$ belong to 
+              $\left(L-\epsilon, L+\epsilon\right)$ whenever $n\geq N.$
             </figcaption>
           </figure>
 
@@ -299,7 +269,7 @@
 
             </div>
             <figcaption>
-              Convergence in two dimensions.
+              Convergence in two dimensions. <strong>Drag slider to plot sequence!</strong>
             </figcaption>
           </figure>
 
@@ -307,24 +277,27 @@
 
 
           <div class="example">
-            <p>
-              The sequence $\{x_n\}_{n=1}^{\infty}$, where $x_n =c,$
-              $\forall n \in \N$ and $c\in\R$ fixed is known as the
-              <strong>constant sequence</strong>.
-            </p>
+            
+            The sequence $\{x_n\}_{n=1}^{\infty}$, where $x_n =c,$
+            $\forall n \in \N$ and $c\in\R$ fixed.
 
-            <p>
+            
               <span>
-                This is a sequence $$\{ c \} = c,c,c,\ldots$$ consisting
+                That is $$\{x_n\}_{n=1}^{\infty}= c,c,c,\ldots$$ consisting
                 of a single constant $c$ repeating indefinitely.
               </span>
               <span>
                 It converges to $c$.
               </span>
 
-            </p>
+            
 
           </div>
+
+          <p>
+            Before proceeding further, we should give two examples of sequences 
+            which are not convergent in $\R.$
+          </p>
 
           <div class="example">
             <p>
@@ -501,6 +474,39 @@
 
           <hr>
 
+          <h3>Bounded sequences</h3>
+
+          <div class="definition">
+            <ol>
+              <li>
+                A sequence $\{ x_n \}$ is <strong>bounded above</strong> if there exists a $ B\in \R$ such that $x_n\leq
+                B$
+                for all $n\in \N.$
+
+              </li>
+              <li>
+                A sequence $\{ x_n \}$ is <strong>bounded below</strong> if there exists a $ B\in \R$ such that $B \leq
+                x_n
+                $ for all $n\in \N.$
+              </li>
+              <li>
+                A sequence $\{ x_n \}$ is <strong>bounded</strong> if
+                there exists a $B \in \R$ such that
+                \begin{equation*}
+                \abs{x_n} \leq B \qquad \text{for all } n \in \N.
+                \end{equation*}
+              </li>
+            </ol>
+
+
+            <span>
+              In other words, the sequence $\{x_n\}$ is bounded whenever
+              the set $\{ x_n : n \in \N \}$
+              is bounded, or equivalently when it is bounded as a function.
+            </span>
+
+          </div>
+
           <h3>Useful results</h3>
 
           <p>
@@ -563,6 +569,8 @@
             :=\max \{ C_1, C_2 \}$. Then for all $n \in \N$, \begin{equation*} \abs{x_n} \leq B.
             \end{equation*}
           </div>
+
+          
 
           <br>
 
