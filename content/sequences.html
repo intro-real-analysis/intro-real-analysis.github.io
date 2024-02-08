@@ -68,30 +68,83 @@
   <main>
     <article>
 
-      <h2 id="definitions">Definitions</h2>
+      <h2 id="definitions">Definition</h2>
 
       <p>
         In this chapter we explore the most basic type of a limit in Real
         Analysis, that is the limit of a
-        sequence of real numbers. You probably have seen sequences used informally
-        in algebra or calculus.
+        sequence of real numbers.
       </p>
 
       <div class="definition">
-        A <strong>sequence</strong> of real numbers is a function $x \colon \N \to
-        \R$. Instead of $x(n),$ we
-        usually denote the $n$th element in the sequence by $x_n$. We
-        use the notation $\{ x_n \}$, or more precisely
-        \begin{equation*}
-        \{ x_n \}_{n=1}^\infty
-        \end{equation*}
-        to denote a sequence.
+        A <strong>sequence</strong> of real numbers is a function
+        from the set $\N$ of natural numbers to the set $\R$
+        of real numbers.
       </div>
 
       <p>
-        Other notations for $\{ x_n \}$ commonly used are:
-        $$\left(x_n\right)_{n=1}^{\infty} \quad \text{and} \quad \{ x_n \}_{n\in\N}.$$
+        Since we will consider only sequences of real numbers we
+        will usually say "sequence" instead of "sequence of real numbers".
+        Whenever we consider sequences whose values are not real numbers,
+        we will mention this explicitly.
       </p>
+
+      <p>
+        We will often use the following expression:
+        
+      </p>
+      <div style="text-align: center;">
+          "the sequence $x_1, x_2, \ldots, x_n,\ldots$"
+      </div>
+
+      <p>
+        What we mean by this is that we consider the sequence
+        $f: \N \to \R$ defined by
+        $$
+        f(n)= x_n\quad\text{for}\quad n\in\N.
+        $$
+      </p>
+
+      <p>
+        Let 
+        $$
+        x_1,  x_2, \ldots, x_n,\ldots
+        $$
+        be a sequence. The real numbers $x_1, x_2, \ldots, x_n,\ldots$ are called
+        the <em>terms</em> of the sequence; $x_1$ is the <em>first term</em>
+        of the sequence, $x_2$ is the <em>second term</em>
+        of the sequence, $\ldots$, $x_n$ is the $n$th <em>term</em>
+        of the sequence.
+      </p>
+
+
+
+      <p>
+       Instead of writing 
+       $$
+       x_1,  x_2, \ldots, x_n,\ldots
+       $$
+       we will sometimes write
+       $$
+        \{ x_n \}_{n=1}^{\infty},\quad\{ x_n \}_{k\in\N},\quad
+        \{x_n\},\quad\text{or}\quad\{ x_n \}_{n}.
+        $$
+      </p>
+
+      <p>
+        The notation for a sequence
+        is similar to that of a set. However, the notions are
+        different. For instance, the sequence $\{ {(-1)}^n \}$ is the sequence
+        $$-1,1,-1,1,-1,1,\ldots$$
+        whereas the set of values, the
+        <em>range of the sequence</em>,
+        is just the set $\{ -1, 1 \}.$ We can write this set
+        as $\{ {(-1)}^n : n \in \N \}.$ When ambiguity can arise, we use the words
+        <em>sequence</em> or <em>set</em>
+        to distinguish the two concepts.
+      </p>
+
+      
 
       <div class="definition">
         <ol>
@@ -167,25 +220,15 @@
         </p>
       </div>
 
-      <p>
-        The notation for a sequence
-        is similar to that of a set. However, the notions are
-        different. For instance, the sequence $\{ {(-1)}^n \}$ is the sequence
-        $$-1,1,-1,1,-1,1,\ldots$$
-        whereas the set of values, the
-        <em>range of the sequence</em>,
-        is just the set $\{ -1, 1 \}.$ We can write this set
-        as $\{ {(-1)}^n : n \in \N \}.$ When ambiguity can arise, we use the words
-        <em>sequence</em> or <em>set</em>
-        to distinguish the two concepts.
+      
 
+      <h3 id="convergence-of-sequeces">Convergence of sequences</h3>
+
+      <p>
         The following is one of the <em>most fundamental concepts</em> in this real analysis.
         You need to make
         sure you understand it thoroughly and you must be able to use it comfortably.
       </p>
-
-      <h3 id="convergence-of-sequeces">Convergence of sequences</h3>
-
       <div class="definition">
         <p>
           A sequence $\{ x_n \}$ is said to <em>converge</em> to a number
@@ -444,10 +487,10 @@
           $\abs{x_n - L} \lt 1$. Let $C_1 :=\abs{L}+1$ and note that for $n \geq N$, \begin{equation*} \begin{split}
           \abs{x_n} &amp;=\abs{x_n - L + L} \leq \abs{x_n - L} + \abs{L} \\ &amp; \lt 1 + \abs{L}=C_1 . \end{split}
           \end{equation*} The set $\{ \abs{x_1}, \abs{x_2}, \ldots, \abs{x_{N-1}} \}$ is a finite set and hence let
-          \begin{equation*} C_2 :=\max \{ \abs{x_1}, \abs{x_2}, \ldots, \abs{x_{N-1}} \} . \end{equation*} 
+          \begin{equation*} C_2 :=\max \{ \abs{x_1}, \abs{x_2}, \ldots, \abs{x_{N-1}} \} . \end{equation*}
           Let $B
           :=\max \{ C_1, C_2 \}$. Then for all $n \in \N$, \begin{equation*} \abs{x_n} \leq B.
-          \end{equation*} 
+          \end{equation*}
         </p>
       </div>
 
