@@ -606,7 +606,6 @@ overflow-x: auto;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #6106d7 !important;
   display: block;
-  overflow-x: auto;
 }
 
 .example::before {
