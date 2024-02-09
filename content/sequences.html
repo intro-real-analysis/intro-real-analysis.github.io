@@ -403,13 +403,49 @@
                 $$ \frac{1}{2} &gt; \abs{x_{n+1} - L} = \abs{-1 - L} .$$
               </span>
               But
-              <span class="responsive">$$\ds 2 = \abs{1 - L - (-1 -L)} \leq \abs{1 - L} + \abs{-1 -L}=1$$</span>
+              <span class="responsive">$$\ds 2 = \abs{1 - L - (-1 -L)} \leq \abs{1 - L} + \abs{-1 -L}\lt\frac{1}{2}+\frac{1}{2}=1$$</span>
               which is a contradiction!
             </p>
             <p>
               Therefore, the sequence $\{ {(-1)}^n \}$ is divergent.
             </p>
 
+          </div>
+
+          <p>
+            The proof of the following theorem shows another useful technique in analysis. Many proofs in real analysis
+            follow the same general scheme. In this case, we want to show a certain quantity is zero. Using the triangle
+            inequality we write the quantity as two quantities, and then we estimate each one by arbitrarily small
+            numbers.
+          </p>
+
+
+          <div class="theorem">
+            A convergent sequence has a unique limit.
+          </div>
+
+
+          <div class="proof">
+            Assume that the sequence $\{ x_n \}$ has limits $L_1$ and $L_2.$
+            Take an arbitrary $\vre &gt; 0$.
+            From the definition find an $N_1$ such that for all $n \geq N_1,$
+            $\abs{x_n-L_1} \lt \frac{\vre}{2}.$ Similarly, find an $N_2$
+            such that for all $n \geq N_2$, we have
+            $\abs{x_n-L_2} \lt \frac{\vre}{2}.$
+            Now take an $n$ such that $n \geq N_1$ and also $n \geq N_2,$ and estimate
+            <div class="scroll-wrapper">
+              \begin{equation*}
+              \begin{split}
+              \abs{L_2-L_1}
+              &amp; =
+              \abs{x_n-L_1 - (x_n -L_2)} \leq
+              \abs{x_n-L_1} + \abs{x_n -L_2} \lt
+              \frac{\vre}{2} + \frac{\vre}{2} = \vre .
+              \end{split}
+              \end{equation*}
+            </div>
+            Since $\abs{L_2-L_1} \lt \vre$ for all $\vre &gt; 0,$ then $\abs{L_2-L_1} = 0$
+            and $L_2=L_1$. Therefore the limit (if it exists) is unique.
           </div>
 
           
@@ -455,7 +491,7 @@
             <div class="proof">
               Let $\vre &gt; 0$ be arbitrary.
               Choose $N\in \N$ with $N&gt;\dfrac{1}{\vre}.$ Then, $n\geq N$ implies
-              $n &gt; \dfrac{1}{\vre}$ or $\vre &gt; \dfrac{1}{n}.$
+              $n &gt; \dfrac{1}{\vre}$ (or $\vre &gt; \dfrac{1}{n}$).
               Therefore, for all $n \geq N,$
               <div class="scroll-wrapper">
                 \begin{equation*}
@@ -470,7 +506,7 @@
             notion
             of limit into a mathematically rigorous statement. The logic involved is complicated and is intimately tied
             to
-            the use of the <em>quantifiers</em> “for all” and “there exists.” Learning to write a grammatically correct
+            the use of the <em>quantifiers</em> "for all" and "there exists". Learning to write a grammatically correct
             convergence proof goes hand in hand with a deep understanding of why the quantifiers appear in the order
             that
             they do.
@@ -484,8 +520,8 @@
           </p>
           <p>
             Looking at the previous example,
-            we see that our formal proof begins with, “Let $\vre&gt;0$ be an arbitrary
-            number.” This is followed by a construction of $N$ and then a
+            we see that our formal proof begins with, "Let $\vre&gt;0$ be an arbitrary
+            number." This is followed by a construction of $N$ and then a
             demonstration that this choice of $N$ has the
             desired property. This, in fact, is a basic outline for how
             every convergence proof should be presented.
@@ -549,49 +585,14 @@
 
           </div>
 
-          <h3>Useful results</h3>
-
-          <p>
-            The proof of the following theorem shows another useful technique in analysis. Many proofs in real analysis
-            follow the same general scheme. In this case, we want to show a certain quantity is zero. Using the triangle
-            inequality we write the quantity as two quantities, and then we estimate each one by arbitrarily small
-            numbers.
-          </p>
+          
 
 
-          <div class="theorem">
-            A convergent sequence has a unique limit.
-          </div>
-
-
-          <div class="proof">
-            Assume that the sequence $\{ x_n \}$ has limits $L_1$ and $L_2.$
-            Take an arbitrary $\vre &gt; 0$.
-            From the definition find an $N_1$ such that for all $n \geq N_1,$
-            $\abs{x_n-L_1} \lt \frac{\vre}{2}.$ Similarly, find an $N_2$
-            such that for all $n \geq N_2$, we have
-            $\abs{x_n-L_2} \lt \frac{\vre}{2}.$
-            Now take an $n$ such that $n \geq N_1$ and also $n \geq N_2,$ and estimate
-            <div class="scroll-wrapper">
-              \begin{equation*}
-              \begin{split}
-              \abs{L_2-L_1}
-              &amp; =
-              \abs{x_n-L_1 - (x_n -L_2)} \leq
-              \abs{x_n-L_1} + \abs{x_n -L_2} \lt
-              \frac{\vre}{2} + \frac{\vre}{2} = \vre .
-              \end{split}
-              \end{equation*}
-            </div>
-            Since $\abs{L_2-L_1} \lt \vre$ for all $\vre &gt; 0,$ then $\abs{L_2-L_1} = 0$
-            and $L_2=L_1$. Therefore the limit (if it exists) is unique.
-          </div>
+          
 
 
           <div class="theorem" id="theo:convergent-seq-bounded">
-            <p>
               A convergent sequence $\{ x_n \}$ is bounded.
-            </p>
           </div>
 
           <div class="proof">
