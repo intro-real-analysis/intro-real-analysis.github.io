@@ -258,7 +258,7 @@
           <p>
             Another way to represent the converge of a sequence is shown in the applet below.
             In this image we first think of the sequence as a graph, as it is a
-            function of $\N.$
+            function of $\N.$ <br/><strong>Drag below slider to plot sequence!</strong>
           </p>
 
           <figure>
@@ -269,7 +269,7 @@
 
             </div>
             <figcaption>
-              Convergence in two dimensions. <strong>Drag slider to plot sequence!</strong>
+              Convergence in two dimensions. 
             </figcaption>
           </figure>
 
@@ -336,8 +336,41 @@
 
           <p>
             Before proceeding further, we should give two examples of sequences 
-            which are not convergent in $\R.$
+            which are <em>divergent</em> (not convergent) in $\R.$
           </p>
+
+          <div class="example">
+            <p>
+              <strong>Claim:</strong> The sequence $\{ n \}_{n\in\N}$ is not convergent.
+            </p>
+            <p>
+              <span>
+                <strong>Proof.</strong>
+              </span>
+              <span>
+                Suppose that the sequence $1, 2, 3,\ldots $ converges to some 
+                number $y\in \R.$ Then given $\epsilon = \dfrac{1}{3},$ there
+                exists a $M\in\N$ such that
+              </span>
+              <div class="scroll-wrapper">
+                $$\abs{n-y}\lt \frac{1}{3} \quad \text{if}\quad n\geq M.$$
+              </div>
+            </p>
+            <p>
+              In particular, 
+              <div class="scroll-wrapper">
+                $$\abs{n-y}\lt \frac{1}{3} \quad \text{and}\quad \abs{M+1-y}\lt \frac{1}{3} $$
+              </div>
+              since $M\gt M+1 .$ We deduce that
+              <div class="scroll-wrapper">
+                $$1= \abs{\left(M+1\right)-M}\lt \abs{ M+1-y}+\abs{y-M}\lt \frac{1}{3}+\frac{1}{3}; $$ 
+              </div>
+              that is 
+              $$1\lt \frac{2}{3}.$$
+              Since the hypothesis that $1,2,3,\ldots$ converges in $\R$ leads to a contradiction
+              we conclude that this sequence does <em>not</em> converge in $\R.$
+            </p>
+          </div>
 
           <div class="example">
             <p>
@@ -376,9 +409,7 @@
 
           </div>
 
-          <div class="example">
-
-          </div>
+          
 
 
 
