@@ -899,7 +899,7 @@ iframe {
 .tooltip,
 .display-container {
   position: relative;
-  cursor:pointer;
+  cursor: pointer;
   color: hsl(0, 0%, 28%);
 }
 
@@ -927,10 +927,15 @@ iframe {
   width: 100%;
   min-width: 20em;
   z-index: 100;
-  left: 0; /* Align with left side of the viewport */
-  right: 0; /* Align with right side of the viewport */
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
-  max-width: calc(100% - 40px); /* Limit maximum width to ensure it fits within the viewport */
+  left: 0;
+  /* Align with left side of the viewport */
+  right: 0;
+  /* Align with right side of the viewport */
+  margin-left: auto;
+  /* Center horizontally */
+  margin-right: auto;
+  /* Center horizontally */
+  max-width: calc(100% - 40px);
+  /* Limit maximum width to ensure it fits within the viewport */
   border-radius: 8px;
 }
