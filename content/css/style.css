@@ -526,6 +526,7 @@ overflow-x: auto;
   clear: both;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #16b190 !important;
+  display: block;
 }
 
 .theorem::before {
@@ -542,6 +543,7 @@ overflow-x: auto;
   font-style: italic;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #3b87f9 !important;
+  display: block;
 }
 
 .lemma::before {
@@ -583,6 +585,7 @@ overflow-x: auto;
   clear: both;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #3b87f9 !important;
+  display: block;
 }
 
 .definition::before {
@@ -600,6 +603,7 @@ overflow-x: auto;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #6106d7 !important;
   margin-left: 10px;
+  display: block;
 }
 
 .example::before {
