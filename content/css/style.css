@@ -599,6 +599,7 @@ overflow-x: auto;
   font-style: normal;
   padding: 8px 16px 8px 16px;
   border-left: 5px solid #6106d7 !important;
+  margin-left: 10px;
 }
 
 .example::before {
