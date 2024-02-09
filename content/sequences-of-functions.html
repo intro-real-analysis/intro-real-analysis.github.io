@@ -21,6 +21,16 @@
   <link rel="stylesheet" href="css/xstyle.css">
   <link rel="stylesheet" href="css/prism/prism.css">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J95ZGQ0CCF');
+  </script>
+
 </head>
 
 <body data-type="book" id="top">
@@ -89,8 +99,8 @@
             We also say that $f_n \colon D \to \R$
             <strong>converges pointwise to $f$ on $E \subset D$</strong>
             for some $f \colon E \to \R$. In this context we mean
-            that 
-            $f(x) = \lim_{n\to\infty} f_n(x)$ for every $x \in E$. 
+            that
+            $f(x) = \lim_{n\to\infty} f_n(x)$ for every $x \in E$.
             In other words, the restrictions of $f_n$ to $E$ converge pointwise to $f$.
           </p>
 
@@ -160,9 +170,9 @@
             </figure>
             <p>
               In this case $f_n$ does not converge pointwise
-              to any function on any interval. However, it 
+              to any function on any interval. However, it
               may converge at certain points, such
-              as when $x=0$ or $x=\pi.$ 
+              as when $x=0$ or $x=\pi.$
               Try to prove as an exercise that in any interval
               $[a,b]$, there exists an $x$ such that $\sin(xn)$ does not have a limit
               as $n$ goes to infinity.
@@ -170,7 +180,7 @@
           </div>
 
           <p>
-           We can state pointwise
+            We can state pointwise
             convergence in a different way. It is a simple application of the
             definition of convergence of a sequence of real numbers.
           </p>
@@ -196,7 +206,7 @@
             <p>Coming soon! :)</p>
           </details>
 
-          
+
 
           <div class="definition">
             Let $f_n \colon D \to \R$
@@ -233,20 +243,20 @@
             The converse does not hold. For instance,
             the functions $f_n(x) \coloneqq x^{2n}$ do not converge uniformly on $[-1,1],$
             even though they converge pointwise. We can prove this by contradiction.
-            That is, assume that the convergence is uniform. 
-            Let's choose $\epsilon \coloneqq \dfrac{1}{2}$. 
-            Then there exists an $N\in\N$ such that 
-            <div class="scroll-wrapper">
-              $$x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}\quad \text{for all}\quad x \in (-1,1),$$
-            </div>
-            since $f_n(x)$  converges to 0 on $(-1,1)$. 
-            This means that for every sequence
-            $\{ x_k \}_{k=1}^\infty$ in $(-1,1)$
-            such that $\lim_{k\to\infty} x_k=1$, 
-            we have $x_k^{2N} \lt \dfrac{1}{2}$ for all $k.$
-            On the other hand, notice that
-            $x^{2N}$ is a continuous function of $x$ (it is a polynomial).
-            Therefore, we obtain
+            That is, assume that the convergence is uniform.
+            Let's choose $\epsilon \coloneqq \dfrac{1}{2}$.
+            Then there exists an $N\in\N$ such that
+          <div class="scroll-wrapper">
+            $$x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}\quad \text{for all}\quad x \in (-1,1),$$
+          </div>
+          since $f_n(x)$ converges to 0 on $(-1,1)$.
+          This means that for every sequence
+          $\{ x_k \}_{k=1}^\infty$ in $(-1,1)$
+          such that $\lim_{k\to\infty} x_k=1$,
+          we have $x_k^{2N} \lt \dfrac{1}{2}$ for all $k.$
+          On the other hand, notice that
+          $x^{2N}$ is a continuous function of $x$ (it is a polynomial).
+          Therefore, we obtain
           <div class="scroll-wrapper">
             \begin{equation*}
             1=1^{2N}=\lim_{k\to\infty} x_k^{2N} \leq \frac{1}{2} ,
@@ -291,7 +301,7 @@
             Let $f_n \colon S \to \R$
             and $f \colon S \to \R$
             be functions. The sequence $\{ f_n \}$ does not converge uniformly to $f$ if and only if
-            for some $\epsilon_0\gt  0$ there is a subsequence $\{ f_{n_k} \}$
+            for some $\epsilon_0\gt 0$ there is a subsequence $\{ f_{n_k} \}$
             of $\{ f_n \}$ and a sequence $\{ x_k \}$ in $S$ such that
             \begin{equation*}
             \abs{\,f_{n_k}\left(x_k\right)-f(x_k)}\geq \epsilon_0\; \text{ for all } \;k\in \N.
