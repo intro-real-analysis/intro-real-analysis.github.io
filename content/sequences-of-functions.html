@@ -223,19 +223,24 @@
           </figure>
 
           <p>
-            Let $\{ f_n \}_{n=1}^\infty$ be a sequence of functions $f_n \colon S \to \R.$
+            Let $\{ f_n \}_{n=1}^\infty$ be a sequence of functions $f_n \colon D \to \R.$
             If $\{ f_n \}_{n=1}^\infty$ converges
             uniformly to $f \colon S \to \R,$ then
             $\{ f_n \}_{n=1}^\infty$ converges pointwise to $f.$
           </p>
 
           <p>
-            The converse does not hold.
-            The functions $f_n(x) \coloneqq x^{2n}$ do not converge uniformly on $[-1,1],$
-            even though they converge pointwise. To see this, suppose for contradiction
-            that the convergence is uniform. For $\epsilon \coloneqq \frac{1}{2}$, there would have
-            to exist an $N$ such that $x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}$ for all $x \in (-1,1)$ (as $f_n(x)$
-            converges to 0 on $(-1,1)$). But that means that for every sequence
+            The converse does not hold. For instance,
+            the functions $f_n(x) \coloneqq x^{2n}$ do not converge uniformly on $[-1,1],$
+            even though they converge pointwise. We can prove this by contradiction.
+            That is, assume that the convergence is uniform. 
+            Let's choose $\epsilon \coloneqq \dfrac{1}{2}$. 
+            Then there would have to exist an $N$ such that 
+            <div class="scroll-wrapper">
+              $$x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}\quad \text{for all}\quad x \in (-1,1),$$
+            </div>
+            since $f_n(x)$  converges to 0 on $(-1,1)$. However 
+            this means that for every sequence
             $\{ x_k \}_{k=1}^\infty$ in $(-1,1)$
             such that $\lim_{k\to\infty} x_k=1$, we have $x_k^{2N} \lt \frac{1}{2}$ for all $k.$
             On the other hand,
