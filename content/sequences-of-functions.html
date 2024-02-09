@@ -235,12 +235,12 @@
             even though they converge pointwise. We can prove this by contradiction.
             That is, assume that the convergence is uniform. 
             Let's choose $\epsilon \coloneqq \dfrac{1}{2}$. 
-            Then there would have to exist an $N$ such that 
+            Then there exists an $N\in\N$ such that 
             <div class="scroll-wrapper">
               $$x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}\quad \text{for all}\quad x \in (-1,1),$$
             </div>
-            since $f_n(x)$  converges to 0 on $(-1,1)$. However 
-            this means that for every sequence
+            since $f_n(x)$  converges to 0 on $(-1,1)$. 
+            This means that for every sequence
             $\{ x_k \}_{k=1}^\infty$ in $(-1,1)$
             such that $\lim_{k\to\infty} x_k=1$, 
             we have $x_k^{2N} \lt \dfrac{1}{2}$ for all $k.$
@@ -258,12 +258,13 @@
 
           <p>
             However, if we restrict our domain to $[-a,a]$ where $0 \lt a \lt 1,$ then
-            $\{ f_n \}_{n=1}^\infty$ converges uniformly to 0 on $[-a,a].$ Note that
-            $a^{2n} \to 0$ as $n \to \infty.$ Given $\epsilon > 0,$
+            $\{ f_n \}_{n=1}^\infty$ converges uniformly to 0 on $[-a,a].$
+            Also note that
+            $a^{2n} \to 0$ as $n \to \infty.$ For every $\epsilon > 0,$
             pick $N \in \N$ such that
             $a^{2n} \lt \epsilon$ for all $n \geq N$.
             When $x \in [-a,a],$ we have
-            $\abs{x} \leq a.$ So
+            $\abs{x} \leq a.$ Thus
             for all $n \geq N$ and all $x \in [-a,a]$,
             \begin{equation*}
             \abs{x^{2n}} = \abs{x}^{2n} \leq a^{2n} \lt \epsilon .
