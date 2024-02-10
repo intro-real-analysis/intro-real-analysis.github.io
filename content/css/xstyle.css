@@ -37,7 +37,7 @@
     text-decoration: none;
     color: black !important;
     margin: 0 10px;
-    font-size: 1.1em;
+    font-size: 1.02em;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -79,7 +79,6 @@
 .content-hover-next {
     display: none;
 }
-
 
 .extra-text {
     position: relative;
