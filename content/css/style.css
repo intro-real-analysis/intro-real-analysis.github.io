@@ -113,6 +113,8 @@
   /* I added hover color */
   --summary: rgb(245, 245, 245);
   /* I added summary color */
+  --callout: rgb(217, 239, 255);
+  /* Call out box */
   --pre-bg-color: hsl(210, 28%, 93%);
   --kbd-bg-color: hsl(210, 5%, 100%);
   --kbd-border-color: hsl(210, 5%, 70%);
@@ -138,6 +140,8 @@
   /* I added this */
   --summary: hsla(0, 0%, 40%, 0.83);
   /* I added summary color */
+  --callout: rgba(217, 239, 255, 0.303);
+  /* Call out box */
   --pre-bg-color: hsl(0, 1%, 25%);
   --kbd-bg-color: hsl(0, 0%, 16%);
   --kbd-border-color: hsl(210, 5%, 70%);
@@ -157,6 +161,8 @@
     /* I added link color for hover */
     --summary: hsla(0, 0%, 40%, 0.83);
     /* I added summary color */
+    --callout: rgba(217, 239, 255, 0.303);
+    /* Call out box */
     --pre-bg-color: hsl(0, 1%, 25%);
     --kbd-bg-color: hsl(0, 0%, 16%);
     --kbd-border-color: hsl(210, 5%, 70%);
@@ -938,4 +944,16 @@ iframe {
   max-width: calc(100% - 40px);
   /* Limit maximum width to ensure it fits within the viewport */
   border-radius: 8px;
+}
+
+
+/* UPDATE CALLOUT BOX */
+.callout {
+  background-color: var(--callout);
+  border: 1px solid rgb(200, 200, 200);
+  padding: 1em;
+  margin-bottom: 1.3em;
+  text-align: left;
+  visibility: visible !important;
+  /* ios hack? */
 }
