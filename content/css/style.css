@@ -115,6 +115,8 @@
   /* I added summary color */
   --callout: rgb(217, 239, 255);
   /* Call out box */
+  --tooltip: hsl(0, 0%, 28%);
+  /* This color is for tooltip text */
   --pre-bg-color: hsl(210, 28%, 93%);
   --kbd-bg-color: hsl(210, 5%, 100%);
   --kbd-border-color: hsl(210, 5%, 70%);
@@ -142,6 +144,8 @@
   /* I added summary color */
   --callout: rgba(217, 239, 255, 0.303);
   /* Call out box */
+  --tooltip: hsl(0, 0%, 95%);
+  /* This color is for tooltip text */
   --pre-bg-color: hsl(0, 1%, 25%);
   --kbd-bg-color: hsl(0, 0%, 16%);
   --kbd-border-color: hsl(210, 5%, 70%);
@@ -163,6 +167,8 @@
     /* I added summary color */
     --callout: rgba(217, 239, 255, 0.303);
     /* Call out box */
+    --tooltip: hsl(0, 0%, 95%);
+  /* This color is for tooltip text */
     --pre-bg-color: hsl(0, 1%, 25%);
     --kbd-bg-color: hsl(0, 0%, 16%);
     --kbd-border-color: hsl(210, 5%, 70%);
@@ -906,7 +912,7 @@ iframe {
 .display-container {
   position: relative;
   cursor: pointer;
-  color: hsl(0, 0%, 28%);
+  color: var(--tooltip);
 }
 
 .tooltip .box-text {
