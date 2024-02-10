@@ -55,19 +55,19 @@
 }
 
 .content-original {
-    display: none;
+    display: inline;
 }
 
 .content-hover {
-    display: inline;
+    display: none;
 }
 
 .link:hover .content-original {
-    display: inline;
+    display: none;
 }
 
 .link:hover .content-hover {
-    display: none;
+    display: inline;
 }
 
 .extra-text {
