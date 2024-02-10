@@ -46,7 +46,6 @@
 
 .link:hover {
     background-color: rgba(222, 222, 222, 0.8);
-    font-weight: bold;
 }
 
 .arrow {
@@ -72,10 +71,16 @@
 
 .content-hover-previous {
     display: none;
+    background-color: rgba(222, 222, 222, 0.8);
+    border-radius: 10px;
+    padding: 0px 5px;
 }
 
 .content-hover-next {
     display: none;
+    background-color: rgba(222, 222, 222, 0.8);
+    border-radius: 10px;
+    padding: 0px 5px;
 }
 
 .extra-text {
