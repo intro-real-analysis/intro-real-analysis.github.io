@@ -49,6 +49,8 @@
     font-weight: bold;
 }
 
+
+
 .arrow {
     margin-right: 8px;
     margin-left: 8px;
@@ -69,6 +71,15 @@
 .link:hover .content-hover {
     display: inline;
 }
+
+.content-hover-previous {
+    display: none;
+}
+
+.content-hover-next {
+    display: none;
+}
+
 
 .extra-text {
     position: relative;

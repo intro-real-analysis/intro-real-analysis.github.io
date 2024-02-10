@@ -1,8 +1,8 @@
- // Dark mode function
- const darkModeToggle = document.getElementById('dark-mode-toggle')
- darkModeToggle.addEventListener('click', () => {
-     document.body.classList.toggle('latex-dark')
- })
+// Dark mode function
+const darkModeToggle = document.getElementById('dark-mode-toggle')
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('latex-dark')
+})
 
 /* 
  *  I need the following code to show modal with support message
@@ -102,8 +102,8 @@ function scrollToElementWithOffset(selector, offset) {
 
 // Adding event listeners to all links with the class 'scroll-link'
 var links = document.querySelectorAll('a[href^="#"]');
-links.forEach(function(link) {
-  link.addEventListener('click', function(event) {
+links.forEach(function (link) {
+  link.addEventListener('click', function (event) {
     event.preventDefault();
     var targetId = this.getAttribute('href');
     scrollToElementWithOffset(targetId, 50); // 50px offset
@@ -116,7 +116,7 @@ links.forEach(function(link) {
 let mybutton = document.getElementById("toTop");
 let prevScrollpos = window.scrollY;
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 // When the user scrolls down 500px from the top of the document, show the button
 function scrollFunction() {
@@ -136,5 +136,60 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+const leftLink = document.getElementById('left-link');
+const rightLink = document.getElementById('right-link');
+const centerLink = document.getElementById('center-link');
+
+leftLink.addEventListener('mouseenter', () => {
+  const contentOriginal = centerLink.querySelector('.content-original');
+  const contentHover = centerLink.querySelector('.content-hover-previous');
+  contentOriginal.style.display = 'none';
+  contentHover.style.display = 'inline';
+});
+
+leftLink.addEventListener('mouseleave', () => {
+  const contentOriginal = centerLink.querySelector('.content-original');
+  const contentHover = centerLink.querySelector('.content-hover-previous');
+  contentOriginal.style.display = 'inline';
+  contentHover.style.display = 'none';
+});
+
+rightLink.addEventListener('mouseenter', () => {
+  const contentOriginal = centerLink.querySelector('.content-original');
+  const contentHover = centerLink.querySelector('.content-hover-next');
+  contentOriginal.style.display = 'none';
+  contentHover.style.display = 'inline';
+});
+
+rightLink.addEventListener('mouseleave', () => {
+  const contentOriginal = centerLink.querySelector('.content-original');
+  const contentHover = centerLink.querySelector('.content-hover-next');
+  contentOriginal.style.display = 'inline';
+  contentHover.style.display = 'none';
+});
+
+centerLink.addEventListener('mouseenter', () => {
+  const contentOriginal = centerLink.querySelector('.content-original');
+  const contentHover = centerLink.querySelector('.content-hover');
+  const contentHoverLeft = centerLink.querySelector('.content-hover-previous');
+  const contentHoverRight = centerLink.querySelector('.content-hover-next');
+  contentHoverLeft.style.display = "none";
+  contentHoverRight.style.display = "none";
+  contentOriginal.style.display = 'none';
+  contentHover.style.display = 'inline';
+});
+
+centerLink.addEventListener('mouseleave', () => {
+  const contentOriginal = centerLink.querySelector('.content-original');
+  const contentHover = centerLink.querySelector('.content-hover');
+  const contentHoverLeft = centerLink.querySelector('.content-hover-previous');
+  const contentHoverRight = centerLink.querySelector('.content-hover-next');
+  contentHoverLeft.style.display = "none";
+  contentHoverRight.style.display = "none";
+  contentOriginal.style.display = 'inline';
+  contentHover.style.display = 'none';
+});
+
 
 includeHTML(); 
