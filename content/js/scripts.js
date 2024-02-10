@@ -141,55 +141,51 @@ const leftLink = document.getElementById('left-link');
 const rightLink = document.getElementById('right-link');
 const centerLink = document.getElementById('center-link');
 
-leftLink.addEventListener('mouseenter', () => {
-  const contentOriginal = centerLink.querySelector('.content-original');
-  const contentHover = centerLink.querySelector('.content-hover-previous');
-  contentOriginal.style.display = 'none';
-  contentHover.style.display = 'inline';
+// Function to handle hover events for links
+function handleLinkHover(event, originalSelector, hoverSelector) {
+  // Find the original and hover content elements
+  const contentOriginal = centerLink.querySelector(originalSelector);
+  const contentHover = centerLink.querySelector(hoverSelector);
+
+  // Toggle display based on event type
+  if (event.type === 'mouseenter') {
+    contentOriginal.style.display = 'none';
+    contentHover.style.display = 'inline';
+  } else if (event.type === 'mouseleave') {
+    contentOriginal.style.display = 'inline';
+    contentHover.style.display = 'none';
+  }
+}
+
+// Add event listeners for left link
+leftLink.addEventListener('mouseenter', (event) => {
+  handleLinkHover(event, '.content-original', '.content-hover-previous');
 });
 
-leftLink.addEventListener('mouseleave', () => {
-  const contentOriginal = centerLink.querySelector('.content-original');
-  const contentHover = centerLink.querySelector('.content-hover-previous');
-  contentOriginal.style.display = 'inline';
-  contentHover.style.display = 'none';
+leftLink.addEventListener('mouseleave', (event) => {
+  handleLinkHover(event, '.content-original', '.content-hover-previous');
 });
 
-rightLink.addEventListener('mouseenter', () => {
-  const contentOriginal = centerLink.querySelector('.content-original');
-  const contentHover = centerLink.querySelector('.content-hover-next');
-  contentOriginal.style.display = 'none';
-  contentHover.style.display = 'inline';
+// Add event listeners for right link
+rightLink.addEventListener('mouseenter', (event) => {
+  handleLinkHover(event, '.content-original', '.content-hover-next');
 });
 
-rightLink.addEventListener('mouseleave', () => {
-  const contentOriginal = centerLink.querySelector('.content-original');
-  const contentHover = centerLink.querySelector('.content-hover-next');
-  contentOriginal.style.display = 'inline';
-  contentHover.style.display = 'none';
+rightLink.addEventListener('mouseleave', (event) => {
+  handleLinkHover(event, '.content-original', '.content-hover-next');
 });
 
-centerLink.addEventListener('mouseenter', () => {
-  const contentOriginal = centerLink.querySelector('.content-original');
-  const contentHover = centerLink.querySelector('.content-hover');
-  const contentHoverLeft = centerLink.querySelector('.content-hover-previous');
-  const contentHoverRight = centerLink.querySelector('.content-hover-next');
-  contentHoverLeft.style.display = "none";
-  contentHoverRight.style.display = "none";
-  contentOriginal.style.display = 'none';
-  contentHover.style.display = 'inline';
+// Add event listeners for center link
+centerLink.addEventListener('mouseenter', (event) => {
+  // When hovering on center link, show general hover content
+  handleLinkHover(event, '.content-original', '.content-hover');
 });
 
-centerLink.addEventListener('mouseleave', () => {
-  const contentOriginal = centerLink.querySelector('.content-original');
-  const contentHover = centerLink.querySelector('.content-hover');
-  const contentHoverLeft = centerLink.querySelector('.content-hover-previous');
-  const contentHoverRight = centerLink.querySelector('.content-hover-next');
-  contentHoverLeft.style.display = "none";
-  contentHoverRight.style.display = "none";
-  contentOriginal.style.display = 'inline';
-  contentHover.style.display = 'none';
+centerLink.addEventListener('mouseleave', (event) => {
+  // When leaving center link, show original content
+  handleLinkHover(event, '.content-original', '.content-hover');
 });
+
 
 
 includeHTML(); 
