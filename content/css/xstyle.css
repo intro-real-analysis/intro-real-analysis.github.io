@@ -44,10 +44,6 @@
     border-radius: 10px;
 }
 
-.link:hover {
-    background-color: rgba(222, 222, 222, 0.8);
-}
-
 .arrow {
     margin-right: 8px;
     margin-left: 8px;
@@ -55,28 +51,11 @@
 
 .content-original {
     display: inline;
-}
-
-.content-hover {
-    display: none;
-}
-
-.link:hover .content-original {
-    display: none;
-}
-
-.link:hover .content-hover {
-    display: inline;
-}
-
-.content-hover-previous {
-    display: none;
-    background-color: rgba(222, 222, 222, 0.8);
     border-radius: 10px;
     padding: 0px 5px;
 }
 
-.content-hover-next {
+.content-hover, .content-hover-previous, .content-hover-next {
     display: none;
     background-color: rgba(222, 222, 222, 0.8);
     border-radius: 10px;
