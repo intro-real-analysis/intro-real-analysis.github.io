@@ -6,6 +6,7 @@
  * 
  * This version has some minor changes
  * by Juan Carlos Ponce Campuzano, 7/Feb/2024
+ * - Added font awesome
  * - Numbered examples with left colored bar
  * - A callout box for important messages
  * - Responsive iframes (so far, it works for GeoGebra iframes)
@@ -13,6 +14,8 @@
  * - Left colored bars and border for definitions, theorems and lemmas
  * - A tooltip for displaying extra info on hover
 */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 
 @font-face {
   font-family: 'Latin Modern';
