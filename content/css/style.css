@@ -6,6 +6,11 @@
  * 
  * This version has some minor changes
  * by Juan Carlos Ponce Campuzano, 7/Feb/2024
+ * - Tip navigation bar
+ * - ToTop button on the right-bottom corner
+ * - Numbered examples
+ * - A callout box for important messages
+ * - 
 */
 
 @font-face {
@@ -106,17 +111,17 @@
 :root {
   --body-color: hsl(0, 5%, 10%);
   --body-bg-color: hsl(210, 20%, 98%);
-  /* I changed link visited this */
+  /* Changed color link visited */
   --link-visited: hsl(194, 100%, 26%);
   --link-focus-outline: hsl(220, 90%, 52%);
   --link-hover: hsl(220, 90%, 52%);
-  /* I added hover color */
+  /* Added hover color */
   --summary: rgb(245, 245, 245);
-  /* I added summary color */
+  /* Added summary color */
   --callout: rgb(217, 239, 255);
-  /* Call out box */
+  /* Adde color for call out box */
   --tooltip: hsl(0, 0%, 28%);
-  /* This color is for tooltip text */
+  /* Added color for tooltip text */
   --pre-bg-color: hsl(210, 28%, 93%);
   --kbd-bg-color: hsl(210, 5%, 100%);
   --kbd-border-color: hsl(210, 5%, 70%);
@@ -139,13 +144,13 @@
   --link-visited: hsl(196 80% 77%);
   --link-focus-outline: hsl(215, 63%, 73%);
   --link-hover: hsl(220, 88%, 63%);
-  /* I added this */
+  /* Added color hover */
   --summary: hsla(0, 0%, 40%, 0.83);
-  /* I added summary color */
+  /* Added summary color */
   --callout: rgba(217, 239, 255, 0.303);
-  /* Call out box */
+  /* Added color for call out box */
   --tooltip: hsl(0, 0%, 95%);
-  /* This color is for tooltip text */
+  /* Added color for tooltip text */
   --pre-bg-color: hsl(0, 1%, 25%);
   --kbd-bg-color: hsl(0, 0%, 16%);
   --kbd-border-color: hsl(210, 5%, 70%);
@@ -162,13 +167,13 @@
     --link-visited: hsl(196 80% 77%);
     --link-focus-outline: hsl(215, 63%, 73%);
     --link-hover: hsl(220, 88%, 63%);
-    /* I added link color for hover */
+    /* Added link color for hover */
     --summary: hsla(0, 0%, 40%, 0.83);
-    /* I added summary color */
+    /* Added summary color */
     --callout: rgba(217, 239, 255, 0.303);
-    /* Call out box */
+    /* Added colos for call out box */
     --tooltip: hsl(0, 0%, 95%);
-  /* This color is for tooltip text */
+    /* Added color for tooltip text */
     --pre-bg-color: hsl(0, 1%, 25%);
     --kbd-bg-color: hsl(0, 0%, 16%);
     --kbd-border-color: hsl(210, 5%, 70%);
