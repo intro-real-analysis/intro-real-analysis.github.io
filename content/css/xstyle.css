@@ -304,8 +304,8 @@ footer {
     font-weight: bold;
     border: none;
     outline: none;
-    background-color: rgba(118, 118, 118, 0.567);
-    color: rgb(242, 241, 241);
+    background-color: rgba(145, 145, 145, 0.567);
+    color: rgb(237, 237, 237);
     cursor: pointer;
     width: 50px; /* Adjust button width */
     height: 50px; /* Adjust button height */
@@ -316,7 +316,7 @@ footer {
   }
   
   #toTop:hover {
-    background-color: #555;
+    background-color: #747474;
   }
 
   
