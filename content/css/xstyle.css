@@ -304,11 +304,15 @@ footer {
     font-weight: bold;
     border: none;
     outline: none;
-    background-color: rgba(118, 118, 118, 0.667);
+    background-color: rgba(118, 118, 118, 0.567);
     color: rgb(242, 241, 241);
     cursor: pointer;
-    padding: 10px;
-    border-radius: 20px;
+    width: 50px; /* Adjust button width */
+    height: 50px; /* Adjust button height */
+    line-height: 40px; /* Adjust line-height to center text vertically */
+    text-align: center; /* Center text horizontally */
+    padding: 0; /* Remove padding */
+    border-radius: 50%; /* Make it circular */
   }
   
   #toTop:hover {
