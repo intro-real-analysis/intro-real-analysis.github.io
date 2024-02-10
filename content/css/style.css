@@ -10,7 +10,9 @@
  * - ToTop button on the right-bottom corner
  * - Numbered examples
  * - A callout box for important messages
- * - 
+ * - Responsive iframes (so far, it works for GeoGebra iframes)
+ * - Numbered figures with centred captions
+ * - Left colored bars for definition, theorem, examples
 */
 
 @font-face {
