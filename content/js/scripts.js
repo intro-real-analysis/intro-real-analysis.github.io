@@ -106,7 +106,7 @@ links.forEach(function (link) {
   link.addEventListener('click', function (event) {
     event.preventDefault();
     var targetId = this.getAttribute('href');
-    scrollToElementWithOffset(targetId, 50); // 50px offset
+    scrollToElementWithOffset(targetId, 50); // 50px offset, I want it below the navbar
   });
 });
 
@@ -186,6 +186,5 @@ centerLink.addEventListener('mouseleave', (event) => {
   handleLinkHover(event, '.content-original', '.content-hover');
 });
 
-
-
+// Finally call this funciton to include HTML
 includeHTML(); 
