@@ -680,6 +680,9 @@ figcaption:before {
 summary {
   background-color: var(--summary);
 }
+summary:hover {
+  cursor: pointer;
+}
 
 /* My donate footer style */
 
