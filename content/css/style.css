@@ -711,10 +711,12 @@ summary:hover {
   font-size: 0.8rem;
   float: right;
   clear: right;
-  width: 18vw;
-  margin-right: -20vw;
+  width: 15vw;
+  margin-right: -17vw;
   margin-bottom: 1em;
   text-indent: 0;
+  line-height: 1.2em;
+  text-align: justify;
 }
 
 .sidenote.left {
@@ -777,7 +779,7 @@ input.sidenote-toggle {
   display: none;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1140px) {
   label.sidenote-toggle:not(.sidenote-number) {
     display: inline;
   }
