@@ -1,10 +1,14 @@
 /*
- A few extra features for LaTeX.css 
- by Juan Carlos Ponce Campuzano, 7/Feb/2024
+ A few extra features for LaTeX.css
 
  - Fixed top bar for navigation (requires JS)
  - Fixed right-bottom corner to go to the top (requires JS)
  - A modal to show extra info
+
+ by Juan Carlos Ponce Campuzano 7/Feb/2024
+ License: CC BY-NC-SA 4.0 DEED
+ Attribution-NonCommercial-ShareAlike 4.0 International
+ https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1
 */
 
 /* Fixed bar styles */

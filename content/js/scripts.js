@@ -1,3 +1,20 @@
+/*
+  Interaction for online textbook:
+
+  - Dark mode
+  - Modal
+  - Include HTML
+  - Scroll up to "id" tags for hyperlinks
+  - To top button
+  - Navigation bar interaction
+
+  by Juan Carlos Ponce Campuzano 7/Feb/2024
+  License: CC BY-NC-SA 4.0 DEED
+  Attribution-NonCommercial-ShareAlike 4.0 International
+  https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1
+
+*/
+
 /* Dark mode function */
 const darkModeToggle = document.getElementById('dark-mode-toggle')
 darkModeToggle.addEventListener('click', () => {
