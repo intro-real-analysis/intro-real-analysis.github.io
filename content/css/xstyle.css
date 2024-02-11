@@ -117,6 +117,9 @@
     #donate {
         font-size: 0.8em;
     }
+    .dark-mode-button{
+        display: none;
+    }
 }
 
 footer {
