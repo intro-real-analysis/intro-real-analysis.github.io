@@ -47,6 +47,12 @@
 .arrow {
     margin-right: 8px;
     margin-left: 8px;
+    padding: 0px 5px;
+}
+
+.arrow:hover {
+    background-color: rgba(222, 222, 222, 0.8);
+    border-radius: 10px;
 }
 
 .content-original {
