@@ -374,6 +374,9 @@ footer {
     text-decoration: none;
 }
 
+/*
+ https://benfrain.com/create-print-styles-using-css3-media-queries/
+*/
 @media print {
 
     #fixed-bar,
