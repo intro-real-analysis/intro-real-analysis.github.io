@@ -682,6 +682,7 @@ summary {
 }
 summary:hover {
   cursor: pointer;
+  color: rgb(121, 147, 196);
 }
 
 /* My donate footer style */
