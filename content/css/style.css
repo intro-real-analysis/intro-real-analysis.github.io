@@ -687,6 +687,7 @@ figcaption:before {
 summary {
   background-color: var(--summary);
 }
+
 summary:hover {
   cursor: pointer;
   color: rgb(121, 147, 196);
@@ -986,4 +987,29 @@ iframe {
   text-align: left;
   visibility: visible !important;
   /* ios hack? */
+}
+
+@media print {
+
+  #fixed-bar,
+  #left-link,
+  #right-link,
+  #center-link,
+  #toTop,
+  #dark-mode-toggle,
+  #donate,
+  footer,
+  .nextPage {
+    display: none;
+  }
+  body {
+    width: 90%;
+    margin: 10px;
+    padding: 10px 0px 10px 30px;
+  }
+
+  * {
+    color: #000;
+    background-color: #fff;
+  }
 }
