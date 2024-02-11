@@ -325,21 +325,39 @@ footer {
 }
 
 
-/* Custom list for alphabetic order */
-
-.custom-list {
+/* Custom lists for "ol" tag */
+/* Alphabetical small caps */
+.alpha-list {
     list-style-type: none;
     /* Remove default numbering */
     counter-reset: list-counter;
     /* Reset the counter */
 }
 
-.custom-list li {
+.alpha-list li {
     counter-increment: list-counter;
     /* Increment the counter */
 }
 
-.custom-list li:before {
+.alpha-list li:before {
     content: "(" counter(list-counter, lower-alpha) ") ";
+    /* Use lowercase letters with parentheses */
+}
+
+/* Roman small caps */
+.roman-list {
+    list-style-type: none;
+    /* Remove default numbering */
+    counter-reset: list-counter;
+    /* Reset the counter */
+}
+
+.roman-list li {
+    counter-increment: list-counter;
+    /* Increment the counter */
+}
+
+.roman-list li:before {
+    content: "(" counter(list-counter, lower-roman) ") ";
     /* Use lowercase letters with parentheses */
 }
