@@ -1,13 +1,13 @@
-// Dark mode function
+/* Dark mode function */
 const darkModeToggle = document.getElementById('dark-mode-toggle')
 darkModeToggle.addEventListener('click', () => {
   document.body.classList.toggle('latex-dark')
 })
 
 /* 
- *  I need the following code to show modal with support message
+ I need the following code to show 
+ modal for the "support message"
 */
-
 // Get the modal
 let modal = document.getElementById("myModal");
 
@@ -19,10 +19,6 @@ let span = document.getElementsByClassName("close")[0];
 //  modal.style.display = "block";
 //}
 
-/* 
-  The follwing function is to include an HTML file in the slides
-  Source: https://www.w3schools.com/howto/howto_html_include.asp
-*/
 function showMessage() {
   modal.style.display = "block";
 }
@@ -55,7 +51,10 @@ let myInterval = setInterval(function () {
 // 1200000 20 mins
 // 1800000 30 mins
 
-
+/* 
+  The follwing function is to include an HTML file in the slides
+  Source: https://www.w3schools.com/howto/howto_html_include.asp
+*/
 function includeHTML() {
   let z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
@@ -88,11 +87,12 @@ function includeHTML() {
   }
 };
 
+/* The following is to scroll up to the "id" tag for hyperlinks */
 // Function to handle smooth scrolling with offset
 function scrollToElementWithOffset(selector, offset) {
   var target = document.querySelector(selector);
   if (target) {
-    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    var targetPosition = target.getBoundingClientRect().top + window.scrollY - offset; // pageYOffset is deprecated :(
     window.scrollTo({
       top: targetPosition,
       behavior: 'smooth'
@@ -110,8 +110,7 @@ links.forEach(function (link) {
   });
 });
 
-
-// Button to the top
+/* Button to the top */
 // Get the button
 let mybutton = document.getElementById("toTop");
 let prevScrollpos = window.scrollY;
@@ -137,6 +136,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+/* Interaction with the fixed navbar on the top */
 const leftLink = document.getElementById('left-link');
 const rightLink = document.getElementById('right-link');
 const centerLink = document.getElementById('center-link');
