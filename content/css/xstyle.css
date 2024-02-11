@@ -121,7 +121,8 @@
     #donate {
         font-size: 0.8em;
     }
-    .dark-mode-button{
+
+    .dark-mode-button {
         display: none;
     }
 }
@@ -367,4 +368,35 @@ footer {
 .roman-list li:before {
     content: "(" counter(list-counter, lower-roman) ") ";
     /* Use lowercase letters with parentheses */
+}
+
+#license-link {
+    text-decoration: none;
+}
+
+@media print {
+
+    #fixed-bar,
+    #left-link,
+    #right-link,
+    #center-link,
+    #toTop,
+    #dark-mode-toggle,
+    #donate,
+    footer,
+    .nextPage,
+    .fa-arrow-up {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+        margin: 0px;
+        padding: 10px 20px 10px 20px;
+    }
+
+    * {
+        color: #000;
+        background-color: #fff;
+    }
 }
