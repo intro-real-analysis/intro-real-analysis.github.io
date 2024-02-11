@@ -1,4 +1,4 @@
-⭐️ Real Analysis project! ⭐️
+# ⭐️ Real Analysis project! ⭐️
 
 I am very excited to share with you an update about the Real Analysis project with interactive applets. 
 
