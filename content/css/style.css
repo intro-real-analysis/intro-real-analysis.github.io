@@ -217,6 +217,13 @@ html {
   }
 }
 
+/* Media query for smaller screens - Top bar */
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
 body.libertinus {
   font-family: 'Libertinus', Georgia, Cambria, 'Times New Roman', Times, serif;
 }
@@ -275,7 +282,7 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make links red */
+/* Make links blue */
 a,
 a:visited {
   color: var(--link-visited);
