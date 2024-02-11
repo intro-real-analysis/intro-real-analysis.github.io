@@ -61,14 +61,17 @@
     padding: 0px 5px;
 }
 
-.content-hover, .content-hover-previous, .content-hover-next {
+.content-hover,
+.content-hover-previous,
+.content-hover-next {
     display: none;
     background-color: rgba(222, 222, 222, 0.8);
     border-radius: 10px;
     padding: 0px 5px;
 }
 
-.dark-mode-button, .support-top-button {
+.dark-mode-button,
+.support-top-button {
     position: relative;
     left: 0px;
     margin-left: 5px;
@@ -271,7 +274,8 @@ footer {
     background-color: #6464d6;
     color: #f7f7f7f3;
     text-align: center;
-    font-size: 1.5em;;
+    font-size: 1.5em;
+    ;
 }
 
 .modal-body {
@@ -302,16 +306,40 @@ footer {
     background-color: rgba(145, 145, 145, 0.567);
     color: rgb(237, 237, 237);
     cursor: pointer;
-    width: 50px; /* Adjust button width */
-    height: 50px; /* Adjust button height */
-    line-height: 40px; /* Adjust line-height to center text vertically */
-    text-align: center; /* Center text horizontally */
-    padding: 0; /* Remove padding */
-    border-radius: 50%; /* Make it circular */
-  }
-  
-  #toTop:hover {
-    background-color: #747474;
-  }
+    width: 50px;
+    /* Adjust button width */
+    height: 50px;
+    /* Adjust button height */
+    line-height: 40px;
+    /* Adjust line-height to center text vertically */
+    text-align: center;
+    /* Center text horizontally */
+    padding: 0;
+    /* Remove padding */
+    border-radius: 50%;
+    /* Make it circular */
+}
 
-  
+#toTop:hover {
+    background-color: #747474;
+}
+
+
+/* Custom list for alphabetic order */
+
+.custom-list {
+    list-style-type: none;
+    /* Remove default numbering */
+    counter-reset: list-counter;
+    /* Reset the counter */
+}
+
+.custom-list li {
+    counter-increment: list-counter;
+    /* Increment the counter */
+}
+
+.custom-list li:before {
+    content: "(" counter(list-counter, lower-alpha) ") ";
+    /* Use lowercase letters with parentheses */
+}
