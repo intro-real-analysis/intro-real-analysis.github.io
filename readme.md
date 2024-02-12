@@ -15,3 +15,7 @@ This project is based on the following projects:
 - [LaTeX.CSS](https://github.com/vincentdoerig/latex-css) by Vincent Dörig
 - [LatexCSS](https://github.com/davidrzs/latexcss) by David Zollikofer
 - [Complex Analysis](https://github.com/complex-analysis) by Juan Carlos Ponce Campuzano
+
+## License
+
+**CC BY-NC-SA 4.0 DEED** Attribution-NonCommercial-ShareAlike 4.0 International
