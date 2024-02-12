@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Real Analysis - Sequences of functions</title>
+  <title>Real Analysis</title>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,9 +17,10 @@
   <link rel="icon" type="image/png" href="imgs/infinity32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="imgs/infinity16.png" sizes="16x16">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/xstyle.css">
-  <link rel="stylesheet" href="css/prism/prism.css">
+  <link rel="stylesheet" href="css/extra-style.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prism/prism.css">
+
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
@@ -30,318 +31,313 @@
 
     gtag('config', 'G-J95ZGQ0CCF');
   </script>
-
 </head>
 
 <body data-type="book" id="top">
 
+  <!-- Main DIV Starts here -->
   <div class="container">
-    <section data-type="chapter" id="sequences-9WN6hRW">
+    <section data-type="chapter" id="sequences-of-functions-YKzYhxw">
 
-      <!-- Starts main content -->
+  <!-- Starts main content -->
 
-      <p class="callout hide-large hide-medium"><strong>⚠️ Warning!</strong>
-        If you can see this message is because your screen is too small.
-        Hence, some applets won't be displayed correctly.
-        You can rotate your device to landscape.
-        Or resize your window so it's more wide than tall.
-      </p>
+  <p class="callout hide-large hide-medium"><strong>⚠️ Warning!</strong>
+    If you can see this message is because your screen is too small.
+    Hence, some applets won't be displayed correctly.
+    You can rotate your device to landscape.
+    Or resize your window so it's more wide than tall.
+  </p>
 
-      <div class="fixed-bar" id="fixed-bar">
-        <div class="link-container">
-          <a href="sequences.html" class="link" id="left-link">
-            <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
-          </a>
-          <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
-          <span class="support-top-button" id="donate" onclick="document.getElementById('myModal').style.display='block'">
-            <i class="fa-regular fa-heart"></i></span>
-        </div>
-        <div class="link">
-          <a href="../#table-of-contents" class="link" id="center-link">
-            <span class="content-hover-previous">Sequences</span>
-            <span class="content-hover">Table of Contents</span>            
-            <span class="content-original">Real Analysis</span>
-            <span class="content-hover-next">Coming soon!</span>
-          </a>
-        </div>
-        <a href="#" class="link" id="right-link">
-          <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
-        </a>
+  <div class="fixed-bar" id="fixed-bar">
+    <div class="link-container">
+      <a href="sequences.html" class="link" id="left-link">
+        <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+      <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
+      <span class="support-top-button" id="donate" onclick="document.getElementById('myModal').style.display='block'">
+        <i class="fa-regular fa-heart"></i></span>
+    </div>
+    <div class="link">
+      <a href="../#table-of-contents" class="link" id="center-link">
+        <span class="content-hover-previous">Sequences</span>
+        <span class="content-hover">Table of Contents</span>            
+        <span class="content-original">Real Analysis</span>
+        <span class="content-hover-next">Coming soon!</span>
+      </a>
+    </div>
+    <a href="#" class="link" id="right-link">
+      <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+  </div>
+
+  <br><br><br>
+
+  <header>
+    <h1>Sequences of functions</h1>
+
+  </header>
+
+  <main>
+    <article>
+
+      <h2 id="pointwise-convergence">Pointwise convergence</h2>
+
+      <div class="definition">
+        Let $S\subseteq \R$. For every $n \in \N$,
+        let $f_n \colon \to \R$ be a function. The sequence
+        $\{ f_n \}_{n=1}^\infty$
+        <strong>converges pointwise</strong> to $f \colon D\subseteq\R \to \R$ if for every $x
+        \in D$, then
+        \begin{equation*}
+        f(x) =
+        \lim_{n\to\infty} f_n(x) .
+        \end{equation*}
       </div>
 
-      <br><br><br>
 
-      <header>
-        <h1>Sequences of functions</h1>
+      <p>Limits of sequences of numbers are unique. That is, if a sequence
+        $\{ f_n \}_{n=1}^\infty$
+        converges pointwise, the limit function $f$ is unique.
+        We also say that $f_n \colon D \to \R$
+        <strong>converges pointwise to $f$ on $E \subset D$</strong>
+        for some $f \colon E \to \R$. In this context we mean
+        that
+        $f(x) = \lim_{n\to\infty} f_n(x)$ for every $x \in E$.
+        In other words, the restrictions of $f_n$ to $E$ converge pointwise to $f$.
+      </p>
 
-      </header>
-
-      <main>
-        <article>
-
-          <h2 id="pointwise-convergence">Pointwise convergence</h2>
-
-          <div class="definition">
-            Let $S\subseteq \R$. For every $n \in \N$,
-            let $f_n \colon \to \R$ be a function. The sequence
-            $\{ f_n \}_{n=1}^\infty$
-            <strong>converges pointwise</strong> to $f \colon D\subseteq\R \to \R$ if for every $x
-            \in D$, then
-            \begin{equation*}
-            f(x) =
-            \lim_{n\to\infty} f_n(x) .
-            \end{equation*}
-          </div>
-
-
-          <p>Limits of sequences of numbers are unique. That is, if a sequence
-            $\{ f_n \}_{n=1}^\infty$
-            converges pointwise, the limit function $f$ is unique.
-            We also say that $f_n \colon D \to \R$
-            <strong>converges pointwise to $f$ on $E \subset D$</strong>
-            for some $f \colon E \to \R$. In this context we mean
-            that
-            $f(x) = \lim_{n\to\infty} f_n(x)$ for every $x \in E$.
-            In other words, the restrictions of $f_n$ to $E$ converge pointwise to $f$.
-          </p>
-
-          <div class="example">
-            The sequence of functions defined on $[-1,1]$ by $f_n(x) \coloneqq x^{2n}$
-            converges pointwise to $f \colon [-1,1] \to \R,$ where
-            <div class="scroll-wrapper">
-              \begin{equation*}
-              f(x) =
-              \begin{cases}
-              1 & \text{if } x=-1 \text{ or } x=1, \\
-              0 & \text{otherwise.}
-              \end{cases}
-              \end{equation*}
-            </div>
+      <div class="example">
+        The sequence of functions defined on $[-1,1]$ by $f_n(x) \coloneqq x^{2n}$
+        converges pointwise to $f \colon [-1,1] \to \R,$ where
+        <div class="scroll-wrapper">
+          \begin{equation*}
+          f(x) =
+          \begin{cases}
+          1 &amp; \text{if } x=-1 \text{ or } x=1, \\
+          0 &amp; \text{otherwise.}
+          \end{cases}
+          \end{equation*}
+        </div>
 
 
-            <p>
-              Below, you can find a visual represenation of this sequence of functions.
-              Drag the slider below to explore the sequence for different values of $n$.
-            </p>
+        <p>
+          Below, you can find a visual represenation of this sequence of functions.
+          Drag the slider below to explore the sequence for different values of $n$.
+        </p>
 
-            <figure>
-              <iframe scrolling="no" title="Pointwise convergence"
-                src="https://www.geogebra.org/material/iframe/id/tqawquk4/width/507/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false"
-                width="507px" height="459px" style="border:0px;" allowfullscreen=""> </iframe>
-              <figcaption>
-                The sequence of functions defined on $[-1,1]$ by $f_n(x) \coloneqq x^{2n}.$
-              </figcaption>
-            </figure>
+        <figure>
+          <iframe scrolling="no" title="Pointwise convergence" src="https://www.geogebra.org/material/iframe/id/tqawquk4/width/507/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="507px" height="459px" style="border:0px;" allowfullscreen=""> </iframe>
+          <figcaption>
+            The sequence of functions defined on $[-1,1]$ by $f_n(x) \coloneqq x^{2n}.$
+          </figcaption>
+        </figure>
 
-            To prove that the sequence converges, consider $x \in (-1,1).$ Then
-            $0 \leq x^2 \lt 1$. This implies that
-            <div class="scroll-wrapper">
-              \begin{equation*}
-              \abs{x^{2n} - 0} = {(x^2)}^n \to 0 \quad \text{as} \quad n \to \infty .
-              \end{equation*}
-            </div>
+        To prove that the sequence converges, consider $x \in (-1,1).$ Then
+        $0 \leq x^2 \lt 1$. This implies that
+        <div class="scroll-wrapper">
+          \begin{equation*}
+          \abs{x^{2n} - 0} = {(x^2)}^n \to 0 \quad \text{as} \quad n \to \infty .
+          \end{equation*}
+        </div>
 
-            Hence, $\lim_{n\to\infty}f_n(x) = 0.$
+        Hence, $\lim_{n\to\infty}f_n(x) = 0.$
 
-            Now for $x = 1$ or $x=-1$, then we have that $x^{2n} = 1$ for all $n$ and therefore
-            $\lim_{n\to\infty}f_n(x) = 1.$
-            Finally, for $x\in \R\setminus[-1,1],$ the sequence
-            $\bigl\{ f_n(x) \bigr\}_{n=1}^\infty$ does not converge.
-          </div>
+        Now for $x = 1$ or $x=-1$, then we have that $x^{2n} = 1$ for all $n$ and therefore
+        $\lim_{n\to\infty}f_n(x) = 1.$
+        Finally, for $x\in \R\setminus[-1,1],$ the sequence
+        $\bigl\{ f_n(x) \bigr\}_{n=1}^\infty$ does not converge.
+      </div>
 
 
-          <div class="example">
-            Let $f_n:S\subseteq\R \to \R$ defined by $f_n(x) \coloneqq \sin(nx)$.
-            Is this sequence pointwise convergent? If so, over which interval $I$ does it
-            converge pointwise?
+      <div class="example">
+        Let $f_n:S\subseteq\R \to \R$ defined by $f_n(x) \coloneqq \sin(nx)$.
+        Is this sequence pointwise convergent? If so, over which interval $I$ does it
+        converge pointwise?
 
-            <p>
-              In the applet below you can appreciate the behaviour of $f_n$ defined on $\R$ for different
-              value of $n.$
-            </p>
+        <p>
+          In the applet below you can appreciate the behaviour of $f_n$ defined on $\R$ for different
+          value of $n.$
+        </p>
 
-            <figure>
-              <iframe scrolling="no" title="No pointwise convergence"
-                src="https://www.geogebra.org/material/iframe/id/uvmzrkpg/width/505/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false"
-                width="505px" height="459px" style="border:0px;" allowfullscreen="">
-              </iframe>
-              <figcaption>
-                The sequence of functions defined on $\R$ by $f_n(x) \coloneqq \sin(nx).$
-              </figcaption>
-            </figure>
-            <p>
-              In this case $f_n$ does not converge pointwise
-              to any function on any interval. However, it
-              may converge at certain points, such
-              as when $x=0$ or $x=\pi.$
-              Try to prove as an exercise that in any interval
-              $[a,b]$, there exists an $x$ such that $\sin(xn)$ does not have a limit
-              as $n$ goes to infinity.
-            </p>
-          </div>
+        <figure>
+          <iframe scrolling="no" title="No pointwise convergence" src="https://www.geogebra.org/material/iframe/id/uvmzrkpg/width/505/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="505px" height="459px" style="border:0px;" allowfullscreen="">
+          </iframe>
+          <figcaption>
+            The sequence of functions defined on $\R$ by $f_n(x) \coloneqq \sin(nx).$
+          </figcaption>
+        </figure>
+        <p>
+          In this case $f_n$ does not converge pointwise
+          to any function on any interval. However, it
+          may converge at certain points, such
+          as when $x=0$ or $x=\pi.$
+          Try to prove as an exercise that in any interval
+          $[a,b]$, there exists an $x$ such that $\sin(xn)$ does not have a limit
+          as $n$ goes to infinity.
+        </p>
+      </div>
 
-          <p>
-            We can state pointwise
-            convergence in a different way. It is a simple application of the
-            definition of convergence of a sequence of real numbers.
-          </p>
+      <p>
+        We can state pointwise
+        convergence in a different way. It is a simple application of the
+        definition of convergence of a sequence of real numbers.
+      </p>
 
-          <div class="theorem">
-            Let $f_n \colon D \to \R$ and $f \colon D \to \R$ be functions.
-            Then $\{ f_n \}_{n=1}^\infty$ converges pointwise to $f$ if and only if
-            for every $x \in D,$ and every $\epsilon > 0,$ there exists
-            an $N \in \N$ such that for all
-            $n \geq N,$ we have
-            <div class="scroll-wrapper">
-              \begin{equation*}
-              \abs{f_n(x)-f(x)} \lt \epsilon .
-              \end{equation*}
-            </div>
+      <div class="theorem">
+        Let $f_n \colon D \to \R$ and $f \colon D \to \R$ be functions.
+        Then $\{ f_n \}_{n=1}^\infty$ converges pointwise to $f$ if and only if
+        for every $x \in D,$ and every $\epsilon &gt; 0,$ there exists
+        an $N \in \N$ such that for all
+        $n \geq N,$ we have
+        <div class="scroll-wrapper">
+          \begin{equation*}
+          \abs{f_n(x)-f(x)} \lt \epsilon .
+          \end{equation*}
+        </div>
 
-          </div>
+      </div>
 
-          <details>
-            <summary>
-              <strong>Proof</strong>
-            </summary>
-            <p>Coming soon! :)</p>
+      <details>
+        <summary>
+          <strong>Proof</strong>
+        </summary>
+        <p>Coming soon! :)</p>
 
-            <img src="imgs/loadcat.gif">
-          </details>
+        <img src="imgs/loadcat.gif">
+      </details>
 
 
 
-          <div class="definition">
-            Let $f_n \colon D \to \R$
-            and $f \colon D \to \R$
-            be functions. The sequence $\{ f_n \}_{n=1}^\infty$
-            <strong>converges uniformly</strong> to $f$ if for
-            every $\epsilon > 0$, there exists an $N \in \N$ such that
-            for all $n \geq N$, we have
-            <div class="scroll-wrapper">
-              \begin{equation*}
-              \abs{f_n(x) - f(x)} \lt \epsilon \quad \text{for all } \quad x \in D.
-              \end{equation*}
-            </div>
-          </div>
+      <div class="definition">
+        Let $f_n \colon D \to \R$
+        and $f \colon D \to \R$
+        be functions. The sequence $\{ f_n \}_{n=1}^\infty$
+        <strong>converges uniformly</strong> to $f$ if for
+        every $\epsilon &gt; 0$, there exists an $N \in \N$ such that
+        for all $n \geq N$, we have
+        <div class="scroll-wrapper">
+          \begin{equation*}
+          \abs{f_n(x) - f(x)} \lt \epsilon \quad \text{for all } \quad x \in D.
+          \end{equation*}
+        </div>
+      </div>
 
-          <figure>
-            <iframe scrolling="no" title="Sequences of functions: Uniform convergence"
-              src="https://www.geogebra.org/material/iframe/id/k8vhgx2b/width/507/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false"
-              width="507px" height="459px" style="border:0px;" allowfullscreen="">
-            </iframe>
-            <figcaption>
-              Uniform convergence.
-            </figcaption>
-          </figure>
+      <figure>
+        <iframe scrolling="no" title="Sequences of functions: Uniform convergence" src="https://www.geogebra.org/material/iframe/id/k8vhgx2b/width/507/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="507px" height="459px" style="border:0px;" allowfullscreen="">
+        </iframe>
+        <figcaption>
+          Uniform convergence.
+        </figcaption>
+      </figure>
 
-          <p>
-            Let $\{ f_n \}_{n=1}^\infty$ be a sequence of functions $f_n \colon D \to \R.$
-            If $\{ f_n \}_{n=1}^\infty$ converges
-            uniformly to $f \colon S \to \R,$ then
-            $\{ f_n \}_{n=1}^\infty$ converges pointwise to $f.$
-          </p>
+      <p>
+        Let $\{ f_n \}_{n=1}^\infty$ be a sequence of functions $f_n \colon D \to \R.$
+        If $\{ f_n \}_{n=1}^\infty$ converges
+        uniformly to $f \colon S \to \R,$ then
+        $\{ f_n \}_{n=1}^\infty$ converges pointwise to $f.$
+      </p>
 
-          <p>
-            The converse does not hold. For instance,
-            the functions $f_n(x) \coloneqq x^{2n}$ do not converge uniformly on $[-1,1],$
-            even though they converge pointwise. We can prove this by contradiction.
-            That is, assume that the convergence is uniform.
-            Let's choose $\epsilon \coloneqq \dfrac{1}{2}$.
-            Then there exists an $N\in\N$ such that
-          <div class="scroll-wrapper">
-            $$x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}\quad \text{for all}\quad x \in (-1,1),$$
-          </div>
-          since $f_n(x)$ converges to 0 on $(-1,1)$.
-          This means that for every sequence
-          $\{ x_k \}_{k=1}^\infty$ in $(-1,1)$
-          such that $\lim_{k\to\infty} x_k=1$,
-          we have $x_k^{2N} \lt \dfrac{1}{2}$ for all $k.$
-          On the other hand, notice that
-          $x^{2N}$ is a continuous function of $x$ (it is a polynomial).
-          Therefore, we obtain
-          <div class="scroll-wrapper">
-            \begin{equation*}
-            1=1^{2N}=\lim_{k\to\infty} x_k^{2N} \leq \frac{1}{2} ,
-            \end{equation*}
-            which is a contradiction.
-          </div>
+      <p>
+        The converse does not hold. For instance,
+        the functions $f_n(x) \coloneqq x^{2n}$ do not converge uniformly on $[-1,1],$
+        even though they converge pointwise. We can prove this by contradiction.
+        That is, assume that the convergence is uniform.
+        Let's choose $\epsilon \coloneqq \dfrac{1}{2}$.
+        Then there exists an $N\in\N$ such that
+      </p><div class="scroll-wrapper">
+        $$x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}\quad \text{for all}\quad x \in (-1,1),$$
+      </div>
+      since $f_n(x)$ converges to 0 on $(-1,1)$.
+      This means that for every sequence
+      $\{ x_k \}_{k=1}^\infty$ in $(-1,1)$
+      such that $\lim_{k\to\infty} x_k=1$,
+      we have $x_k^{2N} \lt \dfrac{1}{2}$ for all $k.$
+      On the other hand, notice that
+      $x^{2N}$ is a continuous function of $x$ (it is a polynomial).
+      Therefore, we obtain
+      <div class="scroll-wrapper">
+        \begin{equation*}
+        1=1^{2N}=\lim_{k\to\infty} x_k^{2N} \leq \frac{1}{2} ,
+        \end{equation*}
+        which is a contradiction.
+      </div>
 
-          </p>
+      <p></p>
 
-          <p>
-            However, if we restrict our domain to $[-a,a]$ where $0 \lt a \lt 1,$ then
-            $\{ f_n \}_{n=1}^\infty$ converges uniformly to 0 on $[-a,a].$
-            Also note that
-            $a^{2n} \to 0$ as $n \to \infty.$ For every $\epsilon > 0,$
-            pick $N \in \N$ such that
-            $a^{2n} \lt \epsilon$ for all $n \geq N$.
-            When $x \in [-a,a],$ we have
-            $\abs{x} \leq a.$ Thus
-            for all $n \geq N$ and all $x \in [-a,a]$,
-            \begin{equation*}
-            \abs{x^{2n}} = \abs{x}^{2n} \leq a^{2n} \lt \epsilon .
-            \end{equation*}
-          </p>
+      <p>
+        However, if we restrict our domain to $[-a,a]$ where $0 \lt a \lt 1,$ then
+        $\{ f_n \}_{n=1}^\infty$ converges uniformly to 0 on $[-a,a].$
+        Also note that
+        $a^{2n} \to 0$ as $n \to \infty.$ For every $\epsilon &gt; 0,$
+        pick $N \in \N$ such that
+        $a^{2n} \lt \epsilon$ for all $n \geq N$.
+        When $x \in [-a,a],$ we have
+        $\abs{x} \leq a.$ Thus
+        for all $n \geq N$ and all $x \in [-a,a]$,
+        \begin{equation*}
+        \abs{x^{2n}} = \abs{x}^{2n} \leq a^{2n} \lt \epsilon .
+        \end{equation*}
+      </p>
 
-          <div class="example">
-            Let $f_n(x) := \dfrac{x}{n}$ defined on $\R$ for every $n\in \N.$
-            Observe that $\{f_n\}$ converges to $f=0,$ since
-            <div class="scroll-wrapper">
-              \begin{equation*}
-              \lim f_n(x) = \lim \frac{x}{n} = x\lim\frac{1}{n}=0 \;\text{ for all }\,x\in \R.
-              \end{equation*}
-            </div>
+      <div class="example">
+        Let $f_n(x) := \dfrac{x}{n}$ defined on $\R$ for every $n\in \N.$
+        Observe that $\{f_n\}$ converges to $f=0,$ since
+        <div class="scroll-wrapper">
+          \begin{equation*}
+          \lim f_n(x) = \lim \frac{x}{n} = x\lim\frac{1}{n}=0 \;\text{ for all }\,x\in \R.
+          \end{equation*}
+        </div>
 
-            If we let $n_k:=k$ and $x_k := k .$ Then $f_{n_k}(x_k)=1$
-            so that
-            \begin{equation*}
-            \abs{\,f_{n_k}(x_k)-f(x_k)}= \abs{1-0}=1.
-            \end{equation*}
+        If we let $n_k:=k$ and $x_k := k .$ Then $f_{n_k}(x_k)=1$
+        so that
+        \begin{equation*}
+        \abs{\,f_{n_k}(x_k)-f(x_k)}= \abs{1-0}=1.
+        \end{equation*}
 
-            Therefore the sequence $\{f_n\}$ does not converges uniformly to $f.$
-          </div>
+        Therefore the sequence $\{f_n\}$ does not converges uniformly to $f.$
+      </div>
 
-          <div class="theorem">
-            Let $f_n \colon S \to \R$
-            and $f \colon S \to \R$
-            be functions. The sequence $\{ f_n \}$ does not converge uniformly to $f$ if and only if
-            for some $\epsilon_0\gt 0$ there is a subsequence $\{ f_{n_k} \}$
-            of $\{ f_n \}$ and a sequence $\{ x_k \}$ in $S$ such that
-            \begin{equation*}
-            \abs{\,f_{n_k}\left(x_k\right)-f(x_k)}\geq \epsilon_0\; \text{ for all } \;k\in \N.
-            \end{equation*}
-          </div>
+      <div class="theorem">
+        Let $f_n \colon S \to \R$
+        and $f \colon S \to \R$
+        be functions. The sequence $\{ f_n \}$ does not converge uniformly to $f$ if and only if
+        for some $\epsilon_0\gt 0$ there is a subsequence $\{ f_{n_k} \}$
+        of $\{ f_n \}$ and a sequence $\{ x_k \}$ in $S$ such that
+        \begin{equation*}
+        \abs{\,f_{n_k}\left(x_k\right)-f(x_k)}\geq \epsilon_0\; \text{ for all } \;k\in \N.
+        \end{equation*}
+      </div>
 
-          <details>
-            <summary>
-              <strong>Proof</strong>
-            </summary>
-            <p>Coming soon! :)</p>
-            <p style="font-size: 1.5em;">$\log 😅  =💧\log 😄$</p>
-          </details>
+      <details>
+        <summary>
+          <strong>Proof</strong>
+        </summary>
+        <p>Coming soon! :)</p>
+        <p style="font-size: 1.5em;">$\log 😅  =💧\log 😄$</p>
+      </details>
 
-          <br/>
-          
+      <br>
+      
 
-          
-          
+      
+      
 
-          <br>
+      <br>
 
 
-        </article>
-      </main>
+    </article>
+  </main>
 
-      <button  onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-      <a href="#" style="text-decoration: none;">
-        <p class="nextPage">NEXT: Page</p>
-      </a>
-      <!-- Ends main content -->
+  <a href="#" style="text-decoration: none;">
+    <p class="nextPage">NEXT: Page</p>
+  </a>
+  <!-- Ends main content -->
 
-    </section>
+</section>
   </div>
+  <!-- Main DIV Ends here -->
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
@@ -361,8 +357,6 @@
             <strong>Patreon</strong></a>
           <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
         </div>
-
-
         <p>
           This project is made possible by the kindness of supporters like you.
           Your contributions enable me to maintain the site, uphold the applets,
@@ -374,9 +368,7 @@
           not monthly, you can use these links:
         </p>
 
-
         <div style="text-align: center;margin-top: 10px;" class="hide-small">
-
           <a class="modal-link" target="_blank"
             href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WTMTR7D8RYZ26&item_name=Your+support+will+help+me+to+improve+and+keep+up+to+date+the+applets+of+this+book.+Sincerely+appreciate+it%21&currency_code=AUD&source=url">
             <strong>❤️ <i class="fa-brands fa-paypal"></i> PayPal Me</strong>
@@ -399,10 +391,6 @@
             <strong>❤️ Buy a T-shirt</strong>
           </a>
         </div>
-
-
-
-
         <p>
           You can't contribute this time, no worries! Maybe you just want to:
         </p>
@@ -410,16 +398,6 @@
           <a class="modal-link" href="mailto:jcponcemath@gmail.com"><strong>Send a
               comment</strong></a>
         </div>
-
-
-        <!--
-          <br />
-          <p>You can also support this project by just filling out a quick survey:</p>
-          <div class="w3-center"><a class="w3-button w3-light-grey w3-round w3-hover-text-blue"
-          href="https://forms.gle/eYMGDeygzBwx6WKW7">Fill out survey!</a></div>
-          <br />
-          <div class="w3-center"><p>Merry Christmas 🎄 and Happy New Year! 🥳</p></div>
-        -->
         <br />
       </div>
       <div class="modal-footer">
@@ -433,6 +411,7 @@
   <hr>
 
   <footer>
+
     <span class="hide-small">
       <span style="font-weight: bold;">[</span>
       <a href="../"><i class="fa-solid fa-house"></i> Home</a>,
@@ -450,10 +429,9 @@
       <span style="font-weight: bold;">]</span>
     </span>
 
-
     <br />
 
-    <a style="text-decoration: none;" rel="license"
+    <a id="licence-link" rel="license"
       href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
       <i class="fa-brands fa-creative-commons"></i>&nbsp;
       <i class="fa-brands fa-creative-commons-by"></i>&nbsp;
@@ -461,8 +439,8 @@
       <i class="fa-brands fa-creative-commons-sa"></i>
     </a>
 
-
     <br />
+
     <!---<strong style="font-size: 18px">ISBN: ?????????</strong> <br>-->
     <strong>
       <span class="hide-small" style="font-size: 18px">&copy; Juan Carlos Ponce Campuzano
@@ -473,16 +451,12 @@
       </span>
     </strong>
 
-
   </footer>
-
-
 
   <script src="js/mathjax.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <script src="js/scripts.js"></script>
-
   <script async src="js/prism.js"></script>
 </body>
 
