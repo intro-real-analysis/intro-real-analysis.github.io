@@ -8,9 +8,10 @@ I am very excited to share with you an update about the Real Analysis project wi
 
 More info in my [Patreon page](https://www.patreon.com/posts/real-analysis-98129332?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link)
 
-## References
+## Acknowledgements
 
 This project is based on the following projects:
 
-- [LaTeX.CSS](https://github.com/vincentdoerig/latex-css)
-- [LatexCSS](https://github.com/davidrzs/latexcss)
+- [LaTeX.CSS](https://github.com/vincentdoerig/latex-css) by Vincent Dörig
+- [LatexCSS](https://github.com/davidrzs/latexcss) by David Zollikofer
+- [Complex Analysis](https://github.com/complex-analysis) by Juan Carlos Ponce Campuzano
