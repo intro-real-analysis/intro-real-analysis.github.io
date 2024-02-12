@@ -13,4 +13,4 @@ More info in my [Patreon page](https://www.patreon.com/posts/real-analysis-98129
 This project is based on the following projects:
 
 - [LaTeX.CSS](https://github.com/vincentdoerig/latex-css)
-- [LatexCSS](https://github.com/davidrzs/latexcss).
+- [LatexCSS](https://github.com/davidrzs/latexcss)
