@@ -383,23 +383,43 @@ footer {
     #left-link,
     #right-link,
     #center-link,
-    #toTop,
     #dark-mode-toggle,
     #donate,
     footer,
-    .nextPage,
-    .fa-arrow-up {
+    .nextPage {
         display: none;
     }
 
+    #toTop {
+        display: none !important;
+    }
+
     body {
-        width: 100%;
+        width: 95%;
         margin: 0px;
-        padding: 10px 20px 10px 20px;
+        padding: 10px 10px 20px 50px;
     }
 
     * {
         color: #000;
         background-color: #fff;
     }
+
+    label.sidenote-toggle:not(.sidenote-number) {
+        display: inline;
+    }
+
+    .sidenote {
+        display: none;
+    }
+
+    .sidenote-toggle+.sidenote {
+        display: block;
+        margin: 0.5rem 1.25rem 1rem 0.5rem;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+    }
+
 }
