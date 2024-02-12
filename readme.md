@@ -18,4 +18,4 @@ This project is based on the following projects:
 
 ## License
 
-**CC BY-NC-SA 4.0 DEED** Attribution-NonCommercial-ShareAlike 4.0 International
+**CC BY-NC-SA 4.0 DEED** [Attribution-NonCommercial-ShareAlike 4.0 International](https://github.com/intro-real-analysis/intro-real-analysis.github.io?tab=License-1-ov-file)
