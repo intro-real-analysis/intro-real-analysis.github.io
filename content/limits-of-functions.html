@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Real Analysis - Limits of functions</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An introduction to Real Analysis" />
+  <meta name="keywords" content="real, analysis, mathematics" />
+
+  <meta property="og:title" content="Real Analysis" />
+  <meta property="og:url" content="" />
+  <meta property="og:description" content="An introduction to Real Analysis" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/png" href="imgs/infinity32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="imgs/infinity16.png" sizes="16x16">
+
+  <link rel="stylesheet" href="css/extra-style.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prism/prism.css">
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J95ZGQ0CCF');
+  </script>
+</head>
+
+<body data-type="book" id="top">
+
+  <!-- Main DIV Starts here -->
+  <div class="container">
+    <section data-type="chapter" id="limits-of-functions">
+
+    <!-- Starts main content -->
+
+    <p class="callout hide-large hide-medium"><strong>⚠️ Warning!</strong>
+        If you can see this message is because your screen is too small.
+        Hence, some applets won't be displayed correctly.
+        You can rotate your device to landscape.
+        Or resize your window so it's more wide than tall.
+    </p>
+
+    <div class="fixed-bar" id="fixed-bar">
+        <div class="link-container">
+            <a href="sequences.html" class="link" id="left-link">
+                <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
+            </a>
+            <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
+            <span class="support-top-button" id="donate" onclick="document.getElementById('myModal').style.display='block'">
+                <i class="fa-regular fa-heart"></i></span>
+        </div>
+        <div class="link">
+            <a href="../#table-of-contents" class="link" id="center-link">
+                <span class="content-hover-previous">Sequences</span>
+                <span class="content-hover">Table of Contents</span>
+                <span class="content-original">Real Analysis</span>
+                <span class="content-hover-next">Coming soon!</span>
+            </a>
+        </div>
+        <a href="sequences-of-functions.html" class="link" id="right-link">
+            <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+    </div>
+
+    <br><br><br>
+
+    <header>
+        <h1>Limits of functions</h1>
+
+    </header>
+
+    <main>
+        <article>
+
+            <h2>Cluster points</h2>
+
+            <p>
+                To start talking about limits first we need the concept of
+                cluster point.
+            </p>
+
+            <div class="definition">
+                Let $S\subset \R$ be a set. A numbwer $x\in \R$ is called an
+                <strong>cluster point</strong> of $S$ if for every
+                $\vre &gt;0$, the set $\left( x- \vre , x + \vre \right) \cap S \setminus \{x\}$ is not empty.
+            </div>
+
+            <p>
+                Intuitively, $x$ is an cluster point of $S$ if there are points of $S$ arbitrarily close to $x.$ Notice
+                also that an cluster point of $S$ does not need to lie in $S.$
+            </p>
+
+            <div class="example">
+                Consider the set
+                <div class="scroll-wrapper">
+                    $$\left[0,1\right)\cup\left\{2\right\}=\{x\in\mathbb R: 0\leq x\lt 1\}\cup\left\{2\right\}.$$
+                </div>
+                $0$ is the only cluster point.
+                <img style="width: 100%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-01.svg">
+            </div>
+
+            <div class="example">
+                The set of cluster points for
+                <div class="scroll-wrapper">
+                    $$(0,1) = \left\{x\in \R~:~ 0\lt x\lt 1 \right\}$$
+                </div>
+                are all points in the closed interval $\left[0,1\right].$
+                <img style="width: 100%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-02.svg">
+            </div>
+
+            <div class="example">
+                The set of cluster points for
+                <div class="scroll-wrapper">
+                    $$\left[0,1\right)\cup\left\{2\right\}=\{x\in\mathbb R: 0\leq x\lt 1\}\cup\left\{2\right\}$$
+                </div>
+                is the interval $\left[0,1\right].$
+                <img style="width: 100%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-03.svg">
+            </div>
+
+            <div class="theorem">
+                A number $c \in \R$ is a cluster point of $S\subset $
+                if and only if
+                there exists a convergent sequence of numbers $\{ x_n \}_{n=1}^\infty$ such that
+                $x_n \not= c$ and $x_n \in S$ for all $n,$ and $\lim\limits_{n\to\infty} x_n = c.$
+            </div>
+
+            <div class="proof">
+                Suppose $c$ is a cluster point of $S.$
+                For every $n \in \N,$ pick $x_n$ to be an arbitrary point of
+                $$\left(c-\frac{1}{n},c+\frac{1}{n}\right) \cap S \setminus \{c\}.$$
+                Note that this is a nonempty set because $c$ is a cluster point of $S.$
+                Then
+                $x_n$ is within $\dfrac{1}{n}$ of $c.$ In other words,
+                \begin{equation*}
+                \abs{x_n-c} \lt \frac{1}{n} .
+                \end{equation*}
+                Since $\{ \frac{1}{n} \}_{n=1}^\infty$ converges
+                to
+                zero, $\{ x_n \}_{n=1}^\infty$ converges to $c$. Now, if we start with a sequence of numbers $\{ x_n
+                \}_{n=1}^\infty$ in $S$ converging to $c$ such that $x_n \not=c$ for all $n,$ then for every
+                $\epsilon&gt; 0$ there is an $N$ such that, in particular,
+                $\abs{x_N -c} \lt \varepsilon.$
+                That is,
+                $$x_N\in(c-\varepsilon,c+\varepsilon) \cap S \setminus \{c\}.$$
+            </div>
+
+            <h2>
+                Limits of functions
+            </h2>
+
+            <p>
+                If a function $f$ is defined on a set $S$ and $c$ is an cluster point of $S,$
+                then we define the limit of $f(x)$ as $x$ gets close to $c.$
+                It is irrelevant for the definition whether $f$ is defined at $c$ or not.
+                Even if the function is defined at $c,$ the limit of the
+                function as $x$ goes to $c$ can be totally different
+                from $f(c).$
+            </p>
+
+            <div class="definition">
+                Let $f \colon S \to \R$ be a function and $c$ an cluster point of $S \subset \R.$
+                Suppose there exists an $L \in \R$ and for every $\vre &gt; 0,$
+                there exists a $\delta &gt; 0$ such that whenever $x \in S \setminus \{ c \}$
+                and $\abs{x - c} \lt \delta,$ we have
+                \begin{equation*} \abs{f(x) - L} \lt \vre . \end{equation*}
+                We
+                then
+                say $f(x)$ <strong>converges</strong> to $L$ as $x$ goes to $c$ and $L$ is the
+                <strong>limit</strong> of $f(x)$ as $x$ goes to $c.$ We write
+                \begin{equation*}
+                \lim_{x \to c} f(x) :=L ,
+                \end{equation*}
+                or
+                \begin{equation*} f(x) \to L \quad\text{as}\quad x \to c . \end{equation*}
+                If no
+                such $L$ exists, then we say that the limit does not exist or that $f$
+                <strong>diverges</strong> at $c.$
+            </div>
+
+
+            <div class="example">
+
+
+                <p> <strong>Claim:</strong> $\displaystyle \lim_{x\ra 2} 3x+1 = 7$.</p>
+
+
+                <p>
+                    <strong>Discussion:</strong> For every $\vre &gt;0 $, we need to find a $\delta&gt;0$ so that
+                    \[
+                    \abs{x-2}\lt\delta \quad \implies \quad \abs{(3x+1) - 7}\lt \vre.
+                    \]
+                    So we start from what we want to estimate:
+                    \[
+                    \abs{(3x+1) - 7} = \abs{3x-6} = 3\abs{x-2}\lt 3 \delta
+                    \]
+                    If we choose $\delta := \vre/3$, then $\abs{(3x+1) - 7} \lt \vre $. Now we are ready to write a
+                    formal
+                    proof.
+                </p>
+
+                <p>
+                    <strong>Proof.</strong>
+                    Let $\vre &gt;0 $. Put $\delta := \vre/3$. Thus for all $x\in \R \setminus \{2\}$
+                </p><div class="scroll-wrapper">
+                    \[
+                    \abs{x-2}\lt \delta \quad \implies \quad \abs{(3x+1) - 7}\lt 3 \left(\frac{\vre}{3} \right) =
+                    \vre.\quad \bs
+                    \]
+                </div>
+                <p></p>
+            </div>
+
+            <div class="example">
+                <p>
+                    <strong>Claim:</strong> $\displaystyle \lim_{x\ra 2} x^2 = 4$.
+                </p>
+                <p>
+                    <strong>Discussion:</strong> Given an arbitrary $\vre &gt;0 $, our goal is to find a $\delta&gt;0$ so that
+                    \[
+                    \abs{x-2} \lt \delta \quad \implies \quad \abs{x^2 - 4}\lt \vre.
+                    \]
+                    Note that
+                    \begin{eqnarray}\label{eq:quadratic}
+                    \abs{x^2 - 4} = \abs{x+2}\abs{x-2}
+                    \end{eqnarray}
+                    Here we can make $\abs{x-2}$ as small as we like, but we need an upper bound on $\abs{x+2}$ in order
+                    to know how small to choose $\delta$. In this case, the presence of the factor $\abs{x+2}$ in the
+                    expression (\ref{eq:quadratic}) may cause some initial confusion, but keep in mind that we are
+                    discussing the limit as $x$ approaches $2$.
+                    So, we need to manipulate the inequality $\abs{x-2}\lt\delta$ in order to get an upper bound for
+                    $\abs{x+2}$, that is
+                    \begin{eqnarray*}
+                    &amp;\abs{x-2}&amp; \lt \delta \\
+                    -\delta \lt &amp; x-2 &amp; \lt \delta \\
+                    4 -\delta \lt&amp; x + 2 &amp; \lt 4 + \delta\\
+                    &amp;\abs{x+2}&amp; \lt \delta + 4
+                    \end{eqnarray*}
+                    If $\delta =1$, then $\abs{x+2} \lt 1+ 4 = 5 $.
+
+                    <br>
+                    Thus, if we choose $\delta := \min\{1, \vre / 5\}$, $\abs{x-2}\lt\delta$ implies $\abs{x^2 - 4} \lt
+                    \vre $. Now let's write the formal proof.
+                </p>
+
+                <p>
+                    Let $\vre &gt;0 $. Choose $\delta := \min\{1, \vre / 5\}$. For all $x\in \R \setminus \{2\}$ and
+                    $\abs{x-2}\lt \delta$, we have that \[ \abs{x^2-4} \lt \abs{x+2}\abs{x-2} \lt (5) \frac{\vre}{5} \lt
+                    \vre \] and the limit is proved.
+                </p>
+            </div>
+
+            <h2>Why cluster points? 🤔</h2>
+
+            <p>
+                At this point, it is likely you are asking yourself:
+                </p><blockquote>
+                    <strong>
+                        Why do we need the concept of cluster point in the definition of limit?
+                    </strong>
+                </blockquote>
+            <p></p>
+
+            <p>
+                To answer this question suppose \(c\) is not a cluster point of \(S\).
+                Then there exists some \(r\) such that the interval
+                \((c-r,c+r)\) contains no points in \(S\) other than \(c\) itself.
+            </p>
+            <p>
+                Then, for any function \(f\), choose any number \(L\).
+                Let \(\varepsilon\gt0\) be arbitrary and choose \(\delta = r.\)
+                Since there are no points \(x\in S\setminus\{c\}\)
+                such that \(|x-c|\lt\delta=r\),
+                then the statement:
+            </p><blockquote>
+                <strong>
+                    For every \(\varepsilon \gt 0\) there exists a \(\delta \gt 0\) such that
+
+                    if for every \(x\in S\setminus\{c\}\) and \(|x-c|\lt \delta\),
+                    then \(|f(x)-L|\lt \varepsilon\).
+                </strong>
+            </blockquote>
+            is vacuously true!
+
+            <p></p>
+
+            <br>
+
+
+        </article>
+    </main>
+
+
+
+    <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <a href="#" style="text-decoration: none;">
+        <p class="nextPage">NEXT: Sequences of functions</p>
+    </a>
+    <!-- Ends main content -->
+
+</section>
+  </div>
+  <!-- Main DIV Ends here -->
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span><br />
+        <strong>👋 Hello!</strong>
+      </div>
+      <div class="modal-body">
+        <p>
+          If you found this interactive textbook helpful, consider becoming a member in:
+        </p>
+        <div style="text-align: center;margin-top: 10px;">
+          <a class="modal-link" href="https://www.patreon.com/bePatron?u=10515025"><i class="fa-brands fa-patreon"></i>
+            <strong>Patreon</strong></a>
+          <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+        </div>
+        <p>
+          This project is made possible by the kindness of supporters like you.
+          Your contributions enable me to maintain the site, uphold the applets,
+          and, crucially, <strong>ensure it remains freely accessible</strong> to anyone eager to
+          explore this captivating field of mathematics <strong>—without any distracting ads</strong>.
+        </p>
+
+        <p>If you prefer to donate just once,
+          not monthly, you can use these links:
+        </p>
+
+        <div style="text-align: center;margin-top: 10px;" class="hide-small">
+          <a class="modal-link" target="_blank"
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WTMTR7D8RYZ26&item_name=Your+support+will+help+me+to+improve+and+keep+up+to+date+the+applets+of+this+book.+Sincerely+appreciate+it%21&currency_code=AUD&source=url">
+            <strong>❤️ <i class="fa-brands fa-paypal"></i> PayPal Me</strong>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <a class="modal-link" target="_blank" href="https://jcponcemath.secure-decoration.com/">
+            <strong>❤️ Buy a T-shirt</strong>
+          </a>
+        </div>
+        <div style="text-align: center;margin-top: 10px;" class="hide-medium hide-large">
+
+          <a class="modal-link" target="_blank"
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WTMTR7D8RYZ26&item_name=Your+support+will+help+me+to+improve+and+keep+up+to+date+the+applets+of+this+book.+Sincerely+appreciate+it%21&currency_code=AUD&source=url">
+            <strong>❤️ <i class="fa-brands fa-paypal"></i> PayPal Me</strong>
+          </a>
+          <br /><br />
+
+          <a class="modal-link" target="_blank" href="https://jcponcemath.secure-decoration.com/">
+            <strong>❤️ Buy a T-shirt</strong>
+          </a>
+        </div>
+        <p>
+          You can't contribute this time, no worries! Maybe you just want to:
+        </p>
+        <div style="text-align: center;margin-top: 10px;">
+          <a class="modal-link" href="mailto:jcponcemath@gmail.com"><strong>Send a
+              comment</strong></a>
+        </div>
+        <br />
+      </div>
+      <div class="modal-footer">
+        Thank you! 🙏 I highly appreciate your support! 🤗
+      </div>
+    </div>
+
+  </div>
+  <!-- The Modal ends -->
+
+  <hr>
+
+  <footer>
+
+    <span class="hide-small" id="footer-elements">
+      <span style="font-weight: bold;">[</span>
+      <a href="../"><i class="fa-solid fa-house"></i> Home</a>,
+      <a href="#"><i class="fa-solid fa-code"></i> Source</a>,
+      <a href="#"><i class="fa-solid fa-lightbulb"></i> Issues</a>,
+      <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
+        <i class="fa-solid fa-heart"></i> Support</span>
+      <span style="font-weight: bold;">]</span>
+    </span>
+    <span class="hide-medium hide-large" style="font-size: 0.85em;">
+      <span style="font-weight: bold;">[</span>
+      <a href="../"><i class="fa-solid fa-house"></i> Home</a> -
+      <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
+        <i class="fa-solid fa-heart"></i> Support</span>
+      <span style="font-weight: bold;">]</span>
+    </span>
+
+    <br />
+
+    <a id="licence-link" rel="license"
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
+      <i class="fa-brands fa-creative-commons"></i>
+      <i class="fa-brands fa-creative-commons-by"></i>
+      <i class="fa-brands fa-creative-commons-nc"></i>
+      <i class="fa-brands fa-creative-commons-sa"></i>
+    </a>
+
+    <br />
+
+    <!---<strong style="font-size: 18px">ISBN: ?????????</strong> <br>-->
+    <strong>
+      <span class="hide-small" style="font-size: 18px">&copy; Juan Carlos Ponce Campuzano
+        <script>document.write(new Date().getFullYear());</script>
+      </span>
+      <span class="hide-medium hide-large" style="font-size: 15px">&copy; J.C. Ponce Campuzano
+        <script>document.write(new Date().getFullYear());</script>
+      </span>
+    </strong>
+
+  </footer>
+
+  <script src="js/mathjax.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="js/scripts.js"></script>
+  <script async src="js/prism.js"></script>
+</body>
+
+</html>
