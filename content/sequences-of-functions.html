@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Real Analysis - Sequences of functions</title>
+  <title>Real Analysis</title>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -126,7 +126,7 @@
         </p>
 
         <figure>
-          <iframe scrolling="no" title="Pointwise convergence" src="https://www.geogebra.org/material/iframe/id/tqawquk4/width/507/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="507px" height="459px" style="border:0px;" allowfullscreen=""> </iframe>
+          <div id="ggb-element-ex-01"></div>
           <figcaption>
             The sequence of functions defined on $[-1,1]$ by $f_n(x) \coloneqq x^{2n}.$
           </figcaption>
@@ -160,8 +160,7 @@
         </p>
 
         <figure>
-          <iframe scrolling="no" title="No pointwise convergence" src="https://www.geogebra.org/material/iframe/id/uvmzrkpg/width/505/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="505px" height="459px" style="border:0px;" allowfullscreen="">
-          </iframe>
+          <div id="ggb-element-ex-02"></div>
           <figcaption>
             The sequence of functions defined on $\R$ by $f_n(x) \coloneqq \sin(nx).$
           </figcaption>
@@ -223,8 +222,7 @@
       </div>
 
       <figure>
-        <iframe scrolling="no" title="Sequences of functions: Uniform convergence" src="https://www.geogebra.org/material/iframe/id/k8vhgx2b/width/507/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="507px" height="459px" style="border:0px;" allowfullscreen="">
-        </iframe>
+        <div id="ggb-element-ex-03"></div>
         <figcaption>
           Uniform convergence.
         </figcaption>
@@ -327,6 +325,67 @@
 
     </article>
   </main>
+
+  <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+  
+  <!--<iframe scrolling="no" title="Pointwise convergence"
+            src="https://www.geogebra.org/material/iframe/id/tqawquk4/width/507/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false"
+            width="507px" height="459px" style="border:0px;" allowfullscreen=""> </iframe>
+  <iframe scrolling="no" title="No pointwise convergence"
+            src="https://www.geogebra.org/material/iframe/id/uvmzrkpg/width/505/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false"
+            width="505px" height="459px" style="border:0px;" allowfullscreen="">
+          </iframe>
+  <iframe scrolling="no" title="Sequences of functions: Uniform convergence"
+          src="https://www.geogebra.org/material/iframe/id/k8vhgx2b/width/507/height/459/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false"
+          width="507px" height="459px" style="border:0px;" allowfullscreen="">
+        </iframe>
+          -->
+  <script>
+    let example01 = {
+      "width": 507,
+      "height": 459,
+      "material_id": "tqawquk4",
+      "borderColor": "888888",
+      "playButton": false,
+      "showFullscreenButton": true,
+      "enableShiftDragZoom": false,
+      "showResetIcon": true
+    };
+    let applet01 = new GGBApplet(example01, true);
+    window.addEventListener("load", function () {
+      applet01.inject('ggb-element-ex-01');
+    });
+
+    let example02 = {
+      "width": 505,
+      "height": 459,
+      "material_id": "uvmzrkpg",
+      "borderColor": "888888",
+      "playButton": false,
+      "showFullscreenButton": true,
+      "enableShiftDragZoom": false,
+      "showResetIcon": true
+    };
+    let applet02 = new GGBApplet(example02, true);
+    window.addEventListener("load", function () {
+      applet02.inject('ggb-element-ex-02');
+    });
+
+    let example03 = {
+      "width": 507,
+      "height": 459,
+      "material_id": "k8vhgx2b",
+      "borderColor": "888888",
+      "playButton": false,
+      "showFullscreenButton": true,
+      "enableShiftDragZoom": false,
+      "showResetIcon": true
+    };
+    let applet03 = new GGBApplet(example03, true);
+    window.addEventListener("load", function () {
+      applet03.inject('ggb-element-ex-03');
+    });
+  </script>
 
   <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
