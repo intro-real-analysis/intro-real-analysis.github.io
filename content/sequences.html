@@ -60,7 +60,7 @@
     <div class="link">
       <a href="../#table-of-contents" class="link" id="center-link">
         <span class="content-hover-previous">Home</span>
-        <span class="content-hover">Table of Contents</span>            
+        <span class="content-hover">Table of Contents</span>
         <span class="content-original">Real Analysis</span>
         <span class="content-hover-next">Sequences of functions</span>
       </a>
@@ -167,7 +167,7 @@
             $-1, 1, -1, 1,\ldots,(-1)^n\ldots;$
           </li>
         </ol>
-        
+
       </div>
 
 
@@ -266,14 +266,11 @@
       <p>
         Another way to represent the converge of a sequence is shown in the applet below.
         In this image we first think of the sequence as a graph, as it is a
-        function of $\N.$ 
+        function of $\N.$
       </p>
 
       <figure>
-        <div class="myFrame">
-          <iframe scrolling="no" title="Convergence of sequences" src="https://www.geogebra.org/material/iframe/id/rmx2ud6p/width/572/height/402/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="572px" height="402px" style="border:0px;" allowfullscreen=""> </iframe>
-
-        </div>
+        <div id="ggb-element-sequences"></div>
         <figcaption>
           Convergence in two dimensions. Drag the slider to plot the sequence.
         </figcaption>
@@ -613,13 +610,31 @@
         \end{equation*}
       </div>
 
-      
 
       <br>
 
 
     </article>
   </main>
+
+  <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+  
+  <script>
+    let paramsSeq = {
+      "width": 572,
+      "height": 402,
+      "material_id": "rmx2ud6p",
+      "borderColor": "888888",
+      "playButton": false,
+      "showFullscreenButton": true,
+      "enableShiftDragZoom": false,
+      "showResetIcon": true
+    };
+    let appletSeq = new GGBApplet(paramsSeq, true);
+    window.addEventListener("load", function () {
+      appletSeq.inject('ggb-element-sequences');
+    });
+  </script>
 
   <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
