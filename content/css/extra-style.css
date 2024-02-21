@@ -18,7 +18,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 95%;
-    max-width: 85ch;
+    max-width: 89ch;
     height: 50px;
     background-color: hsla(210, 20%, 98%, 0.9);
     /* White with 30% transparency */
@@ -108,10 +108,11 @@
 @media only screen and (max-width: 500px) {
     .fixed-bar {
         width: 100%;
+        height: 40px;
     }
 
     .link {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     #dark-mode-toggle {
@@ -350,9 +351,83 @@ footer {
     /* Use lowercase letters with parentheses */
 }
 
+/* Biblio LaTeX */
+.bbtex-list {
+    list-style-type: none;
+    /* Remove default numbering */
+    counter-reset: list-counter;
+    margin-left: 0;
+    padding-left: 0;
+    /* Reset the counter */
+}
+
+.bbtex-list li {
+    text-align: justify;
+    counter-increment: list-counter;
+    display: block;
+    margin-left: 3.5em; 
+    /* Increment the counter */
+}
+
+.bbtex-list li:before {
+    content: "[" counter(list-counter, decimal) "]. ";
+    display: inline-block;
+    text-align: right;
+    width: 3em;                  /* Must be the maximum width of your list's numbers, including the ')', for compatability (in case you use a fixed-width font, for example).  Will have to beef up if using roman. */
+    padding-right: 0.5em;
+    margin-left: -3.5em; 
+    /* Use lowercase letters with parentheses */
+}
+
 #licence-link {
     text-decoration: none;
     font-size: 0.9em;
+}
+
+/* Styles for the table of contents */
+.toc-chapter {
+    font-size: 0.75em;
+    line-height: 1.5em;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px 20px 5px 10px;
+    max-height: calc(100vh - 40px); /* Adjust height as needed */
+    overflow-y: auto;
+    width: 245px;
+    max-width: 245px;
+    z-index: 10;
+  }
+  .toc-chapter p {
+    margin-top: 0;
+    margin-bottom: -10px;
+  }
+  
+  .toc-chapter ul {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  .toc-chapter li {
+    margin-left: 5px;
+  }
+ 
+   /* Highlighting active section */
+.active {
+    font-weight: bold;
+  }
+  .highlight {
+    text-decoration: none;
+    border-left: 3px solid #8cb5e785;
+    padding: 2px 2px;
+  }
+
+@media (max-width: 1325px) {
+    .toc-chapter {
+        display: none !important;
+    }
 }
 
 /*
@@ -367,7 +442,8 @@ footer {
     #dark-mode-toggle,
     #donate,
     #footer-elements,
-    .nextPage {
+    .nextPage,
+    .toc-chapter {
         display: none;
     }
 
@@ -404,3 +480,4 @@ footer {
     }
 
 }
+
