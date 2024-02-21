@@ -794,6 +794,10 @@ blockquote .sidenote {
   width: 18vw;
 }
 
+blockquote {
+  font-size: 0.9em;
+}
+
 
 label.sidenote-toggle {
   display: inline;
