@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-  <title>Real Analysis</title>
+  <title>  Sequences
+</title>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +24,8 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
+  <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -31,10 +33,33 @@
 
     gtag('config', 'G-J95ZGQ0CCF');
   </script>
+  -->
 </head>
 
 <body data-type="book" id="top">
 
+<div class="fixed-bar" id="fixed-bar">
+    <div class="link-container">
+        <a href="index.html" class="link" id="prev-link">
+            <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
+        </a>
+        <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
+        <span class="support-top-button" id="donate"
+            onclick="document.getElementById('myModal').style.display='block'">
+            <i class="fa-regular fa-heart"></i></span>
+    </div>
+    <div class="link">
+        <a href="table_of_contents.html" class="link" id="center-link">
+            <span class="content-hover-previous">Real Analysis</span>
+            <span class="content-hover">Table of Contents</span>
+            <span class="content-original">Complex Analysis</span>
+            <span class="content-hover-next">Limits of functions</span>
+        </a>
+    </div>
+    <a href="limits-of-functions.html" class="link" id="next-link">
+        <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+</div>
   <!-- Main DIV Starts here -->
   <div class="container">
     <section data-type="chapter" id="sequences">
@@ -48,39 +73,6 @@
     Or resize your window so it's more wide than tall.
   </p>
 
-  <div class="toc-chapter" id="toc-chapter">
-    <p><i class="fa-solid fa-list"></i>Contents</p>
-    <ul>
-      <li><a href="#section1">Definition</a></li>
-      <li><a href="#section2">Convergence of sequences</a></li>
-      <li><a href="#section3">Intuitive vs Rigorous</a></li>
-      <li><a href="#section4">Bounded sequences</a></li>
-      <!-- Add more sections as needed -->
-    </ul>
-  </div>
-
-  <div class="fixed-bar" id="fixed-bar">
-    <div class="link-container">
-      <a href="../" class="link" id="left-link">
-        <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-      <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
-      <span class="support-top-button" id="donate" onclick="document.getElementById('myModal').style.display='block'">
-        <i class="fa-regular fa-heart"></i></span>
-    </div>
-    <div class="link">
-      <a href="../#table-of-contents" class="link" id="center-link">
-        <span class="content-hover-previous">Home</span>
-        <span class="content-hover">Table of Contents</span>
-        <span class="content-original">Sequences</span>
-        <span class="content-hover-next">Limits of functions</span>
-      </a>
-    </div>
-    <a href="limits-of-functions.html" class="link" id="right-link">
-      <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-  </div>
-
   <br><br><br>
 
 
@@ -89,7 +81,7 @@
 
       <div id="section1">
 
-        <div class="head-1">Sequences</div>
+        <div class="head-1"><h1>Sequences</h1></div>
 
         <div id="definition" class="head-1 head-1-level2">Definition</div>
 
@@ -199,7 +191,7 @@
         <p>
           For instance $\left\{1/n\right\}_{n\in N}$ is the sequence in <a href="#one-over-n-sequence">Example
             1-(b)</a>.
-          The sequence $\{b_k\}_{k\in\N}$, where $b_k=1$ if $k$ is odd and $b_n=0$ if $k$ is even, is the
+          The sequence $\{b_k\}_{k\in\N},$ where $b_k=1$ if $k$ is odd and $b_n=0$ if $k$ is even, is the
           sequence in <a href="#one-zero-sequence">Example 1-(g)</a>.
         </p>
 
@@ -249,7 +241,7 @@
           that $\abs{x_n - L} \lt \epsilon$ for all $n \geq N.$
           <span>
             The number $L$
-            is said to be the <em>limit</em> of $\{ x_n \}$. We write
+            is said to be the <em>limit</em> of $\{ x_n \}.$ We write
             \begin{equation*}
             \lim_{n\to \infty} x_n := L .
             \end{equation*}
@@ -258,7 +250,7 @@
 
         <p>
           The illustration below can be a useful aid to understand the notion
-          of limit in $\R$. We obtain this illustration by "plotting"
+          of limit in $\R.$ We obtain this illustration by "plotting"
           the termns of the given sequence on the real line. In doing so,
           one must be aware that the same real number may appear more than once in the
           sequence. When we say that the sequence $\{x_n\}$ converges to $L\in \R$
@@ -294,7 +286,7 @@
 
         <div class="example">
 
-          The sequence $\{x_n\}_{n=1}^{\infty}$, where $x_n =c,$
+          The sequence $\{x_n\}_{n=1}^{\infty},$ where $x_n =c,$
           $\forall n \in \N$ and $c\in\R$ fixed.
 
 
@@ -303,7 +295,7 @@
             of a single constant $c$ repeating indefinitely.
           </span>
           <span>
-            It converges to $c$.
+            It converges to $c.$
           </span>
 
 
@@ -328,20 +320,20 @@
               <strong>Proof.</strong>
             </span>
             <span>
-              Given an $\vre &gt; 0$, we find an $N \in \N$ such that
+              Given an $\vre &gt; 0,$ we find an $N \in \N$ such that
               $0 \lt \dfrac{1}{N} \lt \vre$
 
             </span>
             <span>(thanks to the
               <span class="tooltip hover-theme"><strong>Archimedean property</strong>
                 <span id="mytooltip" class="box-text">
-                  If $x, y \in \R$ and $x &gt; 0$, then there exists an $n \in \N$ such that
+                  If $x, y \in \R$ and $x &gt; 0,$ then there exists an $n \in \N$ such that
                   $nx &gt; y .$
                 </span>
               </span> 😎).</span>
           </p>
           <p>
-            Then for all $n \geq N$,
+            Then for all $n \geq N,$
           </p>
           <div class="scroll-wrapper">
             $$\ds \abs{x_n - 0} = \abs{\frac{1}{n}} = \frac{1}{n} \leq \frac{1}{N}\lt \vre .\;\;\blacksquare$$
@@ -397,7 +389,7 @@
               <strong>Proof.</strong>
             </span>
             <span>
-              If there were a limit $L$,
+              If there were a limit $L,$
             </span>
             <span>
               then for $\vre = \dfrac{1}{2}$ we expect an $N$ that
@@ -444,10 +436,10 @@
 
         <div class="proof">
           Assume that the sequence $\{ x_n \}$ has limits $L_1$ and $L_2.$
-          Take an arbitrary $\vre &gt; 0$.
+          Take an arbitrary $\vre &gt; 0.$
           From the definition find an $N_1$ such that for all $n \geq N_1,$
           $\abs{x_n-L_1} \lt \frac{\vre}{2}.$ Similarly, find an $N_2$
-          such that for all $n \geq N_2$, we have
+          such that for all $n \geq N_2,$ we have
           $\abs{x_n-L_2} \lt \frac{\vre}{2}.$
           Now take an $n$ such that $n \geq N_1$ and also $n \geq N_2,$ and estimate
           <div class="scroll-wrapper">
@@ -462,7 +454,7 @@
             \end{equation*}
           </div>
           Since $\abs{L_2-L_1} \lt \vre$ for all $\vre &gt; 0,$ then $\abs{L_2-L_1} = 0$
-          and $L_2=L_1$. Therefore the limit (if it exists) is unique.
+          and $L_2=L_1.$ Therefore the limit (if it exists) is unique.
         </div>
       </div>
 
@@ -498,9 +490,9 @@
             We will initially work backward from our desired conclusion, but in the formal proof
             we will have to be sure our steps are reversible. In the present example, we want
             $$\abs{\frac{n+1}{n}-1} \lt \vre$$ and we want to know how big $n$ must be. So we will operate on this
-            inequality algebraically and try to "solve" for $n$. So, since
+            inequality algebraically and try to "solve" for $n.$ So, since
             $$\abs{\frac{n+1}{n}-1}=\frac{1}{n}\lt\vre,$$
-            we want $n&gt; \dfrac{1}{\vre}$. Thus, if our steps are reversible, choosing $N\in \N$ to be greater than
+            we want $n&gt; \dfrac{1}{\vre}.$ Thus, if our steps are reversible, choosing $N\in \N$ to be greater than
             $\dfrac{1}{\vre}$ implies $\abs{\frac{n+1}{n}-1} \lt \vre.$ With this observation, we are ready to write
             the formal argument.
           </p>
@@ -532,7 +524,7 @@
           The definition begins with the phrase
         </p>
         <p style="text-align: center;">
-          "For every $\vre&gt;0$, there exists $N\in \N$ such that ..."
+          "For every $\vre&gt;0,$ there exists $N\in \N$ such that ..."
         </p>
         <p>
           Looking at the previous example,
@@ -549,7 +541,7 @@
         <ul>
           <li>"Let $\vre &gt;0 $ be arbitrary."</li>
           <li>
-            Demonstrate a choice for $N \in \N$. This step usually requires the most work,
+            Demonstrate a choice for $N \in \N.$ This step usually requires the most work,
             almost all of which is done
             prior to actually writing the formal proof.
           </li>
@@ -557,7 +549,7 @@
             Now, show that $N$ actually works.
           </li>
           <li>
-            "Assume $n\geq N$."
+            "Assume $n\geq N.$"
           </li>
           <li>
             With $N$ well chosen, it should be possible to derive
@@ -611,9 +603,9 @@
         </div>
 
         <div class="proof">
-          Suppose $\{ x_n \}$ converges to $L$. Thus there exists an $N \in \N$
-          such that for all $n \geq N$, we have
-          $\abs{x_n - L} \lt 1$. Let $C_1 :=\abs{L}+1$ and note that for $n \geq N,$
+          Suppose $\{ x_n \}$ converges to $L.$ Thus there exists an $N \in \N$
+          such that for all $n \geq N,$ we have
+          $\abs{x_n - L} \lt 1.$ Let $C_1 :=\abs{L}+1$ and note that for $n \geq N,$
           <div class="scroll-wrapper">
             \begin{equation*} \begin{split}
             \abs{x_n} &amp;=\abs{x_n - L + L} \leq \abs{x_n - L} + \abs{L} \\ &amp; \lt 1 + \abs{L}=C_1 . \end{split}
@@ -624,7 +616,7 @@
             \begin{equation*} C_2 :=\max \{ \abs{x_1}, \abs{x_2}, \ldots, \abs{x_{N-1}} \} . \end{equation*}
           </div>
           Let $B
-          :=\max \{ C_1, C_2 \}$. Then for all $n \in \N$, \begin{equation*} \abs{x_n} \leq B.
+          :=\max \{ C_1, C_2 \}.$ Then for all $n \in \N,$ \begin{equation*} \abs{x_n} \leq B.
           \end{equation*}
         </div>
       </div>
@@ -693,7 +685,7 @@
   <!-- Main DIV Ends here -->
 
   <!-- The Modal -->
-  <div id="myModal" class="modal">
+<div id="myModal" class="modal">
 
     <!-- Modal content -->
     <div class="modal-content">
@@ -744,7 +736,7 @@
         </p>
         <div class="button-container">
           <button id="modal-link" >
-            <a href="mailto:jcponcemath@gmail.com"><strong>Send a
+            <a href="mailto:jcponcemath@gmail.com"><strong><i class="fa-solid fa-envelope"></i> Send a
               comment</strong></a>
           </button>
           
@@ -758,52 +750,40 @@
 
   </div>
   <!-- The Modal ends -->
-
   <hr>
 
-  <footer>
+<footer data-type="footer">
 
-    <span class="hide-small" id="footer-elements">
+    <span id="footer-elements">
       <span style="font-weight: bold;">[</span>
       <a href="../"><i class="fa-solid fa-house"></i> Home</a>,
-      <a href="#"><i class="fa-solid fa-code"></i> Source</a>,
-      <a href="#"><i class="fa-solid fa-lightbulb"></i> Issues</a>,
+      <a href="https://github.com/complex-analysis"><i class="fa-solid fa-code"></i> Source</a>,
+      <a href="https://github.com/complex-analysis/complex-analysis.github.io/issues"><i
+          class="fa-solid fa-lightbulb"></i> Issues</a>,
       <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
         <i class="fa-solid fa-heart"></i> Support</span>
       <span style="font-weight: bold;">]</span>
     </span>
-    <span class="hide-medium hide-large" style="font-size: 0.85em;">
-      <span style="font-weight: bold;">[</span>
-      <a href="../"><i class="fa-solid fa-house"></i> Home</a> -
-      <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
-        <i class="fa-solid fa-heart"></i> Support</span>
-      <span style="font-weight: bold;">]</span>
-    </span>
-
+  
     <br />
-
-    <a id="licence-link" rel="license"
-      href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
+  
+    <a id="licence-link" rel="license" href="license.html" target="_blank">
       <i class="fa-brands fa-creative-commons"></i>
       <i class="fa-brands fa-creative-commons-by"></i>
       <i class="fa-brands fa-creative-commons-nc"></i>
       <i class="fa-brands fa-creative-commons-sa"></i>
     </a>
-
+  
     <br />
-
-    <!---<strong style="font-size: 18px">ISBN: ?????????</strong> <br>-->
+  
+    <strong><span style="font-size: 0.9em;">ISBN: 978-0-6485736-0-9</span></strong><br>
     <strong>
-      <span class="hide-small" style="font-size: 18px">&copy; Juan Carlos Ponce Campuzano
-        <script>document.write(new Date().getFullYear());</script>
-      </span>
-      <span class="hide-medium hide-large" style="font-size: 15px">&copy; J.C. Ponce Campuzano
-        <script>document.write(new Date().getFullYear());</script>
+      <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
+        2019-<script>document.write(new Date().getFullYear());</script>
       </span>
     </strong>
-
+  
   </footer>
-
   <script src="js/mathjax.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 

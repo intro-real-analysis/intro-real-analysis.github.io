@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-  <title>Real Analysis</title>
+  <title>  Limits of functions
+</title>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +24,8 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
+  <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -31,10 +33,33 @@
 
     gtag('config', 'G-J95ZGQ0CCF');
   </script>
+  -->
 </head>
 
 <body data-type="book" id="top">
 
+<div class="fixed-bar" id="fixed-bar">
+    <div class="link-container">
+        <a href="sequences.html" class="link" id="prev-link">
+            <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
+        </a>
+        <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
+        <span class="support-top-button" id="donate"
+            onclick="document.getElementById('myModal').style.display='block'">
+            <i class="fa-regular fa-heart"></i></span>
+    </div>
+    <div class="link">
+        <a href="table_of_contents.html" class="link" id="center-link">
+            <span class="content-hover-previous">Sequences</span>
+            <span class="content-hover">Table of Contents</span>
+            <span class="content-original">Complex Analysis</span>
+            <span class="content-hover-next">Sequences of functions</span>
+        </a>
+    </div>
+    <a href="sequences-of-functions.html" class="link" id="next-link">
+        <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+</div>
   <!-- Main DIV Starts here -->
   <div class="container">
     <section data-type="chapter" id="limits-of-functions">
@@ -58,28 +83,6 @@
         </ul>
     </div>
 
-    <div class="fixed-bar" id="fixed-bar">
-        <div class="link-container">
-            <a href="sequences.html" class="link" id="left-link">
-                <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
-            </a>
-            <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
-            <span class="support-top-button" id="donate" onclick="document.getElementById('myModal').style.display='block'">
-                <i class="fa-regular fa-heart"></i></span>
-        </div>
-        <div class="link">
-            <a href="../#table-of-contents" class="link" id="center-link">
-                <span class="content-hover-previous">Sequences</span>
-                <span class="content-hover">Table of Contents</span>
-                <span class="content-original">Limits of functions</span>
-                <span class="content-hover-next">Sequences of functions</span>
-            </a>
-        </div>
-        <a href="sequences-of-functions.html" class="link" id="right-link">
-            <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-    </div>
-
     <br><br><br>
 
     <header>
@@ -92,7 +95,7 @@
 
             <div id="section1">
 
-                <div class="head-2">Limits of functions</div>
+                <div class="head-2"><h1>Limits of functions</h1></div>
                 <div class="head-2 head-2-level2">Cluster points</div>
 
                 <p>
@@ -103,7 +106,7 @@
                 <div class="definition">
                     Let $S\subset \R$ be a set. A numbwer $x\in \R$ is called an
                     <strong>cluster point</strong> of $S$ if for every
-                    $\vre &gt;0$, the set $\left( x- \vre , x + \vre \right) \cap S \setminus \{x\}$ is not empty.
+                    $\vre &gt;0,$ the set $\left( x- \vre , x + \vre \right) \cap S \setminus \{x\}$ is not empty.
                 </div>
 
                 <p>
@@ -158,7 +161,7 @@
                     \end{equation*}
                     Since $\{ \frac{1}{n} \}_{n=1}^\infty$ converges
                     to
-                    zero, $\{ x_n \}_{n=1}^\infty$ converges to $c$. Now, if we start with a sequence of numbers $\{ x_n
+                    zero, $\{ x_n \}_{n=1}^\infty$ converges to $c.$ Now, if we start with a sequence of numbers $\{ x_n
                     \}_{n=1}^\infty$ in $S$ converging to $c$ such that $x_n \not=c$ for all $n,$ then for every
                     $\epsilon&gt; 0$ there is an $N$ such that, in particular,
                     $\abs{x_N -c} \lt \varepsilon.$
@@ -210,11 +213,11 @@
                 <div class="example">
 
 
-                    <p> <strong>Claim:</strong> $\displaystyle \lim_{x\ra 2} 3x+1 = 7$.</p>
+                    <p> <strong>Claim:</strong> $\displaystyle \lim_{x\ra 2} 3x+1 = 7.$</p>
 
 
                     <p>
-                        <strong>Discussion:</strong> For every $\vre &gt;0 $, we need to find a $\delta&gt;0$ so that
+                        <strong>Discussion:</strong> For every $\vre &gt;0 ,$ we need to find a $\delta&gt;0$ so that
                         \[
                         \abs{x-2}\lt\delta \quad \implies \quad \abs{(3x+1) - 7}\lt \vre.
                         \]
@@ -222,14 +225,14 @@
                         \[
                         \abs{(3x+1) - 7} = \abs{3x-6} = 3\abs{x-2}\lt 3 \delta
                         \]
-                        If we choose $\delta := \vre/3$, then $\abs{(3x+1) - 7} \lt \vre $. Now we are ready to write a
+                        If we choose $\delta := \vre/3,$ then $\abs{(3x+1) - 7} \lt \vre .$ Now we are ready to write a
                         formal
                         proof.
                     </p>
 
                     <p>
                         <strong>Proof.</strong>
-                        Let $\vre &gt;0 $. Put $\delta := \vre/3$. Thus for all $x\in \R \setminus \{2\}$
+                        Let $\vre &gt;0 .$ Put $\delta := \vre/3.$ Thus for all $x\in \R \setminus \{2\}$
                     </p><div class="scroll-wrapper">
                         \[
                         \abs{x-2}\lt \delta \quad \implies \quad \abs{(3x+1) - 7}\lt 3 \left(\frac{\vre}{3} \right) =
@@ -241,10 +244,10 @@
 
                 <div class="example">
                     <p>
-                        <strong>Claim:</strong> $\displaystyle \lim_{x\ra 2} x^2 = 4$.
+                        <strong>Claim:</strong> $\displaystyle \lim_{x\ra 2} x^2 = 4.$
                     </p>
                     <p>
-                        <strong>Discussion:</strong> Given an arbitrary $\vre &gt;0 $, our goal is to find a $\delta&gt;0$ so
+                        <strong>Discussion:</strong> Given an arbitrary $\vre &gt;0 ,$ our goal is to find a $\delta&gt;0$ so
                         that
                         \[
                         \abs{x-2} \lt \delta \quad \implies \quad \abs{x^2 - 4}\lt \vre.
@@ -255,33 +258,36 @@
                         \end{eqnarray}
                         Here we can make $\abs{x-2}$ as small as we like, but we need an upper bound on $\abs{x+2}$ in
                         order
-                        to know how small to choose $\delta$. In this case, the presence of the factor $\abs{x+2}$ in
+                        to know how small to choose $\delta.$ In this case, the presence of the factor $\abs{x+2}$ in
                         the
                         expression (\ref{eq:quadratic}) may cause some initial confusion, but keep in mind that we are
-                        discussing the limit as $x$ approaches $2$.
+                        discussing the limit as $x$ approaches $2.$
                         So, we need to manipulate the inequality $\abs{x-2}\lt\delta$ in order to get an upper bound for
-                        $\abs{x+2}$, that is
+                        $\abs{x+2},$ that is
                         \begin{eqnarray*}
                         &amp;\abs{x-2}&amp; \lt \delta \\
                         -\delta \lt &amp; x-2 &amp; \lt \delta \\
                         4 -\delta \lt&amp; x + 2 &amp; \lt 4 + \delta\\
                         &amp;\abs{x+2}&amp; \lt \delta + 4
                         \end{eqnarray*}
-                        If $\delta =1$, then $\abs{x+2} \lt 1+ 4 = 5 $.
+                        If $\delta =1,$ then $\abs{x+2} \lt 1+ 4 = 5 .$
 
                         <br>
-                        Thus, if we choose $\delta := \min\{1, \vre / 5\}$, $\abs{x-2}\lt\delta$ implies $\abs{x^2 - 4}
+                        Thus, if we choose $\delta := \min\{1, \vre / 5\},$ $\abs{x-2}\lt\delta$ implies $\abs{x^2 - 4}
                         \lt
-                        \vre $. Now let's write the formal proof.
+                        \vre .$ Now let's write the formal proof.
                     </p>
 
                     <p>
-                        Let $\vre &gt;0 $. Choose $\delta := \min\{1, \vre / 5\}$. For all $x\in \R \setminus \{2\}$ and
-                        $\abs{x-2}\lt \delta$, we have that \[ \abs{x^2-4} \lt \abs{x+2}\abs{x-2} \lt (5) \frac{\vre}{5}
+                        Let $\vre &gt;0 .$ Choose $\delta := \min\{1, \vre / 5\}.$ For all $x\in \R \setminus \{2\}$ and
+                        $\abs{x-2}\lt \delta,$ we have that \[ \abs{x^2-4} \lt \abs{x+2}\abs{x-2} \lt (5) \frac{\vre}{5}
                         \lt
                         \vre \] and the limit is proved.
                     </p>
                 </div>
+
+                
+
             </div>
 
             <div id="section3">
@@ -331,6 +337,7 @@
     </main>
 
 
+    
 
     <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
@@ -344,7 +351,7 @@
   <!-- Main DIV Ends here -->
 
   <!-- The Modal -->
-  <div id="myModal" class="modal">
+<div id="myModal" class="modal">
 
     <!-- Modal content -->
     <div class="modal-content">
@@ -395,7 +402,7 @@
         </p>
         <div class="button-container">
           <button id="modal-link" >
-            <a href="mailto:jcponcemath@gmail.com"><strong>Send a
+            <a href="mailto:jcponcemath@gmail.com"><strong><i class="fa-solid fa-envelope"></i> Send a
               comment</strong></a>
           </button>
           
@@ -409,52 +416,40 @@
 
   </div>
   <!-- The Modal ends -->
-
   <hr>
 
-  <footer>
+<footer data-type="footer">
 
-    <span class="hide-small" id="footer-elements">
+    <span id="footer-elements">
       <span style="font-weight: bold;">[</span>
       <a href="../"><i class="fa-solid fa-house"></i> Home</a>,
-      <a href="#"><i class="fa-solid fa-code"></i> Source</a>,
-      <a href="#"><i class="fa-solid fa-lightbulb"></i> Issues</a>,
+      <a href="https://github.com/complex-analysis"><i class="fa-solid fa-code"></i> Source</a>,
+      <a href="https://github.com/complex-analysis/complex-analysis.github.io/issues"><i
+          class="fa-solid fa-lightbulb"></i> Issues</a>,
       <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
         <i class="fa-solid fa-heart"></i> Support</span>
       <span style="font-weight: bold;">]</span>
     </span>
-    <span class="hide-medium hide-large" style="font-size: 0.85em;">
-      <span style="font-weight: bold;">[</span>
-      <a href="../"><i class="fa-solid fa-house"></i> Home</a> -
-      <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
-        <i class="fa-solid fa-heart"></i> Support</span>
-      <span style="font-weight: bold;">]</span>
-    </span>
-
+  
     <br />
-
-    <a id="licence-link" rel="license"
-      href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
+  
+    <a id="licence-link" rel="license" href="license.html" target="_blank">
       <i class="fa-brands fa-creative-commons"></i>
       <i class="fa-brands fa-creative-commons-by"></i>
       <i class="fa-brands fa-creative-commons-nc"></i>
       <i class="fa-brands fa-creative-commons-sa"></i>
     </a>
-
+  
     <br />
-
-    <!---<strong style="font-size: 18px">ISBN: ?????????</strong> <br>-->
+  
+    <strong><span style="font-size: 0.9em;">ISBN: 978-0-6485736-0-9</span></strong><br>
     <strong>
-      <span class="hide-small" style="font-size: 18px">&copy; Juan Carlos Ponce Campuzano
-        <script>document.write(new Date().getFullYear());</script>
-      </span>
-      <span class="hide-medium hide-large" style="font-size: 15px">&copy; J.C. Ponce Campuzano
-        <script>document.write(new Date().getFullYear());</script>
+      <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
+        2019-<script>document.write(new Date().getFullYear());</script>
       </span>
     </strong>
-
+  
   </footer>
-
   <script src="js/mathjax.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 

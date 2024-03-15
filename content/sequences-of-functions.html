@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-  <title>Real Analysis</title>
+  <title>  Sequences of functions
+</title>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +24,8 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
+  <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -31,10 +33,29 @@
 
     gtag('config', 'G-J95ZGQ0CCF');
   </script>
+  -->
 </head>
 
 <body data-type="book" id="top">
 
+<div class="fixed-bar" id="fixed-bar">
+    <div class="link-container">
+        <a href="limits-of-functions.html" class="link" id="prev-link">
+            <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
+        </a>
+        <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
+        <span class="support-top-button" id="donate"
+            onclick="document.getElementById('myModal').style.display='block'">
+            <i class="fa-regular fa-heart"></i></span>
+    </div>
+    <div class="link">
+        <a href="table_of_contents.html" class="link" id="center-link">
+            <span class="content-hover-previous">Limits of functions</span>
+            <span class="content-hover">Table of Contents</span>
+            <span class="content-original">Complex Analysis</span>
+        </a>
+    </div>
+</div>
   <!-- Main DIV Starts here -->
   <div class="container">
     <section data-type="chapter" id="sequences-of-functions">
@@ -56,27 +77,6 @@
     </ul>
   </div>
 
-  <div class="fixed-bar" id="fixed-bar">
-    <div class="link-container">
-      <a href="limits-of-functions.html" class="link" id="left-link">
-        <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-      <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
-      <span class="support-top-button" id="donate" onclick="document.getElementById('myModal').style.display='block'">
-        <i class="fa-regular fa-heart"></i></span>
-    </div>
-    <div class="link">
-      <a href="../#table-of-contents" class="link" id="center-link">
-        <span class="content-hover-previous">Limits of functions</span>
-        <span class="content-hover">Table of Contents</span>
-        <span class="content-original">Sequences of functions</span>
-        <span class="content-hover-next">Coming soon!</span>
-      </a>
-    </div>
-    <a href="#" class="link" id="right-link">
-      <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
-  </div>
 
   <br><br><br>
 
@@ -90,15 +90,15 @@
 
       <div id="section1">
 
-        <div class="head-3 ">Sequences of functions</div>
+        <div class="head-3 "><h1>Sequences of functions</h1></div>
         <div class="head-3 head-3-level2" id="pointwise-convergence">Pointwise convergence</div>
 
         <div class="definition">
-          Let $S\subseteq \R$. For every $n \in \N$,
+          Let $S\subseteq \R.$ For every $n \in \N,$
           let $f_n \colon \to \R$ be a function. The sequence
           $\{ f_n \}_{n=1}^\infty$
           <strong>converges pointwise</strong> to $f \colon D\subseteq\R \to \R$ if for every $x
-          \in D$, then
+          \in D,$ then
           \begin{equation*}
           f(x) =
           \lim_{n\to\infty} f_n(x) .
@@ -111,10 +111,10 @@
           converges pointwise, the limit function $f$ is unique.
           We also say that $f_n \colon D \to \R$
           <strong>converges pointwise to $f$ on $E \subset D$</strong>
-          for some $f \colon E \to \R$. In this context we mean
+          for some $f \colon E \to \R.$ In this context we mean
           that
-          $f(x) = \lim_{n\to\infty} f_n(x)$ for every $x \in E$.
-          In other words, the restrictions of $f_n$ to $E$ converge pointwise to $f$.
+          $f(x) = \lim_{n\to\infty} f_n(x)$ for every $x \in E.$
+          In other words, the restrictions of $f_n$ to $E$ converge pointwise to $f.$
         </p>
 
         <div class="example">
@@ -133,7 +133,7 @@
 
           <p>
             Below, you can find a visual represenation of this sequence of functions.
-            Drag the slider below to explore the sequence for different values of $n$.
+            Drag the slider below to explore the sequence for different values of $n.$
           </p>
 
           <figure>
@@ -144,7 +144,7 @@
           </figure>
 
           To prove that the sequence converges, consider $x \in (-1,1).$ Then
-          $0 \leq x^2 \lt 1$. This implies that
+          $0 \leq x^2 \lt 1.$ This implies that
           <div class="scroll-wrapper">
             \begin{equation*}
             \abs{x^{2n} - 0} = {(x^2)}^n \to 0 \quad \text{as} \quad n \to \infty .
@@ -153,7 +153,7 @@
 
           Hence, $\lim_{n\to\infty}f_n(x) = 0.$
 
-          Now for $x = 1$ or $x=-1$, then we have that $x^{2n} = 1$ for all $n$ and therefore
+          Now for $x = 1$ or $x=-1,$ then we have that $x^{2n} = 1$ for all $n$ and therefore
           $\lim_{n\to\infty}f_n(x) = 1.$
           Finally, for $x\in \R\setminus[-1,1],$ the sequence
           $\bigl\{ f_n(x) \bigr\}_{n=1}^\infty$ does not converge.
@@ -161,7 +161,7 @@
 
 
         <div class="example">
-          Let $f_n:S\subseteq\R \to \R$ defined by $f_n(x) \coloneqq \sin(nx)$.
+          Let $f_n:S\subseteq\R \to \R$ defined by $f_n(x) \coloneqq \sin(nx).$
           Is this sequence pointwise convergent? If so, over which interval $I$ does it
           converge pointwise?
 
@@ -182,7 +182,7 @@
             may converge at certain points, such
             as when $x=0$ or $x=\pi.$
             Try to prove as an exercise that in any interval
-            $[a,b]$, there exists an $x$ such that $\sin(xn)$ does not have a limit
+            $[a,b],$ there exists an $x$ such that $\sin(xn)$ does not have a limit
             as $n$ goes to infinity.
           </p>
         </div>
@@ -223,8 +223,8 @@
           and $f \colon D \to \R$
           be functions. The sequence $\{ f_n \}_{n=1}^\infty$
           <strong>converges uniformly</strong> to $f$ if for
-          every $\epsilon &gt; 0$, there exists an $N \in \N$ such that
-          for all $n \geq N$, we have
+          every $\epsilon &gt; 0,$ there exists an $N \in \N$ such that
+          for all $n \geq N,$ we have
           <div class="scroll-wrapper">
             \begin{equation*}
             \abs{f_n(x) - f(x)} \lt \epsilon \quad \text{for all } \quad x \in D.
@@ -251,15 +251,15 @@
           the functions $f_n(x) \coloneqq x^{2n}$ do not converge uniformly on $[-1,1],$
           even though they converge pointwise. We can prove this by contradiction.
           That is, assume that the convergence is uniform.
-          Let's choose $\epsilon \coloneqq \dfrac{1}{2}$.
+          Let's choose $\epsilon \coloneqq \dfrac{1}{2}.$
           Then there exists an $N\in\N$ such that
         </p><div class="scroll-wrapper">
           $$x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}\quad \text{for all}\quad x \in (-1,1),$$
         </div>
-        since $f_n(x)$ converges to 0 on $(-1,1)$.
+        since $f_n(x)$ converges to 0 on $(-1,1).$
         This means that for every sequence
         $\{ x_k \}_{k=1}^\infty$ in $(-1,1)$
-        such that $\lim_{k\to\infty} x_k=1$,
+        such that $\lim_{k\to\infty} x_k=1,$
         we have $x_k^{2N} \lt \dfrac{1}{2}$ for all $k.$
         On the other hand, notice that
         $x^{2N}$ is a continuous function of $x$ (it is a polynomial).
@@ -279,10 +279,10 @@
           Also note that
           $a^{2n} \to 0$ as $n \to \infty.$ For every $\epsilon &gt; 0,$
           pick $N \in \N$ such that
-          $a^{2n} \lt \epsilon$ for all $n \geq N$.
+          $a^{2n} \lt \epsilon$ for all $n \geq N.$
           When $x \in [-a,a],$ we have
           $\abs{x} \leq a.$ Thus
-          for all $n \geq N$ and all $x \in [-a,a]$,
+          for all $n \geq N$ and all $x \in [-a,a],$
           \begin{equation*}
           \abs{x^{2n}} = \abs{x}^{2n} \leq a^{2n} \lt \epsilon .
           \end{equation*}
@@ -415,7 +415,7 @@
   <!-- Main DIV Ends here -->
 
   <!-- The Modal -->
-  <div id="myModal" class="modal">
+<div id="myModal" class="modal">
 
     <!-- Modal content -->
     <div class="modal-content">
@@ -466,7 +466,7 @@
         </p>
         <div class="button-container">
           <button id="modal-link" >
-            <a href="mailto:jcponcemath@gmail.com"><strong>Send a
+            <a href="mailto:jcponcemath@gmail.com"><strong><i class="fa-solid fa-envelope"></i> Send a
               comment</strong></a>
           </button>
           
@@ -480,52 +480,40 @@
 
   </div>
   <!-- The Modal ends -->
-
   <hr>
 
-  <footer>
+<footer data-type="footer">
 
-    <span class="hide-small" id="footer-elements">
+    <span id="footer-elements">
       <span style="font-weight: bold;">[</span>
       <a href="../"><i class="fa-solid fa-house"></i> Home</a>,
-      <a href="#"><i class="fa-solid fa-code"></i> Source</a>,
-      <a href="#"><i class="fa-solid fa-lightbulb"></i> Issues</a>,
+      <a href="https://github.com/complex-analysis"><i class="fa-solid fa-code"></i> Source</a>,
+      <a href="https://github.com/complex-analysis/complex-analysis.github.io/issues"><i
+          class="fa-solid fa-lightbulb"></i> Issues</a>,
       <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
         <i class="fa-solid fa-heart"></i> Support</span>
       <span style="font-weight: bold;">]</span>
     </span>
-    <span class="hide-medium hide-large" style="font-size: 0.85em;">
-      <span style="font-weight: bold;">[</span>
-      <a href="../"><i class="fa-solid fa-house"></i> Home</a> -
-      <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
-        <i class="fa-solid fa-heart"></i> Support</span>
-      <span style="font-weight: bold;">]</span>
-    </span>
-
+  
     <br />
-
-    <a id="licence-link" rel="license"
-      href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
+  
+    <a id="licence-link" rel="license" href="license.html" target="_blank">
       <i class="fa-brands fa-creative-commons"></i>
       <i class="fa-brands fa-creative-commons-by"></i>
       <i class="fa-brands fa-creative-commons-nc"></i>
       <i class="fa-brands fa-creative-commons-sa"></i>
     </a>
-
+  
     <br />
-
-    <!---<strong style="font-size: 18px">ISBN: ?????????</strong> <br>-->
+  
+    <strong><span style="font-size: 0.9em;">ISBN: 978-0-6485736-0-9</span></strong><br>
     <strong>
-      <span class="hide-small" style="font-size: 18px">&copy; Juan Carlos Ponce Campuzano
-        <script>document.write(new Date().getFullYear());</script>
-      </span>
-      <span class="hide-medium hide-large" style="font-size: 15px">&copy; J.C. Ponce Campuzano
-        <script>document.write(new Date().getFullYear());</script>
+      <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
+        2019-<script>document.write(new Date().getFullYear());</script>
       </span>
     </strong>
-
+  
   </footer>
-
   <script src="js/mathjax.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
