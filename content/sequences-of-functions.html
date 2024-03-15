@@ -18,9 +18,7 @@
   <link rel="icon" type="image/png" href="imgs/infinity32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="imgs/infinity16.png" sizes="16x16">
 
-  <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/x-style.css">
-<link rel="stylesheet" href="css/prism/prism.css">
+  <link rel="stylesheet" href="css/style.css">
 
 
   <!-- Google tag (gtag.js) -->
@@ -49,7 +47,7 @@
             <i class="fa-regular fa-heart"></i></span>
     </div>
     <div class="link">
-        <a href="table_of_contents.html" class="link" id="center-link">
+        <a href="table-of-contents.html" class="link" id="center-link">
             <span class="content-hover-previous">Limits of functions</span>
             <span class="content-hover">Table of Contents</span>
             <span class="content-original">Complex Analysis</span>
@@ -62,12 +60,7 @@
 
   <!-- Starts main content -->
 
-  <p class="callout hide-large hide-medium"><strong>⚠️ Warning!</strong>
-    If you can see this message is because your screen is too small.
-    Hence, some applets won't be displayed correctly.
-    You can rotate your device to landscape.
-    Or resize your window so it's more wide than tall.
-  </p>
+  <div w3-include-html="small_screen_message.html"></div>
 
   <div class="toc-chapter" id="toc-chapter">
     <p><i class="fa-solid fa-list"></i>Contents</p>
@@ -482,36 +475,38 @@
 
 <footer data-type="footer">
 
-    <span id="footer-elements">
-      <span style="font-weight: bold;">[</span>
-      <a href="../"><i class="fa-solid fa-house"></i> Home</a>,
+  <span id="footer-elements">
+    <span style="font-weight: bold;">[</span>
+    <a href="../"><i class="fa-solid fa-house"></i> Home</a>,
+    <span class="hide-small">
       <a href="https://github.com/complex-analysis"><i class="fa-solid fa-code"></i> Source</a>,
       <a href="https://github.com/complex-analysis/complex-analysis.github.io/issues"><i
           class="fa-solid fa-lightbulb"></i> Issues</a>,
-      <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
-        <i class="fa-solid fa-heart"></i> Support</span>
-      <span style="font-weight: bold;">]</span>
     </span>
-  
-    <br />
-  
-    <a id="licence-link" rel="license" href="license.html" target="_blank">
-      <i class="fa-brands fa-creative-commons"></i>
-      <i class="fa-brands fa-creative-commons-by"></i>
-      <i class="fa-brands fa-creative-commons-nc"></i>
-      <i class="fa-brands fa-creative-commons-sa"></i>
-    </a>
-  
-    <br />
-  
-    <strong><span style="font-size: 0.9em;">ISBN: ???</span></strong><br>
-    <strong>
-      <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
-        <script>document.write(new Date().getFullYear());</script>
-      </span>
-    </strong>
-  
-  </footer>
+    <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
+      <i class="fa-solid fa-heart"></i> Support</span>
+    <span style="font-weight: bold;">]</span>
+  </span>
+
+  <br />
+
+  <a id="licence-link" rel="license" href="license.html" target="_blank">
+    <i class="fa-brands fa-creative-commons"></i>
+    <i class="fa-brands fa-creative-commons-by"></i>
+    <i class="fa-brands fa-creative-commons-nc"></i>
+    <i class="fa-brands fa-creative-commons-sa"></i>
+  </a>
+
+  <br />
+
+  <!--<strong><span style="font-size: 0.9em;">ISBN: ???</span></strong><br>-->
+  <strong>
+    <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
+      <script>document.write(new Date().getFullYear());</script>
+    </span>
+  </strong>
+
+</footer>
   <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="js/mathjax.js"></script>
