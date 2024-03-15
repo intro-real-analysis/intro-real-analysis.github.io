@@ -24,7 +24,7 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <!--
+  
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,14 +33,14 @@
 
     gtag('config', 'G-J95ZGQ0CCF');
   </script>
-  -->
+  
 </head>
 
 <body data-type="book" id="top">
 
 <div class="fixed-bar" id="fixed-bar">
     <div class="link-container">
-        <a href="index.html" class="link" id="prev-link">
+        <a href="table-of-contents.html" class="link" id="prev-link">
             <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
         </a>
         <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
@@ -50,7 +50,7 @@
     </div>
     <div class="link">
         <a href="table_of_contents.html" class="link" id="center-link">
-            <span class="content-hover-previous">Real Analysis</span>
+            <span class="content-hover-previous">Table of Contents</span>
             <span class="content-hover">Table of Contents</span>
             <span class="content-original">Complex Analysis</span>
             <span class="content-hover-next">Limits of functions</span>
@@ -668,12 +668,10 @@
       "showResetIcon": true
     };
     let appletSeq = new GGBApplet(paramsSeq, true);
-    window.addEventListener("load", function () {
+    window.addEventListener("load", () => {
       appletSeq.inject('ggb-element-sequences');
     });
   </script>
-
-  <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <a href="limits-of-functions.html" style="text-decoration: none;">
     <p class="nextPage">Limits of functions <i class="fa-solid fa-angles-right"></i></p>
@@ -776,14 +774,16 @@
   
     <br />
   
-    <strong><span style="font-size: 0.9em;">ISBN: 978-0-6485736-0-9</span></strong><br>
+    <strong><span style="font-size: 0.9em;">ISBN: ???</span></strong><br>
     <strong>
       <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
-        2019-<script>document.write(new Date().getFullYear());</script>
+        <script>document.write(new Date().getFullYear());</script>
       </span>
     </strong>
   
   </footer>
+  <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
   <script src="js/mathjax.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 

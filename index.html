@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>  Real Analisys
+  <title>  Real Analysis
 </title>
 
   <meta charset="UTF-8" />
@@ -24,7 +24,7 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <!--
+  
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,12 +33,29 @@
 
     gtag('config', 'G-J95ZGQ0CCF');
   </script>
-  -->
+  
 </head>
 
 <body data-type="book" id="top">
 
-
+<div class="fixed-bar" id="fixed-bar">
+    <div class="link-container">
+        <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
+        <span class="support-top-button" id="donate"
+            onclick="document.getElementById('myModal').style.display='block'">
+            <i class="fa-regular fa-heart"></i></span>
+    </div>
+    <div class="link">
+        <a href="table_of_contents.html" class="link" id="center-link">
+            <span class="content-hover">Table of Contents</span>
+            <span class="content-original">Complex Analysis</span>
+            <span class="content-hover-next">Table of Contents</span>
+        </a>
+    </div>
+    <a href="table-of-contents.html" class="link" id="next-link">
+        <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+</div>
   <!-- Main DIV Starts here -->
   <div class="container">
     <section data-type="chapter" id="index">
@@ -95,14 +112,7 @@
 
         </div>
 
-        <!--
-          <h1>Real Analisys</h1>
-        <p class="author">
-          Juan Carlos Ponce Campuzano<br />
-          Jan
-          
-        </p>
-        -->
+       
     </header>
 
 
@@ -184,21 +194,7 @@
 
 
     </p>
-
-    <hr>
-    <h4 style="font-size: 1.5em;" id="table-of-contents">Contents</h4>
-
-    <nav role="navigation" class="toc">
-
-        <ol>
-            <!--<li><a href="../index.html">Introduction</a></li>-->
-            <li><a href="content/sequences.html">Sequences</a></li>
-            <li><a href="content/limits-of-functions.html">Limits of functions</a></li>
-            <li><a href="content/sequences-of-functions.html">Sequences of functions</a></li>
-        </ol>
-
-    </nav>
-    <br>
+    
 
     <hr>
 
@@ -326,18 +322,20 @@
   
     <br />
   
-    <strong><span style="font-size: 0.9em;">ISBN: 978-0-6485736-0-9</span></strong><br>
+    <strong><span style="font-size: 0.9em;">ISBN: ???</span></strong><br>
     <strong>
       <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
-        2019-<script>document.write(new Date().getFullYear());</script>
+        <script>document.write(new Date().getFullYear());</script>
       </span>
     </strong>
   
   </footer>
+  <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
   <script src="content/js/mathjax.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <script src="js/scripts.js"></script>
+  <script src="content/js/scripts.js"></script>
   <script async src="content/js/prism.js"></script>
 </body>
 

@@ -24,7 +24,7 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <!--
+  
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,7 +33,7 @@
 
     gtag('config', 'G-J95ZGQ0CCF');
   </script>
-  -->
+  
 </head>
 
 <body data-type="book" id="top">
@@ -383,7 +383,7 @@
       "showResetIcon": true
     };
     let applet02 = new GGBApplet(example02, true);
-    window.addEventListener("load", function () {
+    window.addEventListener("load", () => {
       applet02.inject('ggb-element-ex-02');
     });
 
@@ -398,12 +398,10 @@
       "showResetIcon": true
     };
     let applet03 = new GGBApplet(example03, true);
-    window.addEventListener("load", function () {
+    window.addEventListener("load", () => {
       applet03.inject('ggb-element-ex-03');
     });
   </script>
-
-  <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <a href="#" style="text-decoration: none;">
     <p class="nextPage">More coming soon!</p>
@@ -506,14 +504,16 @@
   
     <br />
   
-    <strong><span style="font-size: 0.9em;">ISBN: 978-0-6485736-0-9</span></strong><br>
+    <strong><span style="font-size: 0.9em;">ISBN: ???</span></strong><br>
     <strong>
       <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
-        2019-<script>document.write(new Date().getFullYear());</script>
+        <script>document.write(new Date().getFullYear());</script>
       </span>
     </strong>
   
   </footer>
+  <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
   <script src="js/mathjax.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
