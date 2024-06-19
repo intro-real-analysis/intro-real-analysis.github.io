@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
   <title>  Limits of functions
@@ -7,29 +7,13 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <meta name="description" content="An introduction to Real Analysis" />
   <meta name="keywords" content="real, analysis, mathematics" />
 
-  <link rel="icon" type="image/png" href="imgs/infinity32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="imgs/infinity16.png" sizes="16x16">
-
-  <!--
-    https://www.everywheremarketer.com/blog/ultimate-guide-to-social-meta-tags-open-graph-and-twitter-cards
-  -->
-  <!--Facebook-->
   <meta property="og:title" content="Real Analysis" />
   <meta property="og:url" content="" />
   <meta property="og:description" content="An introduction to Real Analysis" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Real Analysis">
-
-  <!--Twitter/X-->
-  <meta name="twitter:title" content="Real Analysis" />
-  <meta name="twitter:site" content="https://intro-real-analysis.github.io/" />
-  <meta name="twitter:description" content="An introduction to Real Analysis" />
-  <meta name="twitter:type" content="website" />
-  <meta name="twitter:creator" content="@jcponcemath" />
 
   <link rel="icon" type="image/png" href="imgs/infinity32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="imgs/infinity16.png" sizes="16x16">
@@ -37,97 +21,74 @@
   <link rel="stylesheet" href="css/style.css">
 
 
-  <!-- MathCell applets + MathJax -->
-  <script src="js/math.js"></script>
-  <script src="js/mathcell.js"></script>
-  <script src="js/mathjax.js"></script>
+  <!-- Google tag (gtag.js) -->
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+    gtag('config', 'G-J95ZGQ0CCF');
+  </script>
 
 </head>
 
 <body data-type="book" id="top">
 
+<div class="fixed-bar" id="fixed-bar">
+    <div class="link-container">
+        <a href="sequences.html" class="link" id="prev-link">
+            <span class="arrow"><i class="fa-solid fa-arrow-left"></i></span>
+        </a>
+        <span class="dark-mode-button" id="dark-mode-toggle"><i class="fa-solid fa-circle-half-stroke"></i></span>
+        <span class="support-top-button" id="donate"
+            onclick="document.getElementById('myModal').style.display='block'">
+            <i class="fa-regular fa-heart"></i></span>
+    </div>
+    <div class="link">
+        <a href="table-of-contents.html" class="link" id="center-link">
+            <span class="content-hover-previous">Sequences</span>
+            <span class="content-hover">Table of Contents</span>
+            <span class="content-original">Real Analysis</span>
+            <span class="content-hover-next">Sequences of functions</span>
+        </a>
+    </div>
+    <a href="sequences-of-functions.html" class="link" id="next-link">
+        <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+</div>
   <!-- Main DIV Starts here -->
   <div class="container">
-    <section data-type="chapter" id="limits-of-functions-dDpvTaP">
+    <section data-type="chapter" id="limits-of-functions">
 
     <!-- Starts main content -->
 
-    <!-- Sidebar -->
-    <nav class="w3-sidebar w3-bar-block w3-collapse w3-card" style="z-index:3;width:250px;" id="mySidebar">
-        <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-center" href="../index.html"><img id="myLogo" src="imgs/my-logo-black.png" style="width:35%;margin-top: 5px;margin-bottom: 5px;"></a>
+    <div w3-include-html="small_screen_message.html"></div>
 
-
-        <a class="w3-bar-item w3-button w3-hide-large w3-large w3-center" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa-solid fa-xmark w3-large"></i></a>
-
-        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences.html">1. Sequences</a>
-        <a class="w3-bar-item w3-button" id="chapterBar" href="limits-of-functions.html">2. Limits of functions</a>
-        <div class="toc-chapter" id="toc-chapter">
-
-            <a class="w3-bar-item w3-button" href="#section1">&nbsp; 2.1 Cluster points</a>
-            <a class="w3-bar-item w3-button" href="#section2">&nbsp; 2.2 Limits of functions</a>
-            <a class="w3-bar-item w3-button" href="#section3">&nbsp; 2.3 Why cluster points?</a>
-        </div>
-
-        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">3. Sequences of functions</a>
-
-        <br>
-
-
-
-        <div class="w3-container w3-center w3-theme" id="mySocial">
-            <div class="">
-                <a title="Patreon" href="https://www.patreon.com/jcponce" target="_blank"><i class="fa-brands fa-patreon w3-button w3-round-large w3-theme"></i></a>
-                <span title="Support" onclick="document.getElementById('myModal').style.display='block'" class="w3-button w3-round-large w3-theme">
-                    <i class="fa-regular fa-heart"></i></span>
-                <a title="GitHub" href="https://github.com/jcponce" target="_blank"><i class="fa-brands fa-github w3-button w3-round-large w3-theme"></i></a>
-                <br>
-            </div>
-        </div>
-
-
-    </nav>
-
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay">
+    <div class="toc-chapter" id="toc-chapter">
+        <p><i class="fa-solid fa-list"></i>Contents</p>
+        <ul>
+            <li><a href="#section1">Cluster points</a></li>
+            <li><a href="#section2">Limits of functions</a></li>
+            <li><a href="#section3">Why cluster points?</a></li>
+            <!-- Add more sections as needed -->
+        </ul>
     </div>
 
-    <!-- !PAGE CONTENT! -->
+    <br><br><br>
 
-    <div class="w3-main w3-large" style="margin-left:250px;">
+    <header>
 
-        <!-- Main text starts here -->
 
-        <!-- Bar on top shows/hides after scrolling -->
-        <div id="myTop" class="w3-container w3-top w3-theme-bar w3-large">
-            <div id="myTextBar">
-                <p><i class="fa-solid fa-bars w3-button w3-hide-large w3-xlarge" onclick="w3_open()"></i>
-                    <span id="myTitle" class="w3-hide">2. Limits of functions</span>
+    </header>
 
-                    <span title="Toggle" onclick="myDarkMode()" id="dark-mode-toggle" class="topDark w3-theme w3-round-large">
-                        <i class="fa-solid fa-circle-half-stroke"></i>
-                    </span>
-                    <span onclick="document.getElementById('myModal').style.display='block'" class="topDonate w3-button w3-theme w3-round-small w3-hide-small w3-hide-medium ">
-                        <i class="fa-regular fa-heart"></i> Support
-                    </span>
-                </p>
-            </div>
-        </div>
-
-        <!-- Header -->
-        <header class="w3-container w3-theme" style="padding:64px 32px">
-            <div class="w3-hide-large w3-hide-medium w3-hide-small">
-                <h1>Limits of functions</h1>
-            </div>
-            <div class="head-2">Limits of functions</div>
-        </header>
-
-        <!-- Sections -->
-        <div class="w3-container" style="padding:32px">
+    <main>
+        <article>
 
             <div id="section1">
 
-
+                <div class="head-2"><h1>Limits of functions</h1></div>
                 <div class="head-2 head-2-level2">Cluster points</div>
 
                 <p>
@@ -202,6 +163,8 @@
 
 
             </div>
+
+            
 
             <div id="section2">
 
@@ -315,7 +278,7 @@
                     </p>
                 </div>
 
-
+                
 
             </div>
 
@@ -341,8 +304,8 @@
                     Let \(\varepsilon\gt0\) be arbitrary and choose \(\delta = r.\)
                     Since there are no points \(x\in S\setminus\{c\}\)
                     such that \(|x-c|\lt\delta=r,\)
-                    then the statement:</p>
-                <blockquote>
+                    then the statement:
+                </p><blockquote>
                     <strong>
                         For every \(\varepsilon \gt 0\) there exists a \(\delta \gt 0\) such that
 
@@ -350,20 +313,24 @@
                         then \(|f(x)-L|\lt \varepsilon.\)
                     </strong>
                 </blockquote>
-                <p>is vacuously true!
-                </p>
+                is vacuously true!
+
+                <p></p>
             </div>
 
 
 
-        </div>
 
 
+            <br>
 
 
+        </article>
+    </main>
 
-    </div>
-
+    <a href="sequences-of-functions.html" style="text-decoration: none;">
+        <p class="nextPage">Sequences of functions <i class="fa-solid fa-angles-right"></i></p>
+    </a>
     <!-- Ends main content -->
 
 </section>
@@ -373,118 +340,106 @@
   <!-- The Modal -->
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span><br />
-      <h3>Hello! 👋</h3>
-    </div>
-    <div class="modal-body">
-      <p>
-        This interactive book is <strong>free for everybody</strong>,
-        as I believe that everyone should have access to high-quality learning
-        resources to explore and learn mathematics.
-        That's why many users choose to contribute to my efforts.
-        If you believe in what I do and want to help me on my journey,
-        you can do so now with the links below:
-      </p>
-
-      <div class="button-container">
-        <button id="modal-link">
-          <a href="https://www.patreon.com/jcponce"><i class="fa-brands fa-patreon"></i>
-            <strong>Patreon</strong></a>
-        </button>
-        <button id="modal-link">
-          <a target="_blank"
-            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WTMTR7D8RYZ26&item_name=Your+support+will+help+me+to+improve+and+keep+up+to+date+the+applets+of+this+book.+Sincerely+appreciate+it%21&currency_code=AUD&source=url">
-            <strong><i class="fa-brands fa-paypal"></i> PayPal</strong>
-          </a>
-        </button>
-        <button id="modal-link">
-          <a target="_blank" href="https://jcponcemath.secure-decoration.com/">
-            <strong>Get a <i class="fa-solid fa-shirt"></i></strong>
-          </a>
-        </button>
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span><br />
+        <strong>👋 Hey there!</strong>
       </div>
+      <div class="modal-body">
+
+        <p>
+          This interactive book is <strong>free for everybody</strong>,
+          as I believe that everyone should have access to high-quality learning
+          resources to explore and learn mathematics.  
+          That's why many users choose to contribute to my efforts. 
+          If you believe in what I do and want to help me on my journey, 
+          you can do so now with the links below: 
+        </p>
+
+        <div class="button-container">
+          <button id="modal-link">
+            <a href="https://www.patreon.com/jcponce"><i class="fa-brands fa-patreon"></i>
+              <strong>Patreon</strong></a>
+          </button>
+          <button id="modal-link">
+            <a target="_blank"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WTMTR7D8RYZ26&item_name=Your+support+will+help+me+to+improve+and+keep+up+to+date+the+applets+of+this+book.+Sincerely+appreciate+it%21&currency_code=AUD&source=url">
+              <strong><i class="fa-brands fa-paypal"></i> PayPal</strong>
+            </a>
+          </button>
+          <button id="modal-link">
+            <a target="_blank" href="https://jcponcemath.secure-decoration.com/">
+              <strong>Get a <i class="fa-solid fa-shirt"></i></strong>
+            </a>
+          </button>
+        </div>
 
 
-      <p>
-        Your contributions help me to maintain this site
-        and, crucially, <strong>ensure it remains freely accessible</strong>
-        to anyone eager to explore this captivating field of mathematics
-        <strong>—without any distracting ads</strong>.
-      </p>
+        <p>
+          Your contributions help me to maintain this site
+          and, crucially, <strong>ensure it remains freely accessible</strong> 
+          to anyone eager to explore this captivating field of mathematics 
+          <strong>—without any distracting ads</strong>.
+        </p>
 
-      <p>
-        You can't contribute this time, no worries! Maybe you just want to
-        <i class="fa-solid fa-envelope"></i> <a href="mailto:jcponcemath@gmail.com"><strong> Send a
+        <p>
+          You can't contribute this time, no worries! Maybe you just want to 
+          <i class="fa-solid fa-envelope"></i> <a href="mailto:jcponcemath@gmail.com"><strong> Send a
             comment</strong></a>
-      </p>
-      <br />
+        </p>
+        <br />
+      </div>
+      <div class="modal-footer">
+        Thank you! 🙏 I highly appreciate your support! 🤗
+      </div>
     </div>
-    <div class="modal-footer">
-      <p>Thank you! 🙏 I highly appreciate your support! 🤗</p>
-    </div>
-  </div>
 
-</div>
-  <!-- Button to Top -->
+  </div>
+  <!-- The Modal ends -->
+  <hr>
+
+<footer data-type="footer">
+
+  <span id="footer-elements">
+    <span style="font-weight: bold;">[</span>
+    <a href="../"><i class="fa-solid fa-house"></i> Home</a>,
+    <span class="hide-small">
+      <a href="#"><i class="fa-solid fa-code"></i> Source</a>,
+      <a href="#"><i
+          class="fa-solid fa-lightbulb"></i> Issues</a>,
+    </span>
+    <span id="donate-footer" onclick="document.getElementById('myModal').style.display='block'">
+      <i class="fa-solid fa-heart"></i> Support</span>
+    <span style="font-weight: bold;">]</span>
+  </span>
+
+  <br />
+
+  <a id="licence-link" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
+    <i class="fa-brands fa-creative-commons"></i>
+    <i class="fa-brands fa-creative-commons-by"></i>
+    <i class="fa-brands fa-creative-commons-nc"></i>
+    <i class="fa-brands fa-creative-commons-sa"></i>
+  </a>
+
+  <br />
+
+  <!--<strong><span style="font-size: 0.9em;">ISBN: ???</span></strong><br>-->
+  <strong>
+    <span style="font-size: 0.9em;">&copy; Juan Carlos Ponce Campuzano
+      <script>document.write(new Date().getFullYear());</script>
+    </span>
+  </strong>
+
+</footer>
   <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-  <!-- Navigation -->
-   
-<!-- Buttons to navigate -->
-<div class="w3-container w3-center w3-padding-large"  style="margin-left:250px;" id="navigation">
-    <a href="sequences.html"><button
-            class="w3-left w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">&#10094; Previous</button></a>
+  <script src="js/mathjax.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <a href="sequences-of-functions.html"><button
-            class="w3-right w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">Next &#10095;</button></a>
-</div>
-  <br/>
-
-<footer class="w3-container w3-center w3-theme" style="padding:32px;margin-left:250px;">
-
-  <div class="w3-row w3-opacity-min">
-
-    <div class="w3-col m6">
-      <span class="w3-hide-small w3-hide-medium">
-        Real Analysis <i class="fa-regular fa-copyright"></i>
-        <span>
-          <script>document.write(new Date().getFullYear());</script>
-        </span>
-        by J. C. Ponce Campuzano
-      </span>
-      <span class="w3-hide-large">
-        Real Analysis <i class="fa-regular fa-copyright"></i>
-        <span>
-          <script>document.write(new Date().getFullYear());</script>
-        </span>
-        <br />by J. C. Ponce Campuzano
-      </span>
-    </div>
-
-    <div class="w3-col m6 license">
-
-      <a style="text-decoration: none;" rel="license"
-        href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
-        <i class="fa-brands fa-creative-commons"></i>
-        <i class="fa-brands fa-creative-commons-by"></i>
-        <i class="fa-brands fa-creative-commons-nc"></i>
-        <i class="fa-brands fa-creative-commons-sa"></i>
-      </a>
-    </div>
-
-  </div>
-
-</footer>  
-
-  <!-- General scripts -->
-  <script src="js/w3codecolor.js"></script>
-  <script>w3CodeColor(); // Provide color format for code</script>
   <script src="js/scripts.js"></script>
-  <script> includeHTML(); // Import html info file</script>
-
+  <script async src="js/prism.js"></script>
 </body>
 
 </html>
