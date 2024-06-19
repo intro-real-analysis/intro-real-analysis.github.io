@@ -720,6 +720,25 @@
 
   <!-- Ends main content -->
 
+  <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+  <script>
+    let paramsSeq = {
+      "width": 572,
+      "height": 402,
+      "material_id": "rmx2ud6p",
+      "borderColor": "888888",
+      "playButton": false,
+      "showFullscreenButton": true,
+      "enableShiftDragZoom": false,
+      "showResetIcon": true
+    };
+    let appletSeq = new GGBApplet(paramsSeq, true);
+    window.addEventListener("load", () => {
+      appletSeq.inject('ggb-element-sequences');
+    });
+  </script>
+
 </section>
   </div>
   <!-- Main DIV Ends here -->
