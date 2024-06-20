@@ -34,6 +34,16 @@
   <link rel="stylesheet" href="css/style.css">
 
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J95ZGQ0CCF');
+  </script>
+
   <!-- MathCell applets + MathJax -->
   <script src="js/math.js"></script>
   <script src="js/mathcell.js"></script>
@@ -45,14 +55,16 @@
 
 <body data-type="book" id="top">
 
-  <!-- Main DIV Starts here -->
-  <div class="container">
-    <section data-type="chapter" id="limits-of-functions-dDpvTaP">
+  <div class="w3-main w3-large" style="margin-left:250px;">
+
+    <!-- Main DIV Starts here -->
+    <div class="container">
+      <section data-type="chapter" id="limits-of-functions-dDpvTaP">
 
     <!-- Starts main content -->
 
     <!-- Sidebar -->
-    <nav class="w3-sidebar w3-bar-block w3-collapse w3-card" style="z-index:3;width:250px;" id="mySidebar">
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-card" id="mySidebar">
         <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-center" href="../index.html"><img id="myLogo" src="imgs/my-logo-black.png" style="width:35%;margin-top: 5px;margin-bottom: 5px;"></a>
 
 
@@ -92,7 +104,7 @@
 
     <!-- !PAGE CONTENT! -->
 
-    <div class="w3-main w3-large" style="margin-left:250px;">
+   
 
         <!-- Main text starts here -->
 
@@ -352,27 +364,38 @@
                 </p>
             </div>
 
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
 
 
         </div>
 
 
-        <!-- Navigation -->
+      
+    
 
+    <!-- Ends main content -->
+
+</section>
+    </div>
+
+    <!-- Navigation -->
 <!-- Buttons to navigate -->
-<div class="w3-container w3-center w3-padding-large" id="navigation">
-    <a href="sequences.html"><button class="w3-left w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">❮ Previous</button></a>
+<div class="w3-container w3-center w3-padding-large"  id="navigation">
+    <a href="sequences.html"><button
+            class="w3-left w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">&#10094; Previous</button></a>
 
-    <a href="sequences-of-functions.html"><button class="w3-right w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">Next ❯</button></a>
+    <a href="sequences-of-functions.html"><button
+            class="w3-right w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">Next &#10095;</button></a>
 </div>
-        <br>
+    <br />
 
+    <!-- Footer -->
 <footer class="ww3-main w3-container w3-center w3-theme" id="myFooter">
 
   <div class="w3-row w3-opacity-min">
@@ -390,13 +413,14 @@
         <span>
           <script>document.write(new Date().getFullYear());</script>
         </span>
-        <br>by J. C. Ponce Campuzano
+        <br />by J. C. Ponce Campuzano
       </span>
     </div>
 
     <div class="w3-col m6 license">
 
-      <a style="text-decoration: none;" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
+      <a style="text-decoration: none;" rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
         <i class="fa-brands fa-creative-commons"></i>
         <i class="fa-brands fa-creative-commons-by"></i>
         <i class="fa-brands fa-creative-commons-nc"></i>
@@ -407,16 +431,7 @@
   </div>
 
 </footer>
-
-    </div>
-
-    <!-- Ends main content -->
-
-</section>
-  </div>
-  <!-- Main DIV Ends here -->
-
-  <!-- The Modal -->
+    <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
@@ -474,6 +489,8 @@
   </div>
 
 </div>
+  </div>
+
   <!-- Button to Top -->
   <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
