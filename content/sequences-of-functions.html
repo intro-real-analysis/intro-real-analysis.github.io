@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="css/style.css">
 
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js)
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -42,7 +42,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-J95ZGQ0CCF');
-  </script>
+  </script> -->
 
   <!-- MathCell applets + MathJax -->
   <script src="js/math.js"></script>
@@ -102,17 +102,21 @@
     <!-- Bar on top shows/hides after scrolling -->
     <div id="myTop" class="w3-container w3-top w3-theme-bar w3-large">
         <div id="myTextBar">
-            <p><i class="fa-solid fa-bars w3-button w3-hide-large w3-xlarge" onclick="w3_open()"></i>
-                <span id="myTitle" class="w3-hide">3. Sequences of functions</span>
-
-                <span title="Toggle" onclick="myDarkMode()" id="dark-mode-toggle" class="topDark w3-theme w3-round-large">
-                    <i class="fa-solid fa-circle-half-stroke"></i>
-                </span>
-                <span onclick="document.getElementById('myModal').style.display='block'" class="topDonate w3-button w3-theme w3-round-small w3-hide-small w3-hide-medium ">
-                    <i class="fa-regular fa-heart"></i> Support
-                </span>
+            <p>
+              <i class="fa-solid fa-bars w3-button w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+              <span id="myTitle" class="w3-hide">1. Sequences</span>
+      
+      
+              <span onclick="document.getElementById('myModal').style.display='block'" class="topDonate w3-button w3-theme w3-round-small w3-hide-small">
+                <i class="fa-regular fa-heart"></i> Support
+              </span>
+      
+              <span title="Dark/Night Mode" onclick="myDarkMode()" id="dark-mode-toggle" class="topDark w3-theme">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+              </span>
+      
             </p>
-        </div>
+          </div>
     </div>
 
     <!-- Header -->
@@ -133,7 +137,7 @@
 
             <div class="definition">
                 Let $S\subseteq \R.$ For every $n \in \N,$
-                let $f_n \colon S\to \R$ be a function. The sequence
+                let $f_n \colon S \to \R$ be a function. The sequence
                 $\{ f_n \}_{n=1}^\infty$
                 <strong>converges pointwise</strong> to $f \colon D\subseteq\R \to \R$ if for every $x
                 \in D,$ then
