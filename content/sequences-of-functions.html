@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="css/style.css">
 
 
-  <!-- Google tag (gtag.js)-->
+  <!-- Google tag (gtag.js)
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -42,7 +42,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-J95ZGQ0CCF');
-  </script> 
+  </script> -->
 
   <!-- MathCell applets + MathJax -->
   <script src="js/math.js"></script>
@@ -63,7 +63,7 @@
 
     <!-- Sidebar -->
     <nav class="w3-sidebar w3-bar-block w3-collapse w3-card" id="mySidebar">
-        <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-center" href="../"><img id="myLogo" src="imgs/my-logo-black.png" style="width:35%;margin-top: 5px;margin-bottom: 5px;"></a>
+        <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-center" href="../"><img id="myLogo" src="imgs/my-logo-black.png"></a>
 
 
         <a class="w3-bar-item w3-button w3-hide-large w3-large w3-center" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa-solid fa-xmark w3-large"></i></a>
@@ -107,7 +107,7 @@
               <span id="myTitle" class="w3-hide">3. Sequences of functions</span>
       
               <span title="Dark/Night Mode" onclick="myDarkMode()" id="dark-mode-toggle" class="topDark w3-theme w3-hide-small">
-                <i class="fa-regular fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
               </span>
       
               <span onclick="document.getElementById('myModal').style.display='block'" class="topDonate w3-button w3-theme w3-round-small w3-hide-small">
@@ -161,7 +161,7 @@
             <div class="example">
                 The sequence of functions defined on $[-1,1]$ by $f_n(x) \coloneqq x^{2n}$
                 converges pointwise to $f \colon [-1,1] \to \R,$ where
-                <div class="scroll-wrapper">
+                <div class="eqwrapper">
                     \begin{equation*}
                     f(x) =
                     \begin{cases}
@@ -186,7 +186,7 @@
 
                 To prove that the sequence converges, consider $x \in (-1,1).$ Then
                 $0 \leq x^2 \lt 1.$ This implies that
-                <div class="scroll-wrapper">
+                <div class="eqwrapper">
                     \begin{equation*}
                     \abs{x^{2n} - 0} = {(x^2)}^n \to 0 \quad \text{as} \quad n \to \infty .
                     \end{equation*}
@@ -240,7 +240,7 @@
                 for every $x \in D,$ and every $\epsilon &gt; 0,$ there exists
                 an $N \in \N$ such that for all
                 $n \geq N,$ we have
-                <div class="scroll-wrapper">
+                <div class="eqwrapper">
                     \begin{equation*}
                     \abs{f_n(x)-f(x)} \lt \epsilon .
                     \end{equation*}
@@ -266,7 +266,7 @@
                 <strong>converges uniformly</strong> to $f$ if for
                 every $\epsilon &gt; 0,$ there exists an $N \in \N$ such that
                 for all $n \geq N,$ we have
-                <div class="scroll-wrapper">
+                <div class="eqwrapper">
                     \begin{equation*}
                     \abs{f_n(x) - f(x)} \lt \epsilon \quad \text{for all } \quad x \in D.
                     \end{equation*}
@@ -294,7 +294,7 @@
                 That is, assume that the convergence is uniform.
                 Let's choose $\epsilon \coloneqq \dfrac{1}{2}.$
                 Then there exists an $N\in\N$ such that
-            </p><div class="scroll-wrapper">
+            </p><div class="eqwrapper">
                 $$x^{2N} = \abs{x^{2N} - 0} \lt \frac{1}{2}\quad \text{for all}\quad x \in (-1,1),$$
             </div>
             <p>
@@ -307,7 +307,7 @@
                 $x^{2N}$ is a continuous function of $x$ (it is a polynomial).
                 Therefore, we obtain
             </p>
-            <div class="scroll-wrapper">
+            <div class="eqwrapper">
                 \begin{equation*}
                 1=1^{2N}=\lim_{k\to\infty} x_k^{2N} \leq \frac{1}{2} ,
                 \end{equation*}
@@ -333,7 +333,7 @@
             <div class="example">
                 Let $f_n(x) := \dfrac{x}{n}$ defined on $\R$ for every $n\in \N.$
                 Observe that $\{f_n\}$ converges to $f=0,$ since
-                <div class="scroll-wrapper">
+                <div class="eqwrapper">
                     \begin{equation*}
                     \lim f_n(x) = \lim \frac{x}{n} = x\lim\frac{1}{n}=0 \;\text{ for all }\,x\in \R.
                     \end{equation*}
@@ -520,7 +520,7 @@
 
       <p>
         You can't contribute this time, no worries! Maybe you just want to
-        <i class="fa-solid fa-envelope"></i> <a href="mailto:jcponcemath@gmail.com"><strong> Send a
+        <a href="mailto:jcponcemath@gmail.com"><strong><i class="fa-solid fa-envelope"></i> Send a
             comment</strong></a>
       </p>
       <br />
