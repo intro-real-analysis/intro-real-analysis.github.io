@@ -70,8 +70,9 @@
 
         <a class="w3-bar-item w3-button" id="chapterBar" href="sequences.html">1. Sequences</a>
         <a class="w3-bar-item w3-button" id="chapterBar" href="limits-of-functions.html">2. Limits of functions</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="continuity.html">3. Continuity</a>
 
-        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">3. Sequences of
+        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">4. Sequences of
             functions</a>
 
         <div class="toc-chapter" id="toc-chapter">
@@ -120,9 +121,9 @@
 
     <!-- Header -->
     <header class="w3-container w3-theme" style="padding:64px 64px">
-        
+
         <h1>Sequences of functions</h1>
-        
+
     </header>
 
     <!-- Sections -->
@@ -131,7 +132,9 @@
         <div id="section1">
 
 
-            <div id="pointwise-convergence"><h2>Pointwise convergence</h2></div>
+            <div id="pointwise-convergence">
+                <h2>Pointwise convergence</h2>
+            </div>
 
             <div class="definition">
                 Let $S\subseteq \R.$ For every $n \in \N,$
@@ -378,50 +381,30 @@
 
 
     <script>
-        let example01 = {
+        function createApplet(config, elementId) {
+            let applet = new GGBApplet(config, true);
+            window.addEventListener("load", () => {
+                applet.inject(elementId);
+            });
+        }
+
+        let commonConfig = {
             "width": 507,
             "height": 459,
-            "material_id": "tqawquk4",
             "borderColor": "888888",
             "playButton": false,
             "showFullscreenButton": true,
             "enableShiftDragZoom": false,
             "showResetIcon": true
         };
-        let applet01 = new GGBApplet(example01, true);
-        window.addEventListener("load", function () {
-            applet01.inject('ggb-element-ex-01');
-        });
 
-        let example02 = {
-            "width": 505,
-            "height": 459,
-            "material_id": "uvmzrkpg",
-            "borderColor": "888888",
-            "playButton": false,
-            "showFullscreenButton": true,
-            "enableShiftDragZoom": false,
-            "showResetIcon": true
-        };
-        let applet02 = new GGBApplet(example02, true);
-        window.addEventListener("load", () => {
-            applet02.inject('ggb-element-ex-02');
-        });
+        let applets = [
+            { config: { ...commonConfig, "material_id": "tqawquk4" }, elementId: 'ggb-element-ex-01' },
+            { config: { ...commonConfig, "width": 505, "material_id": "uvmzrkpg" }, elementId: 'ggb-element-ex-02' },
+            { config: { ...commonConfig, "material_id": "k8vhgx2b" }, elementId: 'ggb-element-ex-03' }
+        ];
 
-        let example03 = {
-            "width": 507,
-            "height": 459,
-            "material_id": "k8vhgx2b",
-            "borderColor": "888888",
-            "playButton": false,
-            "showFullscreenButton": true,
-            "enableShiftDragZoom": false,
-            "showResetIcon": true
-        };
-        let applet03 = new GGBApplet(example03, true);
-        window.addEventListener("load", () => {
-            applet03.inject('ggb-element-ex-03');
-        });
+        applets.forEach(applet => createApplet(applet.config, applet.elementId));
     </script>
 
 </section>
@@ -429,8 +412,8 @@
 
     <!-- Navigation -->
 <!-- Buttons to navigate -->
-<div class="w3-container w3-center w3-padding-large"  id="navigation">
-    <a href="limits-of-functions.html"><button
+<div class="w3-container w3-center w3-padding-large section-content"  id="navigation">
+    <a href="continuity.html"><button
             class="w3-left w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">&#10094; Previous</button></a>
 
 </div>

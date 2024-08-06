@@ -77,7 +77,8 @@
                         <a class="w3-bar-item w3-button" href="#section3">&nbsp;Why cluster points?</a>
         </div>
 
-        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">3. Sequences of
+        <a class="w3-bar-item w3-button" id="chapterBar" href="continuity.html">3. Continuity</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">4. Sequences of
             functions</a>
 
         <br>
@@ -122,10 +123,10 @@
 
     <!-- Header -->
     <header class="w3-container w3-theme" style="padding:64px 64px">
-        
+
         <h1>Limits of functions</h1>
-        
-        
+
+
     </header>
 
     <!-- Sections -->
@@ -133,11 +134,13 @@
 
         <div id="section1">
 
-            <div><h2>Cluster points</h2></div>
+            <div>
+                <h2>Cluster points</h2>
+            </div>
 
             <p>
-                To start talking about limits first we need the concept of
-                cluster point.
+                To start talking about limits of functions first we need to 
+                introduce the concept of cluster point.
             </p>
 
             <div class="definition">
@@ -158,9 +161,9 @@
                 </div>
                 $0$ is the only cluster point.
                 <figure>
-                    <img style="width: 80%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-01.svg">
+                    <img style="width: 85%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-01.svg">
                 </figure>
-                
+
             </div>
 
             <div class="example">
@@ -169,7 +172,7 @@
                     $$(0,1) = \left\{x\in \R~:~ 0\lt x\lt 1 \right\}$$
                 </div>
                 are all points in the closed interval $\left[0,1\right].$
-                <figure><img style="width: 80%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-02.svg"></figure>
+                <figure><img style="width: 85%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-02.svg"></figure>
             </div>
 
             <div class="example">
@@ -178,7 +181,7 @@
                     $$\left[0,1\right)\cup\left\{2\right\}=\{x\in\mathbb R: 0\leq x\lt 1\}\cup\left\{2\right\}$$
                 </div>
                 is the interval $\left[0,1\right].$
-                <figure><img style="width: 80%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-03.svg"></figure>
+                <figure><img style="width: 85%;" src="https://www.dynamicmath.xyz/math2400/images/summary-04/cluster-points-03.svg"></figure>
             </div>
 
             <div class="theorem">
@@ -328,16 +331,18 @@
         </div>
 
         <div id="section3">
-            <div><h2>Why cluster points? 🤔</h2></div>
+            <div>
+                <h2>Why do we need cluster points? 🤔</h2>
+            </div>
 
             <p>
                 At this point, it is likely you are asking yourself:
-            </p><blockquote>
+            </p>
+            <p class="w3-padding">
                 <strong>
                     Why do we need the concept of cluster point in the definition of limit?
                 </strong>
-            </blockquote>
-            <p></p>
+            </p>
 
             <p>
                 To answer this question suppose \(c\) is not a cluster point of \(S.\)
@@ -350,16 +355,16 @@
                 Since there are no points \(x\in S\setminus\{c\}\)
                 such that \(|x-c|\lt\delta=r,\)
                 then the statement:</p>
-            <blockquote>
+
+            <p class="w3-padding">
                 <strong>
                     For every \(\varepsilon \gt 0\) there exists a \(\delta \gt 0\) such that
 
                     if for every \(x\in S\setminus\{c\}\) and \(|x-c|\lt \delta,\)
                     then \(|f(x)-L|\lt \varepsilon.\)
                 </strong>
-            </blockquote>
-            <p>is vacuously true!
             </p>
+            <p>is vacuously true! </p>
         </div>
 
         <br>
@@ -389,11 +394,11 @@
 
     <!-- Navigation -->
 <!-- Buttons to navigate -->
-<div class="w3-container w3-center w3-padding-large"  id="navigation">
+<div class="w3-container w3-center w3-padding-large section-content"  id="navigation">
     <a href="sequences.html"><button
             class="w3-left w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">&#10094; Previous</button></a>
 
-    <a href="sequences-of-functions.html"><button
+    <a href="continuity.html"><button
             class="w3-right w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">Next &#10095;</button></a>
 </div>
     <br />

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>  Continuity
+</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="An introduction to Real Analysis" />
+  <meta name="keywords" content="real, analysis, mathematics" />
+
+  <!--
+    https://www.everywheremarketer.com/blog/ultimate-guide-to-social-meta-tags-open-graph-and-twitter-cards
+  -->
+  <!--Facebook-->
+  <meta property="og:title" content="Real Analysis" />
+  <meta property="og:url" content="" />
+  <meta property="og:description" content="An introduction to Real Analysis" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Real Analysis">
+
+  <!--Twitter/X-->
+  <meta name="twitter:title" content="Real Analysis" />
+  <meta name="twitter:site" content="https://intro-real-analysis.github.io/" />
+  <meta name="twitter:description" content="An introduction to Real Analysis" />
+  <meta name="twitter:type" content="website" />
+  <meta name="twitter:creator" content="@jcponcemath" />
+
+  <link rel="icon" type="image/png" href="imgs/infinity32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="imgs/infinity16.png" sizes="16x16">
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J95ZGQ0CCF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-J95ZGQ0CCF');
+  </script> 
+
+  <!-- MathCell applets + MathJax -->
+  <script src="js/math.js"></script>
+  <script src="js/mathcell.js"></script>
+  <script src="js/mathjax.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+
+</head>
+
+<body data-type="book" id="top">
+
+  <div class="w3-main w3-large" style="margin-left:250px;">
+
+    <!-- Main DIV Starts here -->
+    <div class="container">
+      <section data-type="chapter" id="continuity-LVXQCW6">
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-card" id="mySidebar">
+        <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-center" href="../"><img id="myLogo" src="imgs/my-logo-black.png"></a>
+
+
+        <a class="w3-bar-item w3-button w3-hide-large w3-large w3-center" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa-solid fa-xmark w3-large"></i></a>
+
+        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences.html">1. Sequences</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="limits-of-functions.html">2. Limits of functions</a>
+
+        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">3. Continuity</a>
+
+        <div class="toc-chapter" id="toc-chapter">
+                        <a class="w3-bar-item w3-button" href="#section1">&nbsp;Definition</a>
+                        <a class="w3-bar-item w3-button" href="#section2">&nbsp;Discontinuity criterion</a>
+                        <a class="w3-bar-item w3-button" href="#section3">&nbsp;Basic properties</a>
+                        <a class="w3-bar-item w3-button" href="#section4">&nbsp;Uniform continuity</a>
+        </div>
+
+        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">4. Sequences of
+            functions</a>
+
+        <br>
+
+        <div class="w3-container w3-center w3-theme" id="mySocial">
+            <div class="">
+                <a title="Patreon" href="https://www.patreon.com/jcponce" target="_blank"><i class="fa-brands fa-patreon w3-button w3-round-large w3-theme"></i></a>
+                <span title="Support" onclick="document.getElementById('myModal').style.display='block'" class="w3-button w3-round-large w3-theme">
+                    <i class="fa-regular fa-heart"></i></span>
+                <a title="GitHub" href="https://github.com/jcponce" target="_blank"><i class="fa-brands fa-github w3-button w3-round-large w3-theme"></i></a>
+                <br>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!-- Overlay to close navbar -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay">
+    </div>
+
+    <!-- Main text starts here -->
+
+    <!-- Bar on top shows/hides after scrolling -->
+    <div id="myTop" class="w3-container w3-top w3-theme-bar w3-large">
+        <div id="myTextBar">
+            <p>
+                <i class="fa-solid fa-bars w3-button w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+                <span id="myTitle" class="w3-hide">Continuity</span>
+
+                <span title="Dark/Night Mode" id="dark-mode-toggle" class="topDark w3-theme w3-hide-small">
+                    <i class="fa-regular fa-sun"></i>
+                </span>
+
+                <span onclick="document.getElementById('myModal').style.display='block'" class="topDonate w3-button w3-theme w3-round-small w3-hide-small">
+                    <i class="fa-regular fa-heart"></i> Support
+                </span>
+
+            </p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-theme" style="padding:64px 64px">
+
+        <h1>Continuity</h1>
+
+    </header>
+
+    <!-- Sections -->
+    <div class="w3-container section-content">
+
+        <div id="section1">
+
+
+            <div id="definition-properties">
+                <h2>Definition</h2>
+            </div>
+
+            <div class="definition">
+                Let $S \subseteq \R,$ $c \in S,$ and let $f \colon S \to \R$ be a function.
+                <span>
+                    We say
+                    that $f$ is <em>continuous at</em> $c$
+                    if for every $\epsilon \gt 0$
+                    there is a $\delta \gt 0$ such that whenever $x \in S$ and $\abs{x-c} \lt
+                    \delta,$ then
+                    $\abs{\,f(x)-f(c)} \lt \epsilon.$
+                </span>
+
+                <p>
+                    When $f \colon S \to \R$ is continuous at all $c \in S,$ then we simply say
+                    $f$ is a <em>continuous function</em>.
+                </p>
+            </div>
+
+            <figure>
+                <div id="ggb-element-ex-01"></div>
+                <figcaption>
+                    Explore the definition of continuity: Drag the slider and then move the top point on $y$-axis.
+                </figcaption>
+            </figure>
+
+            <div class="theorem">
+                <p>
+                    Consider a function $f \colon S \to \R$ defined on a set $S \subseteq \R$
+                    and let $c \in S.$
+                    <span>Then</span>
+                </p>
+
+                <ol>
+                    <li>
+                        If $c$ is not a cluster point of $S,$ then $f$ is continuous at $c.$
+                    </li>
+                    <li>
+                        If $c$ is a cluster point of $S,$ then $f$ is continuous at $c$
+                        if and only if the limit of $f(x)$ as $x \to c$ exists and
+                        \begin{equation*}
+                        \lim_{x\to c} f(x) = f(c) .
+                        \end{equation*}
+                    </li>
+                    <li>
+                        The function $f$ is continuous at $c$ if and only if for every sequence $\{ x_n \}$
+                        where $x_n \in S$ and $\lim\, x_n = c,$ the sequence $\{ \,f(x_n) \}$ converges
+                        to $f(c).$
+
+                    </li>
+                </ol>
+            </div>
+
+            <div class="proof">
+                <span>
+                    Let's prove item 1.
+                </span>
+                <span>
+                    Suppose $c$ is not a cluster point of
+                    $S.$
+                </span>
+                <span>
+                    Then there exists a $\delta &gt; 0$
+                    such that
+                </span>
+                <span>
+                    \[S \cap (c-\delta,c+\delta)= \{ c \}.\]
+                </span>
+
+                <p>
+                    <span>
+                        For any $\epsilon &gt; 0,$ simply pick this given $\delta.$
+                    </span>
+                    <span>
+                        The only $x \in S$ such that $\abs{x-c} \lt \delta$ is $x=c.$
+                    </span>
+                    \[\Ra \;\abs{\,f(x)-f(c)} = \abs{\,f(c)-f(c)} = 0 \lt \epsilon.\]
+                </p>
+
+
+                <p>
+                    Now let's prove item 2. <span>
+                        Suppose $c$ is a cluster point of $S.$
+                    </span>
+                    <span>
+                        $\nec$ First suppose $f$ is continuous
+                        at $c.$
+                    </span>
+                    <span>
+                        For every $\epsilon &gt; 0,$ there exists a $\delta \gt 0$
+                        such that for $x \in S$ where $\abs{x-c} \lt \delta\;$
+                    </span>
+                    <span>
+                        $\Ra \;\abs{\,f(x)-f(c)} \lt \epsilon.$
+                    </span>
+                    <span>
+                        This is true since
+                        $x \in S \setminus \{ c \} \subset S.$
+                    </span>
+                    <span>
+                        Therefore, $\lim_{x\to c} f(x) = f(c).$
+                    </span>
+
+                </p>
+
+                <p>
+                    Now let's prove the other direction.
+                    <span>
+                        Again we assume $c$ is a cluster point of $S.$
+                    </span>
+                    <span>
+                        $\suf$ Now assume that the limit of $f(x)$ as $x \to c$ exists and $\lim_{x\to c} f(x) = f(c).$
+                    </span>
+                    <span>
+                        Then for every $\epsilon &gt; 0,$
+                        there is a $\delta \gt 0$ such that if $x \in S \setminus \{ c \}$
+                        and $\abs{x-c} \lt \delta\,$
+                    </span>
+                    <span>
+                        $\,\Ra \abs{\,f(x)-f(c)} \lt \epsilon.$
+
+                    </span>
+                    <span>
+                        In particular $\abs{\,f(c)-f(c)} = 0 \lt \epsilon,$
+                    </span>
+                    <span>
+                        and the definition of continuity at
+                        $c$ is satisfied.
+                    </span>
+
+                </p>
+            </div>
+
+            <br>
+
+
+        </div>
+
+
+
+        <div id="section2">
+
+            <h2>Discontinuity criterion</h2>
+
+            <div class="theorem">
+                Let $S\subseteq \R,$ let $f \colon S \to \R$ and let $c\in S.$
+                Then $f$ is <strong>discontinuous</strong> at $c$ if and only if
+                there exists a sequence $\{x_n\}$ in $S$
+                such that $\lim x_n = c,$
+                <span>
+                    <strong>but the sequence
+                        $\left\{\,f(x_n)\right\}$ does not converge to $f(c)$</strong>.
+                </span>
+            </div>
+
+        </div>
+
+        <div class="example">
+            $\displaystyle f(x)=\sin\frac{1}{x},$ for $x\neq 0$ and $f(x)=0$ for $x=0.$
+
+            <figure>
+                <img alt="" style="width: 50%;" loading="lazy" src="https://www.dynamicmath.xyz/math2400/images/summary-05/seq-limits-01a.gif">
+                <figcaption>
+                    We can find a sequence $x_n$ such that $x_n\ra 0$ as $n\ra \infty.$
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img alt="C" style="width: 50%;" loading="lazy" src="https://www.dynamicmath.xyz/math2400/images/summary-05/seq-limits-01b.gif">
+                <figcaption>
+                    Notice how the sequence $f\left(x_n\right)$ does not converge to $0.$
+                </figcaption>
+            </figure>
+        </div>
+
+
+        <div id="section3">
+
+            <h2>Basic properties</h2>
+
+            <div class="theorem">
+                Let $f \colon S \to \R$ and $g \colon S \to \R$ be functions
+                continuous at $c \in S.$
+                <ol>
+                    <li>
+                        The function $h \colon S \to \R$ defined by
+                        $h(x) := f(x)+g(x)$ is continuous at $c.$
+                    </li>
+                    <li>
+                        The function $h \colon S \to \R$ defined by
+                        $h(x) := f(x)-g(x)$ is continuous at $c.$
+                    </li>
+                    <li>
+                        The function $h \colon S \to \R$ defined by
+                        $h(x) := f(x)g(x)$ is continuous at $c.$
+                    </li>
+                    <li>
+                        If $g(x)\not=0$ for all $x \in S,$ the function $h \colon S \to \R$
+                        defined by $h(x) := \dfrac{f(x)}{g(x)}$ is continuous at $c.$
+                    </li>
+                </ol>
+            </div>
+
+
+            <div class="example">
+                <p>
+                    <strong>Claim:</strong>
+                    The functions $\sin(x)$ and $\cos(x)$ are continuous.
+                </p>
+
+                <p>
+
+                    <span>
+                        <strong>Proof.</strong>
+                    </span><br>
+                    <span>
+                        Recall that
+                        $\abs{\sin(x)} \leq \abs{x},$ $\abs{\cos(x)} \leq 1,$
+                        and $\abs{\sin(x)} \leq 1.$
+                    </span>
+                    Then
+                </p>
+                <div class="eqwrapper">
+                    \begin{eqnarray*}
+                    \abs{\sin(x)-\sin(c)} &amp; = &amp; \abs{2 \sin \left( \frac{x-c}{2} \right) \cos \left( \frac{x+c}{2}
+                    \right)} \\
+                    &amp; = &amp; 2 \abs{ \sin \left( \frac{x-c}{2} \right) } \abs{ \cos \left( \frac{x+c}{2} \right) }\\
+                    &amp; \leq &amp; 2 \abs{ \sin \left( \frac{x-c}{2} \right) }\\
+                    &amp; \leq &amp; 2 \abs{ \frac{x-c}{2} } = \abs{x-c}.
+                    \end{eqnarray*}
+                </div>
+
+                <p>
+                    On the other hand we have
+                </p>
+                <div class="eqwrapper">
+                    \begin{eqnarray*}
+                    \abs{\cos(x)-\cos(c)} &amp; = &amp;\abs{-2 \sin \left( \frac{x-c}{2} \right) \sin \left( \frac{x+c}{2}
+                    \right)} \\
+                    &amp; = &amp; 2 \abs{ \sin \left( \frac{x-c}{2} \right) } \abs{ \sin \left( \frac{x+c}{2} \right) }\\
+                    &amp; \leq &amp; 2 \abs{ \sin \left( \frac{x-c}{2} \right) }\\
+                    &amp; \leq &amp; 2 \abs{ \frac{x-c}{2} } = \abs{x-c}.
+                    \end{eqnarray*}
+                </div>
+                <p>
+                    Using previous inequalities and applying the definition of
+                    continuity we can conclude that the functions $\sin(x)$ and $\cos(x)$ are continuous.
+                </p>
+            </div>
+
+            <br>
+
+        </div>
+
+
+        <div id="section4">
+
+            <h2>Uniform continuity</h2>
+
+            <div class="definition">
+                Let $S \subseteq \R,$ and let $f \colon S \to \R$ be a function.
+                <span>
+                    Suppose for every $\epsilon \gt 0$ there exists a $\delta &gt; 0$
+                    such that whenever $x, c \in S$ and
+                    $\abs{x-c} \lt \delta,$
+                </span>
+                <span>
+                    then $\abs{\,f(x)-f(c)} \lt \epsilon.$
+                    Then we say $f$ is <em>uniformly continuous</em>.
+                </span>
+            </div>
+
+            <figure>
+                <div id="ggb-element-ex-02"></div>
+                <figcaption>
+                    Geometric interpretation: Uniformly continuos vs Nonuniformly continuous.
+                </figcaption>
+            </figure>
+
+            <div class="example">
+
+                $f \colon [0,1] \to \R$ defined by $f(x) := x^2$ is uniformly continuous.
+                <p>
+                    <span>
+                        <strong>Proof. </strong>
+                    </span>
+                    <span>
+                        Note that $0 \leq x,c \leq 1.$
+                    </span>
+                    <span>
+                        Then
+                    </span>
+                </p>
+                <div class="eqwrapper">
+                    \begin{eqnarray*}
+                    \sabs{x^2-c^2} &amp; = &amp;\sabs{x+c}\sabs{x-c} \\
+                    &amp; \leq &amp; \bigl(\sabs{x}+\sabs{c}\bigr) \sabs{x-c} \\
+                    &amp; \leq &amp; (1+1)\sabs{x-c} .
+                    \end{eqnarray*}
+                </div>
+                <p>
+                    <span>
+                        Therefore, given $\epsilon &gt; 0,$ let $\delta := \dfrac{\epsilon}{2}.$
+                    </span>
+                    <span>
+                        If $\sabs{x-c} \lt \delta,$ then $\sabs{x^2-c^2} \lt \epsilon.$
+                    </span>
+                </p>
+
+                <p>On the other hand, $g \colon \R \to \R$ defined by $g(x):=x^2$ is not uniformly
+                    continuous.
+                </p>
+
+                <p>
+                    <span>
+                        <strong>Proof. </strong>
+                    </span>
+                    <span>
+                        Suppose it is uniformly continuous,
+                    </span>
+                    <span>
+                        then for every $\epsilon &gt; 0,$
+                        there would exist a $\delta &gt; 0$ such that
+                        if $\sabs{x-c} \lt \delta,$ then $\sabs{x^2 -c^2} \lt \epsilon.$
+                    </span>
+                    <span>
+                        So consider $\epsilon =1.$
+                    </span>
+                    <span>
+                        If such $\delta$ existed and $c = x+ \delta/2$
+                    </span>
+                    <span>
+                        $\;\Ra \ds\sabs{x^2 - \left(x+ \frac{\delta}{2}\right)^2} \lt 1.$
+                    </span>
+                    <span>
+                        However
+                    </span>
+                    <span>
+                        $ \ds
+                        \abs{x\delta + \dfrac{\delta^2}{4}} \lt 1$❗
+                    </span>
+                    <span>which is a
+                        contradiction,
+                    </span>
+                    <span>
+                        since we can choose $x$ large.
+                    </span>
+
+                </p>
+            </div>
+
+            <div class="example">
+                The function $f \colon (0,1) \to \R$ defined by $f(x) := \dfrac{1}{x}$ is not
+                uniformly continuous.
+
+
+                <p>
+                    <span>
+                        <strong>Proof. </strong>
+                    </span>
+                    <span>
+                        Choose $\epsilon=2$ and $0 \lt \delta.$
+                    </span>
+                    <span>
+                        Set $\delta_0 = \min\{\delta/2, 1/4\}$, 
+                    </span>
+                    <span>
+                        $x= \delta_0$, and $y = 2 \delta_0.$
+                    </span>
+                    <span>
+                        Then $x,y\in(0,1)$ and $\abs{x-y}= \delta_0 \lt \delta$
+                    </span>
+                    <span>
+                        but
+                    </span>
+                </p>
+                <div class="eqwrapper">
+                    \begin{eqnarray*}
+                    \abs{\frac{1}{x}-\frac{1}{y}}  = &amp;\abs{\frac{y-x}{xy}}  =  \abs{\frac{\delta_0}{2\delta_0^2} }  =  \ds\abs{ \frac{1}{2\delta_0}} \geq 2 = \epsilon.
+                    \end{eqnarray*}
+                </div>
+                <p>
+                    <span>
+                        Hence $f$ is not uniformly continuous.
+                    </span>
+                </p>
+
+                <figure>
+                    <div id="ggb-element-ex-03"></div>
+                    <figcaption>
+                        Geometric interpretation: $f(x) = \dfrac{1}{x}$ is not uniformly continuous.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <br><br><br>
+            
+            <p class="w3-center">
+                More coming soon!
+                <br>
+                <img src="imgs/loadcat.gif">
+            </p>
+
+
+        </div>
+
+
+
+
+        <br><br><br>
+        <br><br><br>
+
+    </div>
+
+    
+    <!-- Ends main content -->
+
+    <!-- Extra scripts for applets -->
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+    <script>
+
+        function createApplet(config, elementId) {
+            let applet = new GGBApplet(config, true);
+            window.addEventListener("load", () => {
+                applet.inject(elementId);
+            });
+        }
+
+        let commonConfig = {
+            "borderColor": "888888",
+            "playButton": false,
+            "showFullscreenButton": true,
+            "enableShiftDragZoom": false,
+            "showResetIcon": true
+        };
+
+        let applets = [
+            { config: { ...commonConfig, "width": 629, "height": 482, "material_id": "awunnmy8" }, elementId: 'ggb-element-ex-01' },
+            { config: { ...commonConfig, "width": 673, "height": 389, "material_id": "sv5tazce" }, elementId: 'ggb-element-ex-02' },
+            { config: { ...commonConfig, "width": 704, "height": 389, "material_id": "fjydugxa" }, elementId: 'ggb-element-ex-03' }
+        ];
+
+        applets.forEach(applet => createApplet(applet.config, applet.elementId));
+
+        
+    </script>
+
+</section>
+    </div>
+
+    <!-- Navigation -->
+<!-- Buttons to navigate -->
+<div class="w3-container w3-center w3-padding-large section-content"  id="navigation">
+    <a href="limits-of-functions.html"><button
+            class="w3-left w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">&#10094; Previous</button></a>
+
+    <a href="sequences-of-functions.html"><button
+            class="w3-right w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">Next &#10095;</button></a>
+</div>
+    <br />
+
+    <!-- Footer -->
+<footer class="w3-main w3-container w3-center w3-theme" id="myFooter">
+
+  <div class="w3-row ">
+
+    <div class="w3-col m6">
+      <span class="w3-hide-small">
+        Real Analysis <i class="fa-regular fa-copyright"></i>
+        <span>
+          <script>document.write(new Date().getFullYear());</script>
+        </span><br />
+        by J. C. Ponce Campuzano
+      </span>
+      <span class="w3-hide-large w3-hide-medium">
+        Real Analysis <i class="fa-regular fa-copyright"></i>
+        <span>
+          <script>document.write(new Date().getFullYear());</script>
+        </span>
+        <br />by J. C. Ponce Campuzano
+      </span>
+    </div>
+
+    <div class="w3-col m6 license">
+
+      <a style="text-decoration: none;" rel="license"
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank">
+        <i class="fa-brands fa-creative-commons"></i>
+        <i class="fa-brands fa-creative-commons-by"></i>
+        <i class="fa-brands fa-creative-commons-nc"></i>
+        <i class="fa-brands fa-creative-commons-sa"></i>
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span><br />
+      <h1 class="w3-xxlarge">Hello! 👋</h1>
+    </div>
+    <div class="modal-body">
+      <p>
+        This interactive book is <strong>free for everybody</strong>,
+        as I believe that everyone should have access to high-quality learning
+        resources to explore and learn mathematics.
+        That's why many users choose to contribute to my efforts.
+        If you believe in what I do and want to help me on my journey,
+        you can do so now with the links below:
+      </p>
+
+      <div class="button-container">
+        <button id="modal-link">
+          <a href="https://www.patreon.com/jcponce"><i class="fa-brands fa-patreon"></i>
+            <strong>Patreon</strong></a>
+        </button>
+        <button id="modal-link">
+          <a target="_blank"
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WTMTR7D8RYZ26&item_name=Your+support+will+help+me+to+improve+and+keep+up+to+date+the+applets+of+this+book.+Sincerely+appreciate+it%21&currency_code=AUD&source=url">
+            <strong><i class="fa-brands fa-paypal"></i> PayPal</strong>
+          </a>
+        </button>
+        <button id="modal-link">
+          <a target="_blank" href="https://jcponcemath.secure-decoration.com/">
+            <strong>Get a <i class="fa-solid fa-shirt"></i></strong>
+          </a>
+        </button>
+      </div>
+
+
+      <p>
+        Your contributions help me to maintain this site
+        and, crucially, <strong>ensure it remains freely accessible</strong>
+        to anyone eager to explore this captivating field of mathematics
+        <strong>—without any distracting ads</strong>.
+      </p>
+
+      <p>
+        You can't contribute this time, no worries! Maybe you just want to
+        <a href="mailto:jcponcemath@gmail.com"><strong><i class="fa-solid fa-envelope"></i> Send a
+            comment</strong></a>
+      </p>
+      <br />
+    </div>
+    <div class="modal-footer">
+      <p class="w3-xlarge">Thank you! 🙏 I highly appreciate your support! 🤗</p>
+    </div>
+  </div>
+
+</div>
+  </div>
+
+  <!-- Button to Top -->
+  <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+  <!-- General scripts -->
+  <script src="js/w3codecolor.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
