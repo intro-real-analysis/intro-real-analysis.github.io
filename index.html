@@ -28,10 +28,10 @@
   <meta name="twitter:type" content="website" />
   <meta name="twitter:creator" content="@jcponcemath" />
 
-  <link rel="icon" type="image/png" href="content/imgs/infinity32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="content/imgs/infinity16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="imgs/infinity32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="imgs/infinity16.png" sizes="16x16">
 
-  <link rel="stylesheet" href="content/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 
   <!-- Google tag (gtag.js) -->
@@ -45,9 +45,9 @@
   </script> 
 
   <!-- MathCell applets + MathJax -->
-  <script src="content/js/math.js"></script>
-  <script src="content/js/mathcell.js"></script>
-  <script src="content/js/mathjax.js"></script>
+  <script src="js/math.js"></script>
+  <script src="js/mathcell.js"></script>
+  <script src="js/mathjax.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
 
@@ -55,11 +55,44 @@
 
 <body data-type="book" id="top">
 
-  <div class="w3-main w3-large">
+  <div class="w3-main w3-large" style="margin-left:250px;">
 
     <!-- Main DIV Starts here -->
     <div class="container">
       <section data-type="chapter" id="index">
+
+    <!-- Sidebar -->
+  <nav class="w3-sidebar w3-bar-block w3-collapse w3-card" id="mySidebar">
+    <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-center" href="/"><img id="myLogo" src="imgs/my-logo-black.png"></a>
+
+    <a class="w3-bar-item w3-button w3-hide-large w3-large w3-center" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa-solid fa-xmark w3-large"></i></a>
+
+    <a class="w3-bar-item w3-button" id="chapterBar" href="sequences.html">1. Sequences</a>
+    <a class="w3-bar-item w3-button" id="chapterBar" href="limits-of-functions.html">2. Limits of functions</a>
+    <a class="w3-bar-item w3-button" id="chapterBar" href="continuity.html">3. Continuity</a>
+    <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">4. Sequences of functions</a>
+
+    <br>
+
+
+    <div class="w3-container w3-center w3-theme" id="mySocial">
+      <div class="">
+        <a title="Patreon" href="https://www.patreon.com/jcponce" target="_blank"><i class="fa-brands fa-patreon w3-button w3-round-large w3-theme"></i></a>
+        <span title="Support" onclick="document.getElementById('myModal').style.display='block'" class="w3-button w3-round-large w3-theme">
+          <i class="fa-regular fa-heart"></i></span>
+        <a title="GitHub" href="https://github.com/jcponce" target="_blank"><i class="fa-brands fa-github w3-button w3-round-large w3-theme"></i></a>
+        <br>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Overlay to close navbar -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay">
+  </div>
+
+
+  
 
     <!-- Starts main content -->
 
@@ -227,7 +260,7 @@
                 <strong>
                     Edward Huff, Abei, pmben, Sophia Wood (Fractal Kitty),
                     Adam Parrott, Newnome Beauton, mirror, Doug Kuhlmann,
-                    Dennis Watson, bleh, Miguel Díaz, Ruan Ramon, Juan Pablo Xandri Antuña.
+                    Dennis Watson, bleh, Miguel Díaz, Ruan Ramon, Juan Pablo Xandri Antuña
                 </strong>.
 
                 <br>
@@ -262,7 +295,13 @@
 </section>
     </div>
 
-   
+    <!-- Navigation -->
+<!-- Buttons to navigate -->
+<div class="w3-container w3-center w3-padding-large section-content"  id="navigation">
+
+    <a href="sequences.html"><button
+            class="w3-right w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">Next &#10095;</button></a>
+</div>
     <br />
 
     <!-- Footer -->
@@ -308,7 +347,7 @@
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span><br />
-      <h1 class="w3-xxlarge">Hello! 👋</h1>
+      <h1 class="w3-xlarge">Hello! 👋</h1>
     </div>
     <div class="modal-body">
       <p>
@@ -354,7 +393,7 @@
       <br />
     </div>
     <div class="modal-footer">
-      <p class="w3-xlarge">Thank you! 🙏 I highly appreciate your support! 🤗</p>
+      <p class="w3-large">Thank you! 🙏 I highly appreciate your support! 🤗</p>
     </div>
   </div>
 
@@ -366,8 +405,8 @@
 
 
   <!-- General scripts -->
-  <script src="content/js/w3codecolor.js"></script>
-  <script src="content/js/scripts.js"></script>
+  <script src="js/w3codecolor.js"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 
