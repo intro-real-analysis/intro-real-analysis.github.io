@@ -42,7 +42,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-J95ZGQ0CCF');
-  </script> 
+  </script>
 
   <!-- MathCell applets + MathJax -->
   <script src="js/math.js"></script>
@@ -55,7 +55,19 @@
 
 <body data-type="book" id="top">
 
+  <!-- Loader fullscreen -->
+  <div class="myLoader" id="loader">
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="loadingMessage">Loading...</div>
+  </div>
+
   <div class="w3-main w3-large" style="margin-left:250px;">
+
+
 
     <!-- Main DIV Starts here -->
     <div class="container">
@@ -649,14 +661,14 @@
         <div class="modal-body">
 
           <div w3-include-html="message-modal.html"></div>
-          
+
           <br />
         </div>
         <div class="modal-footer">
           <p class="w3-large">Thank you! 🙏 I highly appreciate your support! 🤗</p>
         </div>
       </div>
-    
+
     </div>
 
   </div>
