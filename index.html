@@ -55,7 +55,15 @@
 
 <body data-type="book" id="top">
 
- 
+  <!-- Loader fullscreen -->
+  <div class="myLoader" id="loader">
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="loadingMessage">Loading...</div>
+  </div> 
 
   <div class="w3-main w3-large" style="margin-left:250px;">
 
@@ -66,17 +74,24 @@
       <section data-type="chapter" id="index">
 
     <!-- Sidebar -->
-  <nav class="w3-sidebar w3-bar-block w3-collapse w3-card" id="mySidebar">
-    <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-center" href="/"><img id="myLogo" src="imgs/my-logo-black.png"></a>
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-card" id="mySidebar">
+        <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-center" href="/"><img id="myLogo" src="imgs/my-logo-black.png"></a>
 
-    <a class="w3-bar-item w3-button w3-hide-large w3-large w3-center" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa-solid fa-xmark w3-large"></i></a>
+        <a class="w3-bar-item w3-button w3-hide-large w3-large w3-center" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa-solid fa-xmark w3-large"></i></a>
 
-    <a class="w3-bar-item w3-button" id="chapterBar" href="sequences.html">1. Sequences</a>
-    <a class="w3-bar-item w3-button" id="chapterBar" href="limits-of-functions.html">2. Limits of functions</a>
-    <a class="w3-bar-item w3-button" id="chapterBar" href="continuity.html">3. Continuity</a>
-    <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">4. Sequences of functions</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="the-real-numbers.html">1. The Real Numbers</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences.html">2. Sequences</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="series.html">3. Series</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="limits-of-functions.html">4. Limits of functions</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="continuity.html">5. Continuity of functions</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="derivative.html">6. The derivative</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="riemann-integral.html">7. The Riemann integral</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="sequences-of-functions.html">8. Sequences of
+            functions</a>
+        <a class="w3-bar-item w3-button" id="chapterBar" href="metric-spaces-topology.html">9. Metric spaces &amp;
+            Topology</a>
 
-    <!-- Support button -->
+        <!-- Support button -->
 <br>
 
 <span class="w3-center w3-large" style="width: 80%; display: block; margin: 0 auto;">
@@ -88,14 +103,14 @@
   <br>
   <strong>∞</strong>
 </span>
-  </nav>
+    </nav>
 
-  <!-- Overlay to close navbar -->
-  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay">
-  </div>
+    <!-- Overlay to close navbar -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay">
+    </div>
 
 
-  
+
 
     <!-- Starts main content -->
 
@@ -205,10 +220,41 @@
 
 
             <ol>
+                <li><a href="the-real-numbers.html">The real numbers</a>
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="28" height="28">
+                    </picture>
+                </li>
                 <li><a href="sequences.html">Sequences</a></li>
+                <li><a href="series.html">Series</a>
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="28" height="28">
+                    </picture></li>
                 <li><a href="limits-of-functions.html">Limits of functions</a></li>
-                <li><a href="continuity.html">Continuity</a></li>
-                <li><a href="sequences.html">Sequences of functions</a></li>
+                <li><a href="continuity.html">Continuity of functions</a></li>
+                <li><a href="derivative.html">The Derivative</a>
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="28" height="28">
+                    </picture></li>
+                <li><a href="riemann-integral.html">The Riemann integral</a>
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="28" height="28">
+                    </picture></li>
+                <li><a href="sequences-of-functions.html">Sequences of functions</a>
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="28" height="28">
+                    </picture></li>
+                <li><a href="metric-spaces-topology.html">Metric spaces &amp; Topology</a>
+                    <picture>
+                        <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.webp" type="image/webp">
+                        <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="28" height="28">
+                    </picture></li>
+
             </ol>
 
 
@@ -262,10 +308,10 @@
                 It exists thanks to the support of my patreons: <br>
                 <strong>
                     Edward Huff, Abei, pmben, Sophia Wood (Fractal Kitty),
-                    Adam Parrott, Doug Kuhlmann, Dennis Watson, bleh, 
+                    Adam Parrott, Doug Kuhlmann, Dennis Watson, bleh,
                     Miguel Díaz, Ruan Ramon, Maciej Lasota,
                     Christopher-Alexander Hermanns, Aarón Reyes,
-                    Gabriela Sofia Marin Sanchez, Jerome Siegler, 
+                    Gabriela Sofia Marin Sanchez, Jerome Siegler,
                     Yashar Shoraka, Jeff Butterworth.
                 </strong>.
 
@@ -301,7 +347,13 @@
 </section>
     </div>
 
-   
+    <!-- Navigation -->
+<!-- Buttons to navigate -->
+<div class="w3-container w3-center w3-padding-large section-content"  id="navigation">
+
+    <a href="real-numbers.html"><button
+            class="w3-right w3-button w3-dark-grey w3-round-xlarge w3-hover-shadow ">Next &#10095;</button></a>
+</div>
     <br />
 
     <!-- Footer -->
